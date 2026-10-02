@@ -7,13 +7,17 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Data files read into pandas (`data_modeling.ipynb`)
 - [x] Shift hours computed, overnight shifts handled (clock-out before clock-in adds 24h), shifts with no clock-out excluded (notebook only)
 - [x] First-pass list of people averaging over 45 hours a week, and a first small projection for the in-progress week (notebook only, not final)
+- [x] Shift hours attributed to a day and week with the greater-portion rule, including Sunday and public-holiday rates (`src/hours.py`, tested)
+- [x] Duplicate employee IDs (shared ID number, bank account or tax number) detected, severity Escalate or Review, hours combined per person (`src/integrity.py`, tested)
+- [x] Overlapping shifts detected and flagged as potential fraud, hours still counted (`src/integrity.py`, tested)
 
 ## Not done
 
 ### The answer (must be correct)
 - [ ] Derive the in-progress week from the last date in the data, not today's date, with no hardcoded weekday
 - [ ] Prediction for every `employee_id` in `employees.csv`: `will_breach` (0/1) and `risk_score` (0 to 1)
-- [ ] Decide and handle: public-holiday hours, overlapping double-site shifts, duplicate employee IDs, missing clock-outs
+- [ ] Decide and handle: whether Sunday and holiday hours count toward the 10-hour cap, and missing clock-outs (impute or not)
+- [ ] Use the person-level hours (duplicate IDs combined) in the final prediction, with both IDs of a merged person getting the same prediction
 - [ ] Naive baseline, a comparison against it, and a justified choice of metric
 - [ ] `predictions.csv` in the repo with exactly the columns `employee_id,will_breach,risk_score`
 
@@ -22,6 +26,11 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [ ] Shows who goes over the 10-hour overtime cap by Sunday, ranked, with hours so far and projected hours
 - [ ] Says what to do about each person or site, specific to the data (not generic advice)
 - [ ] Shows why the hours happened, based on the supervisors' notes
+
+### Escalations (dashboard)
+- [ ] Show duplicate people flagged for escalation (both IDs, evidence "same ID number / bank account / tax number", severity), never showing bank or tax values
+- [ ] Show overlapping shifts flagged as potential fraud (person, sites, overlap hours, High if different provinces)
+- [ ] Wording is "potential" and "for review", not an accusation
 
 ### Supervisor notes
 - [ ] Taxonomy of reasons for extra hours, including a "nothing useful" category

@@ -10,6 +10,14 @@
   - If the portions are exactly equal, the shift is split at midnight: the earlier day's hours stay with that day (and its week), and the later day's hours go to the later day.
   - The attributed day decides the week (Monday to Sunday) and the pay rate. A shift moved to a Monday loses the Sunday 2x premium, and a shift moved to a Sunday gets it.
 - The same attribution rule applies to public holidays: a shift attributed to a public holiday earns the holiday 2x rate, even if it started the day before.
+- Duplicate employee IDs are flagged as potential fraud and escalated for review.
+  - Two or more employee IDs are treated as one person if they share an ID number, a bank account or a tax number.
+  - Severity is "Escalate" if a bank account or tax number is shared, and "Review" if only the ID number is shared. Currently 5 people (10 employee IDs) are flagged, all "Escalate": E1035/E1036, E1090/E1091, E1097/E1098, E1126/E1127, E1193/E1194.
+  - The flags are indicators for escalation, not a finding of guilt. They are worded as "potential".
+- Overlapping shifts (one person with two records at the same time, for example at two sites) still have all their recorded hours counted, and are flagged as "Potential fraud: two sites at once". They are marked High severity when the two sites are in different provinces, otherwise Medium. Currently 195 overlapping pairs (126 within one employee ID, 69 between the two IDs of a duplicate person).
+- Hours are combined across all employee IDs of one person for weekly totals and breach risk, because splitting hours across two IDs hides a breach.
+- In `predictions.csv`, both employee IDs of a merged person get the same `will_breach` and `risk_score`.
+- Only the bank account and tax number columns of `payroll_details.csv` are read, in memory, to compare for duplicates. Their values are never written to any output, dashboard, export or notebook.
 
 ## 2. Assumptions inferred
 
@@ -31,8 +39,7 @@ _None recorded yet._
 ### Data quality
 - 184 shifts have no clock-out time. Beyond excluding them, it's undecided whether to impute a typical shift length instead. `weekly_summary.csv` counts them as zero, which understates hours.
 - Two shifts' worth of missing clock-outs this week belong to employees (E1182, E1094) who have no other usable shift, so they would show 0 hours.
-- 126 same-day shift pairs have the same employee at two different sites with overlapping times, which is physically impossible. Undecided whether overlapping time is counted once (union) or summed.
-- Five pairs of employee IDs share an ID number and look like one person registered twice: E1035/E1036, E1090/E1091, E1097/E1098, E1126/E1127, E1193/E1194. Undecided whether to merge them into one person for hours totals.
+- The greater-portion rule has a large effect. Counting by the week of the clock-in date gives 66 per-ID breach-weeks, and the greater-portion attribution gives 87, because it moves whole long shifts into the next week. If the checker's ground truth counts by clock-in date, our weekly totals will differ for some people.
 - Whether every employee in `employees.csv` must be predicted, including the 6 with no shifts and anyone no longer working.
 - `weekly_summary.csv` is not fully trusted: it matches a recomputation from `shifts.csv` exactly, but that includes its errors (missing clock-outs counted as 0, overlaps double-counted).
 - Hours for an employee are totalled across all sites, not per site.
@@ -53,7 +60,7 @@ _None recorded yet._
 - How the note-sorting will be checked given there is no answer sheet.
 
 ### Sensitive data
-- `payroll_details.csv` contains bank and tax details. Undecided whether it is used at all (only `hourly_rate` seems relevant) and it should not be in the repo, dashboard or video.
+- `payroll_details.csv` contains bank and tax details. It is only used to detect duplicate people (see above), and its values must stay out of the dashboard, outputs and video. The file itself is already in `data/` in the repo as supplied, so whether to remove it before making the repo public is undecided. `hourly_rate` is not used.
 
 ### Submission
 - The README says the repo must contain "four files" but lists three. The fourth is unclear.
