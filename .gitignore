@@ -1,1 +1,17 @@
 .DS_Store
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.streamlit/secrets.toml

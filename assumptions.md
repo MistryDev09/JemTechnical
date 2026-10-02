@@ -2,7 +2,14 @@
 
 ## 1. Assumptions I made
 
-- Shifts with no clock-out time are excluded from the hours calculation.
+- Shifts with no clock-out time are excluded from the hours calculation. They are flagged, and open shifts in the in-progress week are shown in the dashboard.
+- A shift is overnight if its clock-out time is earlier than its clock-in time, and its duration is the time between them across midnight (+24h). This uses the times only, not `shift_pattern`.
+- Shifts with an empty or invalid clock-in or clock-out time (or identical clock-in and clock-out) are flagged and excluded from hours.
+- Shifts longer than 12 hours are flagged, because the maximum working day under South African law is 12 hours. They are still counted in the hours totals.
+- Greater-portion rule (as per South African law, supplied by me; the source was not independently verified): a shift that spans a calendar day boundary is attributed whole to the day on which the greater portion of the shift was worked.
+  - If the portions are exactly equal, the shift is split at midnight: the earlier day's hours stay with that day (and its week), and the later day's hours go to the later day.
+  - The attributed day decides the week (Monday to Sunday) and the pay rate. A shift moved to a Monday loses the Sunday 2x premium, and a shift moved to a Sunday gets it.
+- The same attribution rule applies to public holidays: a shift attributed to a public holiday earns the holiday 2x rate, even if it started the day before.
 
 ## 2. Assumptions inferred
 
@@ -14,7 +21,6 @@ _None recorded yet._
 - Which week is "in progress": derived from the last date in `shifts.csv` (Wed 2026-08-12, so the week starting Mon 2026-08-10), not from today's date.
 - A later export may not end on a Wednesday, so the cutoff day should not be hardcoded.
 - Weeks run Monday to Sunday.
-- Overnight shifts that cross midnight on a Sunday: which week do the hours belong to (clock-in date or split at midnight)?
 
 ### Breach definition
 - A breach means more than 10 hours of overtime in the week, i.e. more than 55 total hours (45 ordinary plus 10 overtime). Strictly greater than, not greater than or equal to.
