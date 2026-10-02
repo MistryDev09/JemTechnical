@@ -9,6 +9,7 @@
 - Greater-portion rule (as per South African law, supplied by me; the source was not independently verified): a shift that spans a calendar day boundary is attributed whole to the day on which the greater portion of the shift was worked.
   - If the portions are exactly equal, the shift is split at midnight: the earlier day's hours stay with that day (and its week), and the later day's hours go to the later day.
   - The attributed day decides the week (Monday to Sunday) and the pay rate. A shift moved to a Monday loses the Sunday 2x premium, and a shift moved to a Sunday gets it.
+- The greater-portion rule is in effect everywhere: hours totals, weekly breach labels, the model's features and the final predictions all use the attributed week, not the clock-in date. We treat it as the way the client's ground truth counts hours. Its effect is large and is stated so it can be explained: it raises breach-weeks from 66 (clock-in date, per employee ID, which is also what the client's `weekly_summary.csv` shows) to 87 (per ID) because it moves whole long shifts into the next week, and to 114 once duplicate IDs are merged. A clock-in-date rerun of the model is kept only as a sensitivity check (it flags 36 people instead of 46 this week, and 12 predictions differ).
 - The same attribution rule applies to public holidays: a shift attributed to a public holiday earns the holiday 2x rate, even if it started the day before.
 - Duplicate employee IDs are flagged as potential fraud and escalated for review.
   - Two or more employee IDs are treated as one person if they share an ID number, a bank account or a tax number.
@@ -18,38 +19,33 @@
 - Hours are combined across all employee IDs of one person for weekly totals and breach risk, because splitting hours across two IDs hides a breach.
 - In `predictions.csv`, both employee IDs of a merged person get the same `will_breach` and `risk_score`.
 - Only the bank account and tax number columns of `payroll_details.csv` are read, in memory, to compare for duplicates. Their values are never written to any output, dashboard, export or notebook.
+- The in-progress week is derived from the last date in `shifts.csv` (currently Wed 2026-08-12, so the week starting Mon 2026-08-10), not from today's date. During testing the cutoff date can also be set by hand.
+- The cutoff day is not hardcoded. A later export, or a test, may use a cutoff later in the week.
+- A breach means more than 10 hours of overtime in the week, i.e. more than 55 total hours (45 ordinary plus 10 overtime). Strictly greater than, not greater than or equal to.
+- Sunday and public-holiday hours count toward the 10-hour overtime cap, and are paid at 2x. They count as normal hours in the totals; the 2x is a pay rate, not extra weight toward the cap.
+- Monday 2026-08-10 is a public holiday (National Women's Day, observed, from `public_holidays.csv`) and falls inside the in-progress week.
+- No meal break is deducted. Shift hours are the full time between clock-in and clock-out, because any meal break is assumed to be included in the shift and paid. The data has no break information (no break field, no deduction in the client's `weekly_summary.csv`, and no break notes).
+- New weekly exports are loaded by uploading the files in the dashboard (a Streamlit app on Streamlit Community Cloud), with no developer needed.
+- Prediction model (built in `data_modeling.ipynb`):
+  - One row per person (duplicate IDs merged) per week. The label is 1 if the person's attributed hours in a completed week are strictly over 55. Weeks 2 to 9 are used for training and week 10 (in progress) is predicted. Week 1 only provides history.
+  - The cutoff is stored as an offset from Monday (currently +2 days, from the last `shift_date`), and every training week is cut at the same point. "Hours so far" means shifts clocked in on or before that point, so Sunday-start shifts attributed to Monday and Wednesday-night shifts attributed to Thursday count as already worked.
+  - Model: standardised logistic regression with 7 features (hours so far, shifts so far, average weekly hours, average shifts per week, share of shifts over 11 hours, prior breaches, night pattern). History features use completed prior weeks only. Regularisation is chosen by an inner time-split inside the training weeks only.
+  - Evaluation uses an expanding window over test weeks 5 to 9, never random splits. Baselines B1 to B4 are scored on the same folds. If the model does not clearly beat B3 (higher pooled PR-AUC and better in at least 3 of 5 folds), B3 is used instead.
+  - Metrics: PR-AUC and precision and recall of the flagged list as the headline, and the Brier score to check that `risk_score` is an honest probability. Accuracy is not used. Results are also reported without the 5 merged people.
+  - `risk_score` is the predicted probability. `will_breach` is 1 when the score reaches the threshold that maximises F2 on the out-of-fold predictions. We are sticking with F2 for now and may revisit it. It flags 46 people (51 employee IDs) this week against about 13 expected breachers, with an out-of-fold precision of about 0.25 and recall of about 0.69. A stricter F1 threshold would flag about 14 names a week but miss about half of the breachers.
+  - The remaining shifts for Thursday to Sunday are not known (no roster), so the model learns them from the person's usual shifts per week and the shifts already worked.
+  - Missing clock-outs stay excluded in the model. Imputing the person's median shift length is only a sensitivity run.
+  - Site, role, supervisor notes, `weekly_summary.csv` and `payroll_details.csv` are not used as features.
 
 ## 2. Assumptions inferred
 
-_None recorded yet._
+- Weeks run Monday to Sunday.
+- Every `employee_id` in `employees.csv` gets a row in `predictions.csv`, including employees with no shifts in the in-progress week, because the README requires one row per employee.
+- Hours for a person are totalled across all sites, not per site. This follows from counting overlapping records and from combining duplicate IDs.
+- `weekly_summary.csv` is not used as the source of truth. Hours are recomputed from `shifts.csv`, and the summary is only used for comparison. It matches a plain recomputation exactly, but that includes its errors (missing clock-outs counted as 0, overlaps double-counted, no merging of duplicate IDs, weeks by clock-in date). Under our rules 122 of 2,124 employee-weeks differ from it.
+- Employees whose only shifts this week have no clock-out (E1182, E1094) show 0 hours so far, and are listed as open shifts for review.
 
 ## 3. Assumptions not yet decided
-
-### Time and week definition
-- Which week is "in progress": derived from the last date in `shifts.csv` (Wed 2026-08-12, so the week starting Mon 2026-08-10), not from today's date.
-- A later export may not end on a Wednesday, so the cutoff day should not be hardcoded.
-- Weeks run Monday to Sunday.
-
-### Breach definition
-- A breach means more than 10 hours of overtime in the week, i.e. more than 55 total hours (45 ordinary plus 10 overtime). Strictly greater than, not greater than or equal to.
-- Whether Sunday and public-holiday hours (paid at 2x) count toward the 10-hour overtime cap.
-- Monday 2026-08-10 is a public holiday (National Women's Day, observed) and falls inside the in-progress week.
-- Whether unpaid breaks should be deducted from shift durations (the data has no break information).
-
-### Data quality
-- 184 shifts have no clock-out time. Beyond excluding them, it's undecided whether to impute a typical shift length instead. `weekly_summary.csv` counts them as zero, which understates hours.
-- Two shifts' worth of missing clock-outs this week belong to employees (E1182, E1094) who have no other usable shift, so they would show 0 hours.
-- The greater-portion rule has a large effect. Counting by the week of the clock-in date gives 66 per-ID breach-weeks, and the greater-portion attribution gives 87, because it moves whole long shifts into the next week. If the checker's ground truth counts by clock-in date, our weekly totals will differ for some people.
-- Whether every employee in `employees.csv` must be predicted, including the 6 with no shifts and anyone no longer working.
-- `weekly_summary.csv` is not fully trusted: it matches a recomputation from `shifts.csv` exactly, but that includes its errors (missing clock-outs counted as 0, overlaps double-counted).
-- Hours for an employee are totalled across all sites, not per site.
-
-### Prediction
-- No roster exists for Thursday to Sunday, so how remaining hours are projected is undecided.
-- The naive baseline for comparison (e.g. "breaches if already over, or on pace to be").
-- Which metric to optimise (breach is rare, about 3.4% of employee-weeks, so accuracy is misleading).
-- How to evaluate honestly: test forward in time, not with random splits, since the same person appears across weeks.
-- How `risk_score` (0 to 1) is derived and what threshold turns it into `will_breach`.
 
 ### Supervisor notes
 - Notes cover only some shifts, so conclusions about where overtime is concentrated come from a subset.
@@ -64,4 +60,3 @@ _None recorded yet._
 
 ### Submission
 - The README says the repo must contain "four files" but lists three. The fourth is unclear.
-- How new weekly exports will be loaded without a developer (upload vs drop folder).
