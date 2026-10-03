@@ -24,6 +24,8 @@ Requirements for the final project only. Status is split into Done and Not done.
 ### Dashboard
 - [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see DEPLOY.md)
 - [x] Shows who goes over the 10-hour overtime cap by Sunday, ranked by risk, with hours so far, hours left and sites (built, runs locally)
+- [x] The list shows only people at 50% risk or higher, each with a Resolve button
+- [ ] TODO: the Resolve button does nothing yet (it only shows a message). Decide what resolving means (for example record who resolved it and when, and remove the person from the list) and build it
 - [ ] Says what to do about each person or site, specific to the data (partly: each person shows hours left and how many usual shifts that allows; no site-level advice yet)
 - [ ] Shows why the hours happened, based on the supervisors' notes
 
@@ -31,6 +33,11 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Show duplicate people flagged for escalation (both IDs, evidence "same ID number / bank account / tax number", severity), never showing bank or tax values
 - [x] Show overlapping shifts flagged as potential fraud (person, sites, overlap hours, High if different provinces)
 - [x] Wording is "potential" and "for review", not an accusation
+- [x] The "2 records, see Escalations" flag on a person's card is a link that jumps to that person under Escalations
+- [x] Overlapping shifts are shown as cards (person, severity, both sites and times side by side) so nothing needs sideways scrolling on a phone
+- [x] Each escalation has a Report button, and there is an Escalate all button, that open a pre-filled email to sitenumbersandnames@gmail.com (the app does not send anything itself)
+- [ ] TODO: confirm the real escalation email address (it is a placeholder in `src/report.py`) and decide whether reports should be sent from the app instead of opening an email draft
+- [ ] TODO: keep track of what has been reported (a reported or escalated state per item), so the same item is not reported twice
 
 ### Supervisor notes
 - [ ] Taxonomy of reasons for extra hours, including a "nothing useful" category
