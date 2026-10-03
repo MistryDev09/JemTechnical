@@ -124,7 +124,7 @@ def test_without_sites_the_dashboard_uses_site_ids(bundle):
 
 def test_without_holidays_hours_are_unchanged(bundle, full):
     res = run({k: v for k, v in bundle.items() if k != "public_holidays"})
-    assert (res.people.set_index("person_key").hours_so_far == full.people.set_index("person_key").hours_so_far).all()
+    assert res.people.set_index("person_key").hours_so_far.sort_index().equals(full.people.set_index("person_key").hours_so_far.sort_index())
 
 
 def test_usual_hours_still_to_come(full):
@@ -169,3 +169,20 @@ def test_the_will_breach_cut_off_is_the_f1_optimal_one(full):
     assert full.model["threshold"] == pytest.approx(0.2463, abs=1e-3)
     flagged = full.people[(full.people.will_breach == 1)]
     assert flagged.risk_score.min() >= full.model["threshold"] - 1e-9
+
+
+def _with_pattern(bundle, employee_id, pattern):
+    emp = bundle["employees"].copy()
+    emp.loc[emp.employee_id == employee_id, "shift_pattern"] = pattern
+    return {**bundle, "employees": emp}
+
+
+def test_the_bundled_data_has_no_shift_pattern_mismatches(full):
+    assert len(full.pattern_mismatches) == 0 and len(full.pattern_mismatches_current) == 0 and full.quality["pattern_mismatch"] == 0
+
+
+def test_an_overnight_shift_for_a_day_pattern_employee_is_flagged_without_changing_hours(bundle, full):
+    res = run(_with_pattern(bundle, "E1004", "day"))          # E1004 works nights
+    assert len(res.pattern_mismatches) == 36 and len(res.pattern_mismatches_current) == 2
+    assert set(res.pattern_mismatches.employee_id) == {"E1004"} and res.quality["pattern_mismatch"] == 36
+    assert res.people.set_index("person_key").hours_so_far.sort_index().equals(full.people.set_index("person_key").hours_so_far.sort_index())

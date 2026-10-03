@@ -3,7 +3,7 @@
 ## 1. Assumptions I made
 
 - Shifts with no clock-out time are excluded from the hours calculation. They are flagged, and open shifts in the in-progress week are shown in the dashboard.
-- A shift is overnight if its clock-out time is earlier than its clock-in time, and its duration is the time between them across midnight (+24h). This uses the times only, not `shift_pattern`.
+- A shift is overnight if its clock-out time is earlier than its clock-in time, and its duration is the time between them across midnight (+24h). `shift_pattern` validates this and does not change the hours: an overnight shift for an employee who is not on the night pattern is flagged for review (under Escalations) and its hours are still counted, with the greater-portion rule applied as usual. The reverse (night pattern, shift not overnight; 42 short night shifts in this data) is not flagged. Nothing is flagged when the pattern is missing or the employees file is not loaded. On the bundled data no shift is flagged: every one of the 1,010 overnight shifts is a night-pattern employee's and no day-pattern employee works overnight. Shifts with no clock-out are never judged and no clock-out time is made up.
 - Shifts with an empty or invalid clock-in or clock-out time (or identical clock-in and clock-out) are flagged and excluded from hours.
 - Shifts longer than 12 hours are flagged, because the maximum working day under South African law is 12 hours. They are still counted in the hours totals.
 - Greater-portion rule (as per South African law, supplied by me; the source was not independently verified): a shift that spans a calendar day boundary is attributed whole to the day on which the greater portion of the shift was worked.

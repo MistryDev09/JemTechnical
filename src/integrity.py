@@ -1,4 +1,4 @@
-"""Integrity flags: duplicate people, overlapping shifts and two provinces on one day. These only report; hours are never removed.
+"""Integrity flags: duplicate people, overlapping shifts, two provinces on one day and shifts that do not match the shift pattern. These only report; hours are never removed.
 
 Wording is deliberately "potential" and "for review": a flag is a reason to escalate, not a finding.
 Bank account and tax number values are compared in memory and never appear in any output.
@@ -121,3 +121,22 @@ def find_cross_province_days(segments, sites):
     g = d.groupby(["person_key", "attributed_date"]).agg(week_start=("week_start", "first"), sites=("site_id", "nunique"),
                                                          provinces=("province", "nunique")).reset_index()
     return g[g["provinces"] > 1][columns].reset_index(drop=True)
+
+
+def find_pattern_mismatches(shifts, employees):
+    """Overnight shifts (by the times) for employees whose shift_pattern is not "night".
+
+    `shifts` is the output of `hours.parse_shifts`. A clock-in 18:00 and clock-out 06:00 confirms a night-pattern employee; the same
+    shift for a day-pattern employee is flagged for review. Hours stay counted. Shifts with no clock-out are never judged (no clock-out
+    is made up), and nothing is flagged when the pattern is missing or there is no employees file. The reverse (night pattern, shift
+    not overnight) is deliberately not flagged.
+    """
+    columns = ["shift_id", "employee_id", "site_id", "shift_date", "clock_in_time", "clock_out_time", "shift_pattern", "hours"]
+    if employees is None or "shift_pattern" not in employees:
+        return pd.DataFrame(columns=columns)
+    pattern = employees.drop_duplicates("employee_id").set_index("employee_id")["shift_pattern"].astype("string").str.strip().str.lower()
+    d = shifts[~shifts["excluded"] & shifts["is_overnight"]].copy()
+    d["shift_pattern"] = d["employee_id"].map(pattern)
+    d = d[d["shift_pattern"].notna() & (d["shift_pattern"] != "night")]
+    d["hours"] = d["duration_hours"]
+    return d[columns].sort_values(["shift_date", "employee_id"]).reset_index(drop=True)

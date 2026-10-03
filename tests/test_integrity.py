@@ -2,7 +2,7 @@ import pandas as pd
 import pytest
 
 from src.hours import attribute_hours, parse_shifts
-from src.integrity import add_person_key, find_cross_province_days, find_duplicate_people, find_overlaps
+from src.integrity import add_person_key, find_cross_province_days, find_duplicate_people, find_overlaps, find_pattern_mismatches
 from src.loader import load_employees, load_payroll, load_shifts, load_sites
 
 SITES = pd.DataFrame({
@@ -186,3 +186,41 @@ def test_two_provinces_on_different_days_are_not_flagged():
 def test_no_province_information_gives_no_flags():
     seg = _segments(("E1", "ST-01", "2026-08-11", "06:00", "10:00"), ("E1", "ST-04", "2026-08-11", "14:00", "18:00"))
     assert find_cross_province_days(seg, SITES.drop(columns="province")).empty and find_cross_province_days(seg, None).empty
+
+
+def _patterns(**by_employee):
+    return pd.DataFrame({"employee_id": list(by_employee), "shift_pattern": list(by_employee.values())})
+
+
+NIGHT = ("E1", "ST-01", "2026-08-11", "18:00", "06:00")
+DAY = ("E1", "ST-01", "2026-08-11", "06:00", "15:00")
+
+
+def test_overnight_shift_for_a_night_pattern_employee_is_confirmed_not_flagged():
+    assert find_pattern_mismatches(shifts(NIGHT), _patterns(E1="night")).empty
+
+
+def test_overnight_shift_for_a_day_pattern_employee_is_flagged_and_keeps_its_hours():
+    out = find_pattern_mismatches(shifts(NIGHT), _patterns(E1="day"))
+    assert list(out.shift_id) == ["S0"] and out.shift_pattern.iloc[0] == "day" and out.hours.iloc[0] == 12
+    # flagging never changes the hours that are counted
+    seg = attribute_hours(shifts(NIGHT))
+    assert seg.hours.sum() == 12
+
+
+def test_a_day_shift_is_not_flagged_for_either_pattern_and_the_reverse_case_is_not_flagged():
+    assert find_pattern_mismatches(shifts(DAY), _patterns(E1="day")).empty
+    assert find_pattern_mismatches(shifts(DAY), _patterns(E1="night")).empty          # night pattern, not overnight: deliberately not flagged
+
+
+def test_pattern_check_ignores_case_spaces_missing_patterns_and_a_missing_employees_file():
+    assert len(find_pattern_mismatches(shifts(NIGHT), _patterns(E1=" Day "))) == 1
+    assert find_pattern_mismatches(shifts(NIGHT), _patterns(E1=None)).empty
+    assert find_pattern_mismatches(shifts(NIGHT), pd.DataFrame({"employee_id": ["E2"], "shift_pattern": ["day"]})).empty
+    assert find_pattern_mismatches(shifts(NIGHT), None).empty
+    assert find_pattern_mismatches(shifts(NIGHT), pd.DataFrame({"employee_id": ["E1"]})).empty
+
+
+def test_a_shift_with_no_clock_out_is_never_judged_or_made_up():
+    s = shifts(("E1", "ST-01", "2026-08-11", "18:00", ""))
+    assert s.excluded.all() and find_pattern_mismatches(s, _patterns(E1="day")).empty

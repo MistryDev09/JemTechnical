@@ -10,7 +10,7 @@ import pandas as pd
 
 from .forecast import CAP, MIN_WEEKS, forecast
 from .hours import attribute_hours, data_cutoff, parse_shifts, quality_report
-from .integrity import add_person_key, find_cross_province_days, find_duplicate_people, find_overlaps
+from .integrity import add_person_key, find_cross_province_days, find_duplicate_people, find_overlaps, find_pattern_mismatches
 from .notes import classify_notes
 from .validate import cross_check
 
@@ -43,6 +43,8 @@ class Result:
     site_labels: dict = field(default_factory=dict)
     n_weeks: int = 0
     escalated: pd.DataFrame | None = None        # people also escalated for duplicate records or double dipping this week, with the reason
+    pattern_mismatches: pd.DataFrame | None = None         # overnight shifts for employees not on the night pattern (hours still counted)
+    pattern_mismatches_current: pd.DataFrame | None = None  # the same, shifts this week
     reasons: pd.DataFrame | None = None          # supervisor notes joined to a person: person_key, shift_date, site_id, category, note, this_week
     note_classes: pd.DataFrame | None = None     # shift_id, category, note for every note (the note_classifications.csv columns)
 
@@ -187,6 +189,8 @@ def run(bundle):
         why_out[key] = "duplicate person"
     people["also_escalated_for"] = people["person_key"].map(why_out).fillna("")
     escalated = people.loc[people["also_escalated_for"] != "", ["person_key", "employee_ids", "name", "also_escalated_for", "risk_score", "will_breach"]].reset_index(drop=True)
+    mismatches = find_pattern_mismatches(sh, employees)
+    mismatches_now = mismatches[mismatches["shift_date"] >= current_week].reset_index(drop=True)
     open_shifts = sh.loc[open_mask, ["shift_id", "employee_id", "site_id", "shift_date", "clock_in_time", "clock_out_time"]].reset_index(drop=True)
 
     # --- why the hours happened: the supervisors' notes, sorted into reasons and attached to the person
@@ -214,7 +218,8 @@ def run(bundle):
     res.predicted_days = DAY_NAMES[offset + 1:]
     res.people, res.sites, res.predictions = people, sites_summary, predictions
     res.duplicates, res.overlaps, res.overlaps_current, res.open_shifts = dups, overlaps, overlaps_now, open_shifts
-    res.quality = quality_report(sh)
+    res.quality = {**quality_report(sh), "pattern_mismatch": len(mismatches)}
+    res.pattern_mismatches, res.pattern_mismatches_current = mismatches, mismatches_now
     res.site_labels = {s: _label(s, site_names) for s in set(sh["site_id"].dropna()) | set(site_names) | {x for lst in people["primary_sites"] for x in lst}}
     res.n_weeks = len(fc.weeks) if fc.weeks is not None else 0
     res.reasons, res.note_classes = reasons, note_classes

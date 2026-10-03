@@ -16,6 +16,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Flagged-list length decided: the F1-optimal cut-off (about 0.25), so `will_breach` flags about as many people as actually breach (23 employee IDs, 18 people, this week)
 - [x] Missing clock-outs and Sunday/holiday hours decided (excluded and flagged; Sunday and holiday hours count normally toward the cap)
 - [x] Improvement experiments on the model (`notebooks/data_modeling.ipynb` section 10): nothing clearly beats the shipped model
+- [x] Shift pattern validates overnight shifts: an overnight shift for an employee not on the night pattern is flagged under Escalations (hours still counted; 0 flagged on the bundled data)
 - [x] Results and drawbacks in one place: `docs/RESULTS.md`
 - [x] Cost analysis notebook (`notebooks/cost_analysis.ipynb`): the client's way of counting hours against ours, in money, per employee and in total (extra, not in the README)
 

@@ -74,6 +74,21 @@ def test_people_also_escalated_for_overlapping_shifts_have_a_tag_that_links_to_t
     assert "Also escalated: duplicate person" not in text                          # duplicates already carry the 2 records link
 
 
+def test_pattern_mismatch_block_is_hidden_on_the_bundled_data_and_shown_when_there_are_some():
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    assert "not on the night pattern" not in page_text(at)
+    emp = at.session_state["bundle"]["employees"].copy()
+    emp.loc[emp.employee_id == "E1004", "shift_pattern"] = "day"
+    at.session_state["bundle"] = {**at.session_state["bundle"], "employees": emp}
+    at.run()
+    text = page_text(at)
+    assert not at.exception and "not on the night pattern (for review)" in text
+    assert any("36 in all the data, 2 this week" in c.value for c in at.caption)
+    assert "Pattern: day" in text and "still counted" in text
+    assert len([b for b in at.button if b.key and b.key.startswith("resolve_pattern_")]) == 2
+    assert any(b.label == "Escalate all (20)" for b in at.button)             # 18 records + the 2 mismatches this week
+
+
 def test_there_is_no_email_pop_up_any_more():
     text = page_text(AppTest.from_file(APP, default_timeout=180).run())
     assert "mailto:" not in text and "sitenumbersandnames" not in text and ">Report</a>" not in text

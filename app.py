@@ -225,6 +225,7 @@ def tiles(res):
     sites_hit = len({s for lst in high["sites_worked"] for s in lst})
     dup_items = 0 if res.duplicates is None else len(res.duplicates)
     over_items = 0 if res.overlaps_current is None else len(res.overlaps_current)
+    over_items += 0 if res.pattern_mismatches_current is None else len(res.pattern_mismatches_current)
     open_n = 0 if res.open_shifts is None else len(res.open_shifts)
     first = "went over the cap" if res.status == "week_complete" else ("at 50%+ risk of going over" if res.status == "model" else "already over the cap")
     items = [("red" if len(high) else "", len(high), f"people {first}"),
@@ -323,13 +324,15 @@ def sites_section(res):
 def escalations_section(res):
     dups = res.duplicates if res.duplicates is not None else []
     over = res.overlaps_current if res.overlaps_current is not None else []
-    if not len(dups) and not len(over) and (res.overlaps is None or res.overlaps.empty):
+    mism_all = res.pattern_mismatches if res.pattern_mismatches is not None else []
+    mism = res.pattern_mismatches_current if res.pattern_mismatches_current is not None else []
+    if not len(dups) and not len(over) and (res.overlaps is None or res.overlaps.empty) and not len(mism_all):
         return
     names = res.people.set_index("person_key")["name"]
     labels = res.site_labels
     st.subheader("Escalations")
     st.caption("These are indicators for review, not findings. Bank and tax numbers are compared behind the scenes and never shown.")
-    total = len(dups) + len(over)
+    total = len(dups) + len(over) + len(mism)
     if total and st.button(f"Escalate all ({total})", type="primary", key="escalate_all"):
         notify(f"resolving all {total} escalations")
     if len(dups):
@@ -365,6 +368,19 @@ def escalations_section(res):
                 f'<div class="leg"><b>{esc(labels.get(r.site_b, r.site_b))}</b>{esc(span(r.start_b, r.end_b))}</div></div></div>', unsafe_allow_html=True)
             if st.button("Resolve", key=f"resolve_overlap_{i}_{r.shift_id_a}_{r.shift_id_b}"):
                 notify("resolving a shift overlap", who)
+    if len(mism_all):
+        emp_names = {e: row.name for row in res.people.itertuples() for e in row.employee_ids}
+        st.markdown("**Overnight shifts for people who are not on the night pattern (for review)**")
+        st.caption(f"The clock times say the shift ran overnight, but the employee's shift pattern is not night. {len(mism_all)} in all the data, {len(mism)} this week"
+                   + (f" (showing {MAX_OVERLAPS})." if len(mism) > MAX_OVERLAPS else ". Their hours are still counted."))
+        for r in mism.head(MAX_OVERLAPS).itertuples():
+            who = emp_names.get(r.employee_id, r.employee_id)
+            st.markdown(
+                f'<div class="card flag"><div class="top"><span class="name">{esc(who)}</span><span class="tag rev">Pattern: {esc(r.shift_pattern)}</span></div>'
+                f'<div class="sub">{esc(r.employee_id)} · {esc(labels.get(r.site_id, r.site_id))} · {r.shift_date:%a %d %b}: in {esc(r.clock_in_time)}, out {esc(r.clock_out_time)} '
+                f'(next day) · {r.hours:.1f} h, still counted</div></div>', unsafe_allow_html=True)
+            if st.button("Resolve", key=f"resolve_pattern_{r.shift_id}"):
+                notify("resolving a shift that does not match the shift pattern", who)
 
 
 def main():
