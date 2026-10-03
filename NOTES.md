@@ -1,5 +1,7 @@
 # NOTES
 
+**Live dashboard:** https://jemtechnical-lf2bceqkfzrdoab2mdyfvi.streamlit.app/ — I invite you to open the site on your phone or laptop. (Free hosting sleeps when it has not been used for a while; if you see a "wake up" button, press it and wait about a minute.)
+
 **Video (12 minutes(explaination of length in the first 30 seconds)):** https://www.loom.com/share/3668b148cb5f4628bd34b8765d69b255
 
 ## 1. Assumptions about the data
