@@ -3,7 +3,6 @@
 | File | What it is |
 |---|---|
 | [`assumptions.md`](assumptions.md) | Every assumption made, grouped as made / inferred / not yet decided |
-| [`VIDEO_SCRIPT.md`](VIDEO_SCRIPT.md) | The timed script for the 5-minute video |
 | [`RESULTS.md`](RESULTS.md) | The results found in testing and the drawbacks, compact |
 | [`REQUIREMENTS.md`](REQUIREMENTS.md) | What the final project needs, split into done and not done |
 | [`DEPLOY.md`](DEPLOY.md) | Putting the dashboard on Streamlit Community Cloud, and running it locally |
