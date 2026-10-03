@@ -1,5 +1,7 @@
 # NOTES
 
+**Video (12 minutes(explaination of length in the first 30 seconds)):** https://www.loom.com/share/3668b148cb5f4628bd34b8765d69b255
+
 ## 1. Assumptions about the data
 Not repeated, because the README gives them: Monday to Sunday weeks, the in-progress week is the one predicted, a breach is over 55 hours, pay 1.5x and 2x. Full list: `docs/assumptions.md`; results and drawbacks: `docs/RESULTS.md`.
 - **Greater-portion rule:** I used it to decide which day, and so which week and pay rate, a shift's hours lie in.  The rule was assumed from "Basic Conditions of Employment Act". It matters: it raises breach-weeks from 66 (counting by clock-in date) to 87.
