@@ -54,3 +54,13 @@ def content_hash(bundle):
         h.update("|".join(map(str, df.columns)).encode())
         h.update(pd.util.hash_pandas_object(df, index=False).to_numpy().tobytes())
     return h.hexdigest()
+
+
+def code_version(folder=None):
+    """Fingerprint of the source files. Part of the cache key, so a result computed by older code is never reused."""
+    folder = Path(folder) if folder else Path(__file__).resolve().parent
+    h = hashlib.sha256()
+    for path in sorted(folder.glob("*.py")):
+        h.update(path.name.encode())
+        h.update(path.read_bytes())
+    return h.hexdigest()[:12]

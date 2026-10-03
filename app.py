@@ -3,7 +3,7 @@ import html
 
 import streamlit as st
 
-from src.dataset import apply_upload, content_hash, load_bundled
+from src.dataset import apply_upload, code_version, content_hash, load_bundled
 from src.export import predictions_csv
 from src.forecast import CAP
 from src.pipeline import run
@@ -70,8 +70,9 @@ def join_days(days):
     return short[0] if len(short) == 1 else ", ".join(short[:-1]) + " and " + short[-1]
 
 
-@st.cache_data(show_spinner="Checking the data and running the model...")
-def cached_run(data_hash, _bundle):
+@st.cache_data(show_spinner="Checking the data and running the model...", max_entries=8)
+def cached_run(data_hash, version, _bundle):
+    # `version` is the fingerprint of the source files: after a new deploy an old cached result is not reused
     return run(_bundle)
 
 
@@ -105,8 +106,9 @@ def pattern_note(p):
     if p.hours_so_far > CAP:
         return f"Already over the {CAP}-hour cap by {p.hours_so_far - CAP:.1f} hours."
     history = ""
-    if p.past_breaches == p.past_breaches and p.avg_weekly_hours == p.avg_weekly_hours:       # not NaN
-        history = f" The risk comes from long weeks: an average of {p.avg_weekly_hours:.0f} h a week and {int(p.past_breaches)} past week{'s' if p.past_breaches != 1 else ''} over {CAP}."
+    past, avg = getattr(p, "past_breaches", float("nan")), getattr(p, "avg_weekly_hours", float("nan"))
+    if past == past and avg == avg:       # neither is NaN
+        history = f" The risk comes from long weeks: an average of {avg:.0f} h a week and {int(past)} past week{'s' if past != 1 else ''} over {CAP}."
     if p.usual_shifts_left < 0.05:
         return (f"Has already worked a usual number of shifts this week, so no more usual hours are expected. "
                 f"Any extra shift would use up the {p.hours_left:.1f} h left before {CAP}.{history}")
@@ -312,7 +314,7 @@ def main():
     except ValueError as exc:
         st.error(f"The bundled data could not be loaded: {exc}")
         return
-    res = cached_run(content_hash(st.session_state.bundle), st.session_state.bundle)
+    res = cached_run(content_hash(st.session_state.bundle), code_version(), st.session_state.bundle)
 
     if res.cutoff is not None:
         line = f"Data up to {res.cutoff:%a %d %b %Y} · week of {res.week_start:%a %d %b}"

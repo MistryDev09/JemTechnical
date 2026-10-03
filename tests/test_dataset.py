@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.dataset import apply_upload, content_hash, load_bundled
+from src.dataset import apply_upload, code_version, content_hash, load_bundled
 
 
 def test_bundled_data_loads_every_used_file_and_payroll_is_minimal():
@@ -47,3 +47,12 @@ def test_content_hash_changes_with_the_data():
     assert content_hash(bundle) == content_hash({k: v.copy() for k, v in bundle.items()})
     changed = apply_upload(bundle, [("sites", bundle["sites"].iloc[:3], "overwrite")])
     assert content_hash(changed) != content_hash(bundle)
+
+
+def test_code_version_changes_when_the_source_changes(tmp_path):
+    (tmp_path / "a.py").write_text("x = 1\n")
+    before = code_version(tmp_path)
+    assert before == code_version(tmp_path) and len(before) == 12
+    (tmp_path / "a.py").write_text("x = 2\n")
+    assert code_version(tmp_path) != before
+    assert code_version() == code_version()                  # the real src folder is stable between calls
