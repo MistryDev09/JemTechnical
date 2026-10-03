@@ -1,0 +1,2118 @@
+shift_id,logged_by,note,category,pile
+S100737,SUP-16,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S106900,SUP-23,client signed for the extra hrs but real reason is relief no show again,relief_no_show,operational
+S108361,SUP-17,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S100877,SUP-15,"generator fault, stayed to monitor",equipment_failure,operational
+S108162,SUP-22,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S102786,SUP-15,Covering for Mahlangu - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S107007,SUP-14,,nothing_useful,no_info
+S106106,SUP-16,shift handover delayed by 30 min,late_handover,operational
+S106463,SUP-21,double shift because relief never pitched,relief_no_show,operational
+S102332,SUP-14,double shift because relief never pitched,relief_no_show,operational
+S108056,SUP-16,Nexxt shift guuard did not pitch. Had to cover.,relief_no_show,operational
+S103439,SUP-16,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S100571,SUP-04,relief no show AGAIN,relief_no_show,operational
+S101332,SUP-03,"handover late again, keys missing",late_handover,operational
+S107753,SUP-19,"no replacement sent, ngicela sort this out..",relief_no_show,operational
+S106253,SUP-06,Client requested deep clean before the audit - approved,client_requested,client
+S100168,SUP-12,all fine,nothing_useful,no_info
+S104252,SUP-12,sharp,nothing_useful,no_info
+S103008,SUP-10,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105453,SUP-23,akukho lutho,nothing_useful,no_info
+S106113,SUP-20,etra hours approved by client for the event setup,client_requested,client
+S106907,SUP-14,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S106876,SUP-09,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105345,SUP-20,"next shift akafikanga, ngihlale kuze kube 06h00",relief_no_show,operational
+S106814,SUP-01,"Mabaso didnt come in, covered the post",colleague_no_show,operational
+S109082,SUP-16,"hanodver late again, keys missing",late_handover,operational
+S107738,SUP-16,"waited 50 min for handover, OB book not signed",late_handover,operational
+S107339,SUP-08,"additional cover requested by site manager, signed off",client_requested,client
+S100205,SUP-10,no issues on site,nothing_useful,no_info
+S108984,SUP-21,Covering for Pillay - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S104765,SUP-01,"waited 50 min for handover, ob book not signed",late_handover,operational
+S102055,SUP-11,"covering Wyk post, no show no call",colleague_no_show,operational
+S101825,SUP-17,"late handover, waiting on paperwork",late_handover,operational
+S102559,SUP-21,no incidents,nothing_useful,no_info
+S106334,SUP-22,Client asked for extra patrol aftter the break-in Tuesday,client_requested,client
+S101061,SUP-05,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S108139,SUP-06,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S106859,SUP-11,fine,nothing_useful,no_info
+S103877,SUP-11,sharp,nothing_useful,no_info
+S103656,SUP-13,"DOUBLE DUTY TODAY, FOURIE ON FAMILY RESPONSIBILITY LEAVE",colleague_sick_or_leave,absence_excused_or_unclear
+S105093,SUP-16,"client asked us to stay for the delivery, ok'd by centre mgmt..",client_requested,client
+S105680,SUP-09,"client wanted extra man on the gate for the event, approved",client_requested,client
+S101121,SUP-11,niks om te rapporteer nie,nothing_useful,no_info
+S108690,SUP-11,no incidents,nothing_useful,no_info
+S105807,SUP-24,klient het ekstra ure gevra vir stockake,client_requested,client
+S105217,SUP-11,shift handover delayed by 25 min,late_handover,operational
+S105371,SUP-03,ok,nothing_useful,no_info
+S106224,SUP-09,"gedek vir Adams, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S108070,SUP-07,stood in for Radebe,stood_in_unspecified,absence_excused_or_unclear
+S104308,SUP-13,Next shift guard did not pitch. Had to cover,relief_no_show,operational
+S105062,SUP-06,quiet shift,nothing_useful,no_info
+S101434,SUP-24,"scrubber broke down, had to do the floor manually..",equipment_failure,operational
+S103671,SUP-19,Covering for September - booked off sick..,colleague_sick_or_leave,absence_excused_or_unclear
+S108354,SUP-03,"gedek vir Tshabaala, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S108267,SUP-19,Centre mgr requested additionaal cover for stocktake,client_requested,client
+S108389,SUP-20,"requested by centre management for load in, signed off",client_requested,client
+S103433,SUP-08,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S106978,SUP-05,"next shift akafikanga, ngihlale kuze kube six",relief_no_show,operational
+S106245,SUP-07,sharp,nothing_useful,no_info
+S106878,SUP-20,"September didt come in, covered the post",colleague_no_show,operational
+S104428,SUP-09,"stocktake ran over, client asked us to remain, thhey know they pay for it",client_requested,client
+S102342,SUP-18,.,nothing_useful,no_info
+S105877,SUP-01,all good,nothing_useful,no_info
+S106936,SUP-21,ok,nothing_useful,no_info
+S107938,SUP-03,"late handover, waiting on paperwork",late_handover,operational
+S108000,SUP-21,"handover late agn, keys missing..",late_handover,operational
+S103399,SUP-10,ntr,nothing_useful,no_info
+S101233,SUP-24,"took Jacobs shift as well, 2 posts 1 guard",colleague_no_show,operational
+S101223,SUP-11,Client requested deep clean before the audit - approved,client_requested,client
+S105661,SUP-07,double shift because relief never pitched,relief_no_show,operational
+S108187,SUP-15,"oorhandiging was laat, gewag vir sletuels !",late_handover,operational
+S106210,SUP-14,all good,nothing_useful,no_info
+S104295,SUP-01,"machine down again, took twice as long",equipment_failure,operational
+S101088,SUP-18,"scrubber broke down, had to do the floor manualyl",equipment_failure,operational
+S104328,SUP-07,Centre manager requested additional cover for stocktake,client_requested,client
+S101143,SUP-07,extra hours approved by client for the event seup,client_requested,client
+S107378,SUP-09,,nothing_useful,no_info
+S109333,SUP-24,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S106514,SUP-18,shift handover delayed by 25 min,late_handover,operational
+S101642,SUP-18,Client requested deep clean before the audit - approved,client_requested,client
+S100593,SUP-23,"took fourie shift as wll, 2 posts 1 guard",colleague_no_show,operational
+S105147,SUP-14,"client says stay till 06:00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S105777,SUP-15,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S103083,SUP-03,"still on site, relief was suppose to come 0600",relief_no_show,operational
+S107881,SUP-15,Client requested deep clean before the audit - approved,client_requested,client
+S100164,SUP-14,"uFouire akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S106903,SUP-23,relief no show AGAIN,relief_no_show,operational
+S106247,SUP-01,next shift guard did not pitch. had to cover,relief_no_show,operational
+S108878,SUP-18,"handover late again, keys missing",late_handover,operational
+S102888,SUP-07,"double duty today, Mahlangu on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S107172,SUP-20,nothing to report,nothing_useful,no_info
+S105907,SUP-15,stood in for Mthembu,stood_in_unspecified,absence_excused_or_unclear
+S107272,SUP-13,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S107719,SUP-21,Covered for Motaung again - 3rd time this month,colleague_no_show,operational
+S107751,SUP-07,"September didnt come in, covered the post !",colleague_no_show,operational
+S100406,SUP-01,as per normal,nothing_useful,no_info
+S101019,SUP-02,"late handover, waiting on paperwork",late_handover,operational
+S104171,SUP-14,"requested by centre management for load in, signed off",client_requested,client
+S100329,SUP-18,client signed for the extra hours but real reason is relief no show again,relief_no_show,operational
+S104084,SUP-24,"late handover, waiting on paperwork",late_handover,operational
+S105455,SUP-20,Covering for Mahlangu - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S104307,SUP-01,"requested by centre management for load in, signed off",client_requested,client
+S107353,SUP-05,nothing to report,nothing_useful,no_info
+S105081,SUP-21,"control room says relief coming, nobody came",relief_no_show,operational
+S104524,SUP-09,all quiet,nothing_useful,no_info
+S106429,SUP-08,shift handover delayed by 30 min,late_handover,operational
+S103630,SUP-21,"Botha absent, took her rounds as well",colleague_no_show,operational
+S101912,SUP-23,"covering khumalo post, no show no call",colleague_no_show,operational
+S106449,SUP-06,client requested deep clean before the audit - approved !,client_requested,client
+S102915,SUP-10,"worked through, Baloyi at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S108089,SUP-24,"conntrol room says relief coming, nobody came",relief_no_show,operational
+S100063,SUP-19,"Botha didnt come in, covered the post",colleague_no_show,operational
+S109151,SUP-07,no incidents,nothing_useful,no_info
+S105810,SUP-09,covered for mauel again - 3rd time this month,colleague_no_show,operational
+S100324,SUP-13,"still on site, relief was suppose to come 06:00",relief_no_show,operational
+S108372,SUP-11,"worked through, Sibiya at the clinic..",colleague_sick_or_leave,absence_excused_or_unclear
+S104893,SUP-01,"waited 20 min for handover, OB book not signed",late_handover,operational
+S106412,SUP-05,"uTshabalala akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S106153,SUP-04,stood in for Pillay..,stood_in_unspecified,absence_excused_or_unclear
+S107045,SUP-24,relief no show AGAIN,relief_no_show,operational
+S104802,SUP-11,"extra patrol per client email, approved by office",client_requested,client
+S108282,SUP-13,klient het ekstra ure gevra vir stocktake,client_requested,client
+S103468,SUP-03,"waited 25 min for handover, OB book not signed",late_handover,operational
+S100592,SUP-24,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S104639,SUP-21,"additional cover requested by site mgr, signed off",client_requested,client
+S106391,SUP-24,akukho lutho,nothing_useful,no_info
+S102310,SUP-19,.,nothing_useful,no_info
+S108259,SUP-07,"gate motor failed, manned it by hand till 6",equipment_failure,operational
+S107682,SUP-21,-,nothing_useful,no_info
+S106087,SUP-01,"relief only arrived 06h00, stayed until then",relief_no_show,operational
+S101617,SUP-08,,nothing_useful,no_info
+S103563,SUP-21,sharp,nothing_useful,no_info
+S107432,SUP-11,ntr,nothing_useful,no_info
+S105979,SUP-12,fine,nothing_useful,no_info
+S107340,SUP-23,Covering for Mahlangu - bookked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S103376,SUP-16,"client wanted extra man on the gate for the event, approved",client_requested,client
+S107293,SUP-17,"relief never arrived, stayed on till 6",relief_no_show,operational
+S100954,SUP-23,ok,nothing_useful,no_info
+S101549,SUP-24,"handover late agn, keys missing",late_handover,operational
+S100624,SUP-01,akukho lutho,nothing_useful,no_info
+S100926,SUP-11,"covering Hendricks pos, no show no call",colleague_no_show,operational
+S103528,SUP-12,Centre mgr requested additional cover for stocktake,client_requested,client
+S107844,SUP-02,Clint requested deep clean before the audit - approved,client_requested,client
+S106119,SUP-09,"uMolefe akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S101874,SUP-07,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S107803,SUP-14,fine,nothing_useful,no_info
+S105335,SUP-02,client asked for extra patrol after the break-in tueesday,client_requested,client
+S107833,SUP-21,"oorhandiging was laa, gewag vir sleutels",late_handover,operational
+S108358,SUP-02,"took Motaung shift as well, 2 posts 1 guard",colleague_no_show,operational
+S101505,SUP-13,,nothing_useful,no_info
+S106236,SUP-03,extra hours approved by clent for the event setup,client_requested,client
+S101047,SUP-10,Centre manager requested additional cover for stocktake,client_requested,client
+S109288,SUP-17,all quiet,nothing_useful,no_info
+S104123,SUP-24,nothing to report,nothing_useful,no_info
+S108613,SUP-13,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S103780,SUP-14,nothing to report,nothing_useful,no_info
+S109338,SUP-16,relief no show again,relief_no_show,operational
+S106991,SUP-04,"client asked us to stay for the delivery, ok'd by cnetre mgmt",client_requested,client
+S108913,SUP-23,double shift bc relief never pitched,relief_no_show,operational
+S101184,SUP-05,shift handover delayed by 25 min,late_handover,operational
+S101387,SUP-06,"gedek vir Adaams, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S108219,SUP-20,nothing to report,nothing_useful,no_info
+S101599,SUP-17,client signed for the extra hours but real reason is relief no show agin,relief_no_show,operational
+S106262,SUP-03,"covering Molefe post, no sow no call..",colleague_no_show,operational
+S102769,SUP-02,,nothing_useful,no_info
+S109299,SUP-01,"Hendricks didnt come in, coevred the post",colleague_no_show,operational
+S101576,SUP-19,"waited 30 min for handover, OB book not signed !",late_handover,operational
+S104408,SUP-06,"ugNcobo akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S102020,SUP-24,"took Wyk shift as well, 2 posts 1 guard",colleague_no_show,operational
+S105189,SUP-05,CLIENT REQUESTED DEEP CLEAN BEFORE THE AUDIT - APPROVED,client_requested,client
+S101875,SUP-14,shift handover delayed by 30 min,late_handover,operational
+S103448,SUP-19,"Mokoena didnt come in, covered the pst",colleague_no_show,operational
+S104440,SUP-23,"waited for relief, nobody came through",relief_no_show,operational
+S103026,SUP-01,relief no shwo AGAIN,relief_no_show,operational
+S100892,SUP-02,"uJacobs akezanga namhlanje, ngimele yena..",colleague_no_show,operational
+S107877,SUP-02,shift handover delayed by 45 min,late_handover,operational
+S108492,SUP-04,fine,nothing_useful,no_info
+S107113,SUP-15,"handover late again, keys missing",late_handover,operational
+S104838,SUP-06,"cllient says stay till 06h00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S104527,SUP-12,Covreed for Mabaso agn - 3rd time this month,colleague_no_show,operational
+S106371,SUP-17,"double duty today, Dlamini on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S108108,SUP-21,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S102956,SUP-08,"late handover, waiting on paperwork..",late_handover,operational
+S101752,SUP-18,"gedek vir Maluleke, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S103686,SUP-02,"relief never arrived, stayed on till 06h00",relief_no_show,operational
+S104188,SUP-09,"TOOK SIBIYA SHIFT AS WELL, 2 POSTS 1 GUARD",colleague_no_show,operational
+S107471,SUP-23,.,nothing_useful,no_info
+S107963,SUP-06,"Sithole absent, took her rounds as well..",colleague_no_show,operational
+S101906,SUP-14,"scrubber broke down, had to do the flooor manually",equipment_failure,operational
+S102383,SUP-21,"client wanted extra man on the gate for the event, appoved",client_requested,client
+S104172,SUP-22,"generator fault, stayed to monitor",equipment_failure,operational
+S108025,SUP-22,"reliief only arrived 06:00, stayed until then",relief_no_show,operational
+S109329,SUP-17,"client says stay till 6am, dont kow if office approved",client_unconfirmed,client_unconfirmed
+S103063,SUP-22,"took Wyk shift as well, 2 posts 1 guard",colleague_no_show,operational
+S100422,SUP-10,mavuso off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107743,SUP-12,"gedek vir Khumalo, siek gemeld !",colleague_sick_or_leave,absence_excused_or_unclear
+S100921,SUP-14,as per normal,nothing_useful,no_info
+S108442,SUP-08,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S107824,SUP-17,Centre manager requested additional cover for stocktake,client_requested,client
+S106793,SUP-07,client signed for the extra hours but real reason is relief no show agn..,relief_no_show,operational
+S101513,SUP-06,"TOOK BOTHA SHIFT AS WELL, 2 POSTS 1 GUARD",colleague_no_show,operational
+S102046,SUP-10,"client wanted extra man on the gate for the event, approved",client_requested,client
+S108952,SUP-09,"handover late again, keys missign",late_handover,operational
+S105999,SUP-09,stood in for Ndlovu,stood_in_unspecified,absence_excused_or_unclear
+S103398,SUP-12,"control room syas relief coming, nobody came",relief_no_show,operational
+S102032,SUP-22,"machine down again, took twice as long..",equipment_failure,operational
+S108170,SUP-09,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S103186,SUP-23,"waited 45 min for handover, ob book not signed",late_handover,operational
+S103258,SUP-02,,nothing_useful,no_info
+S102514,SUP-09,"maluleke absent, took her rounds as well",colleague_no_show,operational
+S101242,SUP-18,extra hours approved by cliennt for the event setup,client_requested,client
+S103855,SUP-02,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S107720,SUP-23,"machine down again, took twce as long",equipment_failure,operational
+S104067,SUP-21,sharp,nothing_useful,no_info
+S105344,SUP-12,"covering Mokoena post, no show no call",colleague_no_show,operational
+S100153,SUP-13,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S100195,SUP-09,"additional cover requuested by site maanger, signed off",client_requested,client
+S100504,SUP-21,quiet shift,nothing_useful,no_info
+S107445,SUP-20,"toko Fourie shift as well, 2 posts 1 guard",colleague_no_show,operational
+S105589,SUP-21,extra hours approoved by clinet for the event setup,client_requested,client
+S104419,SUP-11,shift handover delayed by 25 min !,late_handover,operational
+S107473,SUP-05,"wroked through, naidoo at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S101083,SUP-04,quiet shift,nothing_useful,no_info
+S100377,SUP-08,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S102826,SUP-22,,nothing_useful,no_info
+S100391,SUP-14,"aflos het nie opgedaag nie, moes aabnly",relief_no_show,operational
+S108328,SUP-03,"covering Jacobs post, no show no call",colleague_no_show,operational
+S100618,SUP-01,nothing to report,nothing_useful,no_info
+S107742,SUP-23,"control room says relief coming, nobdoy came",relief_no_show,operational
+S104637,SUP-18,extra hours approved by client for the event setup,client_requested,client
+S100893,SUP-15,"buffer machine kaput, did the floor by hand..",equipment_failure,operational
+S104125,SUP-15,"waited for relief, nobody came through",relief_no_show,operational
+S103628,SUP-09,extra hrs approved by client for the event setup,client_requested,client
+S106131,SUP-09,extra hrs approved by client for the event setup,client_requested,client
+S107763,SUP-18,no incidents,nothing_useful,no_info
+S107745,SUP-07,"requested by centre management for load in, signed off !",client_requested,client
+S106445,SUP-01,no relief. stayed. someone must please sort the roster..,relief_no_show,operational
+S106151,SUP-14,shift handover delayed by 50 min,late_handover,operational
+S103016,SUP-14,ok,nothing_useful,no_info
+S104630,SUP-06,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S104543,SUP-06,exra hours approved by client for the event setup,client_requested,client
+S104784,SUP-09,"machine down agn, took twice as long..",equipment_failure,operational
+S101584,SUP-13,Client requested deep clean before the audit - approved,client_requested,client
+S107058,SUP-21,"control room says relief coming, nobody came",relief_no_show,operational
+S100599,SUP-15,"double duty today, jacobs on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S106491,SUP-23,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S108623,SUP-20,"nxt shift akafikanga, ngihlale kuze kube 0600",relief_no_show,operational
+S108587,SUP-10,"worked through, september at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S107327,SUP-14,no relief. staye. someone must pleease sort the roster !,relief_no_show,operational
+S109285,SUP-23,shift handover delayed by 30 min,late_handover,operational
+S104563,SUP-11,shift handover delayed by 30 min,late_handover,operational
+S101903,SUP-24,no incidents,nothing_useful,no_info
+S104534,SUP-21,"took Wyk shift as well, 2 posts 1 guard..",colleague_no_show,operational
+S100693,SUP-04,"handover late agn, keys missing !",late_handover,operational
+S102396,SUP-03,"next shift akafikanga, ngihlale kuze kube 06h00",relief_no_show,operational
+S108862,SUP-20,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S106564,SUP-20,centre manager requested additional cover for stocktake,client_requested,client
+S101591,SUP-23,"uAdams akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S107632,SUP-12,shift handover delayed by 40 min,late_handover,operational
+S107123,SUP-21,"oorhandiging was laat, geewag vir sleutels",late_handover,operational
+S100716,SUP-24,Botha off sick. again. covered,colleague_sick_or_leave,absence_excused_or_unclear
+S106552,SUP-23,Covering for Khumalo - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S108889,SUP-22,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S100160,SUP-15,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S108113,SUP-17,"client wanted extra man on the gate for the event, approved",client_requested,client
+S104315,SUP-11,Covered for Zulu agn - 3rd time this month,colleague_no_show,operational
+S100588,SUP-19,"oorhandiging was laat, gewag vir sletuels",late_handover,operational
+S106213,SUP-03,"Radebe didnt come in, covered the post",colleague_no_show,operational
+S102110,SUP-08,"client says stay till 0600, dont know if office approved",client_unconfirmed,client_unconfirmed
+S103965,SUP-18,"Mavuso didnt come in, covered the post",colleague_no_show,operational
+S102765,SUP-19,"buffer mcahine kaput, did the floor by hand..",equipment_failure,operational
+S102065,SUP-05,"CLIENT ASKED US TO STAY FOR THE DELIVERY, OK'D BY CENTRE MGMT",client_requested,client
+S108797,SUP-24,Client requested deep clean before the audit - approved,client_requested,client
+S100570,SUP-21,no incidents,nothing_useful,no_info
+S106130,SUP-07,extra hours approved by client for the event setup,client_requested,client
+S105900,SUP-07,"covering Maluleke post, no show no call",colleague_no_show,operational
+S100159,SUP-14,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S107412,SUP-06,Client requested deep clean before the audit - approved,client_requested,client
+S104919,SUP-11,double shift bc relief never pitched,relief_no_show,operational
+S104519,SUP-22,"SCRUBBER BROKE DOWN, HAD TO DO THE FLOOR MANUALLY",equipment_failure,operational
+S104625,SUP-05,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S104230,SUP-07,"HENDRICKS DIDNT COME IN, COVERED THE POST",colleague_no_show,operational
+S107710,SUP-03,"buffer machine kaput, did the floor by hand..",equipment_failure,operational
+S107512,SUP-05,no issues on site,nothing_useful,no_info
+S107337,SUP-23,next shift guard did not pitch. had to cover.,relief_no_show,operational
+S109128,SUP-13,sharp,nothing_useful,no_info
+S104122,SUP-19,-,nothing_useful,no_info
+S100731,SUP-17,"late handover, waiting on paperwork",late_handover,operational
+S107041,SUP-02,"client says stay till 0600, dont know if offcie approved",client_unconfirmed,client_unconfirmed
+S107057,SUP-19,no incidents,nothing_useful,no_info
+S108017,SUP-19,"relief only arrived six, stayed until thhen",relief_no_show,operational
+S100815,SUP-12,,nothing_useful,no_info
+S105108,SUP-15,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S104091,SUP-21,"double duty today, Ngcobo on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S105998,SUP-24,sharp,nothing_useful,no_info
+S106138,SUP-20,"relief only arrived 06:00, stayed until then",relief_no_show,operational
+S103597,SUP-17,"covering Molefe post, no show no call..",colleague_no_show,operational
+S107765,SUP-21,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S102732,SUP-06,stood in for Khumalo,stood_in_unspecified,absence_excused_or_unclear
+S100013,SUP-22,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S107891,SUP-17,"covering Radebe post, no show no call",colleague_no_show,operational
+S104320,SUP-19,client signed for the extra hrs but real reason is relief no show again,relief_no_show,operational
+S103450,SUP-11,"client wanted extra man on the gate for the event, approved",client_requested,client
+S105833,SUP-19,Centre manager requested additional cover for stocktake..,client_requested,client
+S107430,SUP-23,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S105324,SUP-11,"waited 20 min for handover, OB book not signed",late_handover,operational
+S101068,SUP-18,"mavuso didnt come in, covered the post",colleague_no_show,operational
+S103089,SUP-21,"took Mavuso shift as well, 2 posts 1 guard",colleague_no_show,operational
+S106346,SUP-24,"CLIET SAYS STAY TILL 0600, DONT KNOW IF OFFICE APPROVED",client_unconfirmed,client_unconfirmed
+S100845,SUP-07,,nothing_useful,no_info
+S101082,SUP-20,-,nothing_useful,no_info
+S102397,SUP-12,"relief oly arrived six, stayed until then",relief_no_show,operational
+S101577,SUP-17,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S103386,SUP-03,akukho lutho,nothing_useful,no_info
+S100261,SUP-07,"extra patrol per client email, approved by office",client_requested,client
+S108560,SUP-16,"Motaung absent, took her rounds as well",colleague_no_show,operational
+S100346,SUP-20,"gate motor faled, manned it by hand till 06h00",equipment_failure,operational
+S107758,SUP-19,"waited for relief, nobody came through",relief_no_show,operational
+S103760,SUP-15,client signed for the extra hours but real reason is relief no show agn,relief_no_show,operational
+S105632,SUP-23,"late handover, waiting on paperwork",late_handover,operational
+S102162,SUP-16,quiet shift,nothing_useful,no_info
+S106556,SUP-17,"gate motor failed, manned it by hand till six",equipment_failure,operational
+S106150,SUP-06,"DOUBLE DUTY TODAY, WYK ON FAMILY RESPONSIBILITY LEAVE",colleague_sick_or_leave,absence_excused_or_unclear
+S104946,SUP-04,ok,nothing_useful,no_info
+S109135,SUP-13,"late handover, waiting on paperwork",late_handover,operational
+S107358,SUP-01,"extra patrool per client email, approved by office",client_requested,client
+S108965,SUP-14,"client says stay till six, dont know if office approved",client_unconfirmed,client_unconfirmed
+S107557,SUP-08,Balloyi off sick. agn. covered,colleague_sick_or_leave,absence_excused_or_unclear
+S102889,SUP-14,"client says stay till 6am, dont know if office approved",client_unconfirmed,client_unconfirmed
+S101114,SUP-11,klient het ekstra ure gevra vir stocktake !,client_requested,client
+S104158,SUP-24,"client says say till 6am, dont know if office approved",client_unconfirmed,client_unconfirmed
+S108836,SUP-18,"waited for relief, nobody came through",relief_no_show,operational
+S103378,SUP-20,"handover laet agn, keys missing",late_handover,operational
+S108174,SUP-09,shift handover delayed by 20 min..,late_handover,operational
+S102121,SUP-18,akukho lutho,nothing_useful,no_info
+S106272,SUP-01,"additional cover requested by site manager, signed off",client_requested,client
+S102883,SUP-08,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S104413,SUP-07,"double duty today, Zulu on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S102630,SUP-06,"took dlamini shift as well, 2 posts 1 guard",colleague_no_show,operational
+S103206,SUP-21,stood in for Fourie,stood_in_unspecified,absence_excused_or_unclear
+S103609,SUP-07,"gedek vir Ndlovu, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S103551,SUP-19,CLIETN ASKED FOR EXTRA PATROL AFTER THE BREAK-IN TUESDAY,client_requested,client
+S107118,SUP-20,klient het ekstra ure gevra vir stocktake,client_requested,client
+S107491,SUP-16,zulu off sick. again. coveered.,colleague_sick_or_leave,absence_excused_or_unclear
+S103775,SUP-03,"scrubber broke down, had to do the floor manually..",equipment_failure,operational
+S104429,SUP-18,"Septeember didnt come in, covered the post",colleague_no_show,operational
+S104005,SUP-02,"Mabaso didnt come in, covered the post",colleague_no_show,operational
+S102885,SUP-16,sharp,nothing_useful,no_info
+S106574,SUP-01,ntr,nothing_useful,no_info
+S104365,SUP-11,"additional cover requested by site mgr, signed off",client_requested,client
+S105303,SUP-10,extra hours approved by client for the event setup,client_requested,client
+S102254,SUP-17,"client says stay till 6, dont know if office approved",client_unconfirmed,client_unconfirmed
+S102028,SUP-02,"stocktake ran over, client asked us to reemain, they know they pay for it",client_requested,client
+S107739,SUP-05,klient het ekstra ure gevra vir stocktake..,client_requested,client
+S100313,SUP-13,"generator fault, stayed to monitor",equipment_failure,operational
+S105239,SUP-05,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S101500,SUP-22,"Sithole absent, took her rounds as well",colleague_no_show,operational
+S109296,SUP-24,"NEXT SHIFT AKAFIKANGA, NGIHLALE KUZE KUBE 0600..",relief_no_show,operational
+S109301,SUP-12,"took Wyk shift as well, 2 posts 1 gard..",colleague_no_show,operational
+S102605,SUP-16,,nothing_useful,no_info
+S103931,SUP-04,niks om te rapporteer nie,nothing_useful,no_info
+S102420,SUP-06,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S108871,SUP-09,Client askeed for extra patrol afetr the break-in Tuesday,client_requested,client
+S105150,SUP-06,-,nothing_useful,no_info
+S106438,SUP-06,stood in for Mabaso,stood_in_unspecified,absence_excused_or_unclear
+S102631,SUP-04,"NEXT SHIFT AKAFIKANGA, NGIHLALE KUZE KUBE 06:00",relief_no_show,operational
+S105083,SUP-16,"additional cover requested by site manager, signed off",client_requested,client
+S108286,SUP-15,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S101325,SUP-06,klient het ekstra ure gevra vir stocktake !,client_requested,client
+S108195,SUP-14,"relief never arrived, stayed on till 6am",relief_no_show,operational
+S104015,SUP-10,"covering Motaung post, no show no caall",colleague_no_show,operational
+S102989,SUP-07,"handover late agn, keys missing",late_handover,operational
+S108078,SUP-19,Next shift guard did not pitch. Had to covr.,relief_no_show,operational
+S106439,SUP-01,"double duty today, Sithole on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S101779,SUP-05,"late handover, waiting on paperwork",late_handover,operational
+S101122,SUP-03,PILLAY OFF SICK. AGN. COVERED !,colleague_sick_or_leave,absence_excused_or_unclear
+S102228,SUP-02,stood in for Fourie,stood_in_unspecified,absence_excused_or_unclear
+S100554,SUP-12,Centre manager requested addtional cover for stocktake..,client_requested,client
+S108850,SUP-23,.,nothing_useful,no_info
+S106565,SUP-20,ok,nothing_useful,no_info
+S109287,SUP-03,"waited 25 min for handover, OB book not signed..",late_handover,operational
+S108347,SUP-04,,nothing_useful,no_info
+S107387,SUP-04,"took naidoo shift as well, 2 posts 1 guard..",colleague_no_show,operational
+S106396,SUP-13,Client asked for extra patrol after the break-in Tuesday..,client_requested,client
+S100905,SUP-06,quiet shift,nothing_useful,no_info
+S100333,SUP-23,"geddek vir Mabaso, siek gemeld..",colleague_sick_or_leave,absence_excused_or_unclear
+S103806,SUP-06,Ndlovu off sick. aggn. covered,colleague_sick_or_leave,absence_excused_or_unclear
+S103850,SUP-16,no issues on site,nothing_useful,no_info
+S101502,SUP-21,"additional cover requested by site manager, signed off",client_requested,client
+S106645,SUP-18,client asked for extra patrol after the break-in tuesday,client_requested,client
+S104103,SUP-04,"Pillay absent, took her rounds as well",colleague_no_show,operational
+S102856,SUP-14,niks om te rapporteer nie,nothing_useful,no_info
+S101331,SUP-06,"no replacement sent, ngicela sort this out..",relief_no_show,operational
+S108104,SUP-08,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S102307,SUP-18,"double duty today, Maluleke on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S102886,SUP-18,"took Adams shift as well, 2 posts 1 guard..",colleague_no_show,operational
+S106107,SUP-08,"machine down again, took twice as long",equipment_failure,operational
+S104337,SUP-15,"requested by centre management for load in, signed off",client_requested,client
+S106848,SUP-11,no issues on site,nothing_useful,no_info
+S103166,SUP-03,ok,nothing_useful,no_info
+S103384,SUP-17,"generator fault, stayed to monitor",equipment_failure,operational
+S100022,SUP-16,Client rquested deep clean before the audit - approved,client_requested,client
+S109118,SUP-13,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S103269,SUP-04,all good,nothing_useful,no_info
+S100388,SUP-19,"additional cover requested by site manager, signed off",client_requested,client
+S103014,SUP-23,"Sithole absent, took her rounds as well",colleague_no_show,operational
+S103608,SUP-11,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S104501,SUP-12,all fine,nothing_useful,no_info
+S103366,SUP-23,quiet shift,nothing_useful,no_info
+S101518,SUP-02,"waited 30 min for handover, ob book not signed",late_handover,operational
+S102859,SUP-03,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S106529,SUP-21,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S104422,SUP-12,all fine,nothing_useful,no_info
+S100738,SUP-23,double shift bc relief never pitched,relief_no_show,operational
+S102143,SUP-19,ok,nothing_useful,no_info
+S101484,SUP-04,"waited 45 min for handover, OB book not signed",late_handover,operational
+S105299,SUP-05,,nothing_useful,no_info
+S100204,SUP-06,all good,nothing_useful,no_info
+S105768,SUP-13,client asked for extra patrol after the break-in tuesday,client_requested,client
+S107100,SUP-01,,nothing_useful,no_info
+S106646,SUP-16,client requested deep clean befroe the audit - approved,client_requested,client
+S104821,SUP-12,"oorhandiging was lat, gewag vir sleutels",late_handover,operational
+S101034,SUP-14,no issues on site,nothing_useful,no_info
+S103226,SUP-10,Client requested deep clean before the audit - approved..,client_requested,client
+S106671,SUP-02,"requested by centre management for load in, signed off",client_requested,client
+S109348,SUP-14,client signed for the extra hours but real reason is relief no show agn,relief_no_show,operational
+S105269,SUP-14,"covering Sibiya post, no show no call",colleague_no_show,operational
+S103800,SUP-13,nothing to report,nothing_useful,no_info
+S108275,SUP-06,relif no show AGAIN,relief_no_show,operational
+S102865,SUP-10,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S102439,SUP-24,all good,nothing_useful,no_info
+S107217,SUP-16,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S102952,SUP-23,ntr,nothing_useful,no_info
+S108076,SUP-08,"CLIENT ASKED US TO STAY FOR THE DELIVERY, OK'D BY CENTRE MGMT",client_requested,client
+S100629,SUP-22,COVERED FOR WYK AGAIN - 3RD TIME THIS MONTH,colleague_no_show,operational
+S108051,SUP-01,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S108033,SUP-18,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S108562,SUP-01,Covering for Adams - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S104862,SUP-05,"handover late again, keys missing",late_handover,operational
+S102855,SUP-03,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S103428,SUP-03,"zulu absent, took her rounds as well",colleague_no_show,operational
+S103584,SUP-09,"worked through, baloyi at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S106947,SUP-23,shift handover delayed by 40 min,late_handover,operational
+S108154,SUP-16,.,nothing_useful,no_info
+S105631,SUP-12,Khumalo off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S104568,SUP-03,"Cele absent, took her rounds as well",colleague_no_show,operational
+S105508,SUP-21,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S106033,SUP-16,Covering for Fourie - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S106673,SUP-03,Client asked for exra patrol after the break-in Tuesday,client_requested,client
+S109183,SUP-10,Client requested deep clean before the audit - approveed,client_requested,client
+S108185,SUP-18,"covering Wyk post, no show no call",colleague_no_show,operational
+S103019,SUP-10,"still on site, relief was suppose to come 06:00",relief_no_show,operational
+S102844,SUP-24,radebe off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107816,SUP-02,"worked through, Maluleke at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S101627,SUP-01,"waited 40 min for handover, OB book not signed",late_handover,operational
+S108529,SUP-11,"uFourie akezanga namhalnje, ngimele yena",colleague_no_show,operational
+S101445,SUP-23,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S104588,SUP-24,all good,nothing_useful,no_info
+S108628,SUP-24,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S108873,SUP-09,Fourie off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S104017,SUP-13,"uPillay akezanga namhlanje, nimele yena !",colleague_no_show,operational
+S106533,SUP-20,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S101777,SUP-08,"machine down again, took twice as long",equipment_failure,operational
+S103073,SUP-04,covering for nkosi - booked off sick..,colleague_sick_or_leave,absence_excused_or_unclear
+S100983,SUP-05,no issues on site,nothing_useful,no_info
+S108346,SUP-24,"covering Cele post, no show no call",colleague_no_show,operational
+S107474,SUP-18,"control room says relief coming, nobody came",relief_no_show,operational
+S100715,SUP-09,nothing to report,nothing_useful,no_info
+S106737,SUP-11,"laet handover, waiting on paperwork",late_handover,operational
+S105115,SUP-08,Naidoo off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S100577,SUP-06,"requested by centre management for load in, signed off",client_requested,client
+S103405,SUP-08,,nothing_useful,no_info
+S105653,SUP-24,stood in for Jacobs,stood_in_unspecified,absence_excused_or_unclear
+S102421,SUP-22,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S102725,SUP-07,-,nothing_useful,no_info
+S103582,SUP-16,"Mabaso didnt come in, covered the post..",colleague_no_show,operational
+S109249,SUP-12,quiet shift,nothing_useful,no_info
+S106149,SUP-11,client asked for extra patrol after the break-in tuesday,client_requested,client
+S103062,SUP-24,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S103565,SUP-17,ntr,nothing_useful,no_info
+S107861,SUP-13,sharp,nothing_useful,no_info
+S100942,SUP-12,Nkosi off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107766,SUP-15,"uAdams akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S104514,SUP-22,ntr,nothing_useful,no_info
+S108019,SUP-01,"BUFFER MACHINE KAPUT, DID THE FLOOR BY HAND..",equipment_failure,operational
+S100711,SUP-18,"took Wyk shift as well, 2 posts 1 guard",colleague_no_show,operational
+S107338,SUP-15,"took Sithole shift as well, 2 posts 1 guard",colleague_no_show,operational
+S105984,SUP-21,"late handover, waiting on paperwork",late_handover,operational
+S100747,SUP-01,"client says stay till 6am, dont know if office approved",client_unconfirmed,client_unconfirmed
+S103623,SUP-20,relief no show again,relief_no_show,operational
+S106555,SUP-22,shift handover delayed by 45 min,late_handover,operational
+S104288,SUP-01,"took Sithole shift as well, 2 posts 1 guard",colleague_no_show,operational
+S101734,SUP-09,"Mokoena absent, took her rounds as well",colleague_no_show,operational
+S103832,SUP-17,"still on site, relief was suppose to come 06:00",relief_no_show,operational
+S106792,SUP-02,"no replacement sent, ngicela sort this out..",relief_no_show,operational
+S106354,SUP-10,Client requested deep clean before the audit - approved,client_requested,client
+S102049,SUP-15,"client asked us to stay for the delivery, ok'd by cnetre mgmt",client_requested,client
+S106122,SUP-12,shift handover delayed by 30 min..,late_handover,operational
+S103211,SUP-15,"additional cover requested by site manager, signed off",client_requested,client
+S103957,SUP-06,quiet shift,nothing_useful,no_info
+S103447,SUP-10,"relief never arrived, stayed on till 06:00",relief_no_show,operational
+S103726,SUP-22,"worked through, fourie at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S100818,SUP-23,"worked through, mthembu at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S103655,SUP-12,"late handover, waitnig on paperwork",late_handover,operational
+S102134,SUP-08,"handover late agn, keys missing !",late_handover,operational
+S107628,SUP-07,as per normal,nothing_useful,no_info
+S104916,SUP-19,"Mavuso absent, took her rounds as well",colleague_no_show,operational
+S103547,SUP-03,"relief only arrived 6, stayed until then..",relief_no_show,operational
+S107968,SUP-14,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S102834,SUP-04,"gate motor failed, manned it by hand till 6",equipment_failure,operational
+S108466,SUP-20,"GEDK VIR MOKOENA, SEK GEMELD",colleague_sick_or_leave,absence_excused_or_unclear
+S108071,SUP-10,"waited for relief, nobody came through",relief_no_show,operational
+S107721,SUP-08,"WORKED THROUGH, MOTAUNG AT THE CLINIC",colleague_sick_or_leave,absence_excused_or_unclear
+S106240,SUP-17,"aflos het nie opgedaag nie, moes aanbly..",relief_no_show,operational
+S102816,SUP-07,client signed for the extra hours but real reason is relief no show agn,relief_no_show,operational
+S103400,SUP-05,RELIEF NO SHOW AGAIN,relief_no_show,operational
+S103567,SUP-23,Covering for Naidoo - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S103011,SUP-02,"still on site, relief was suppose to coe six",relief_no_show,operational
+S106804,SUP-03,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S104038,SUP-11,"late handover, waiting on paperwork",late_handover,operational
+S101555,SUP-04,Clint ased for extra patrol after the break-in Tuesday,client_requested,client
+S105556,SUP-04,"UMANUEL AKEZANGA NAMHLANJE, NGIMELE YENA",colleague_no_show,operational
+S105003,SUP-20,-,nothing_useful,no_info
+S107975,SUP-19,no issues on site,nothing_useful,no_info
+S100140,SUP-12,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S107075,SUP-23,"double duty toda,y sibiya on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S106652,SUP-16,"still on site, relief was suppoes to come 6am",relief_no_show,operational
+S103478,SUP-02,"double dtuy today, Nkoi on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S101798,SUP-22,"worked through, Cele at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S102432,SUP-01,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105047,SUP-09,"client says stay till six, donnt know if office approved",client_unconfirmed,client_unconfirmed
+S101552,SUP-02,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S109173,SUP-14,.,nothing_useful,no_info
+S103055,SUP-17,stood in for Fourie,stood_in_unspecified,absence_excused_or_unclear
+S106541,SUP-15,stood in for Mavuso,stood_in_unspecified,absence_excused_or_unclear
+S102204,SUP-05,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S103344,SUP-12,"extra patrol per client email, approved by office",client_requested,client
+S108105,SUP-04,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S102382,SUP-06,"gate motor failed, manned it by hand till 06:00",equipment_failure,operational
+S106979,SUP-15,"covering mthembu post, no show no call",colleague_no_show,operational
+S101551,SUP-10,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S103691,SUP-19,Client reuested deep clean before the audit - approved,client_requested,client
+S100590,SUP-22,"tok mahlangu shift as wll, 2 posts 1 guard",colleague_no_show,operational
+S104130,SUP-20,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S101805,SUP-22,"masjien is stukkend, alls met die hand gedoen",equipment_failure,operational
+S107050,SUP-23,"took Nosi shift as well, 2 pots 1 guard",colleague_no_show,operational
+S100586,SUP-18,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S106664,SUP-06,"Mabaso didnt come in, covered the post",colleague_no_show,operational
+S106280,SUP-07,Client requested deep clean before the audit - approved,client_requested,client
+S105325,SUP-23,"Zulu didnt come in, covered the post",colleague_no_show,operational
+S101883,SUP-20,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S108332,SUP-19,"stocktake ran over, client asked us to remain, they knnow tey pay for it",client_requested,client
+S104275,SUP-02,"stocktake ran over, client asked us to remai,n they know they pay for it",client_requested,client
+S101278,SUP-20,ok,nothing_useful,no_info
+S106650,SUP-21,"worked through, Tshabalala at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S109304,SUP-16,"MAASJIEN IS STUKKEND, ALLES MET DIE HAND GEDOEN",equipment_failure,operational
+S100889,SUP-14,"cllient wanted extra man on the gate for the event, approved",client_requested,client
+S109279,SUP-15,ntr,nothing_useful,no_info
+S101961,SUP-15,fine,nothing_useful,no_info
+S108951,SUP-02,quiet shift,nothing_useful,no_info
+S105579,SUP-18,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S103829,SUP-24,"worked through, Jaobs at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S105821,SUP-16,"extra patrol per clent email, approved by office",client_requested,client
+S101230,SUP-20,ntr,nothing_useful,no_info
+S106561,SUP-05,"srubber broke down, had to do the floor manually",equipment_failure,operational
+S104974,SUP-08,all quiet,nothing_useful,no_info
+S103973,SUP-23,Covering for Sibiya - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S100485,SUP-24,shiift handover delayed by 30 min,late_handover,operational
+S100306,SUP-07,Client requested deep clean before the audit - approved,client_requested,client
+S105701,SUP-17,"handover late agn, keys missing !",late_handover,operational
+S103796,SUP-07,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S106442,SUP-19,nothing to report,nothing_useful,no_info
+S108776,SUP-22,stood in for Ndlovu,stood_in_unspecified,absence_excused_or_unclear
+S104245,SUP-17,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105429,SUP-08,"generator fault, stayed to monitor",equipment_failure,operational
+S104642,SUP-06,"uDlamini akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S104321,SUP-15,quiet shift,nothing_useful,no_info
+S102395,SUP-01,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S100719,SUP-13,no relief. stayed. someone must pls sort the roster,relief_no_show,operational
+S100928,SUP-18,"handover late agn, keys missing",late_handover,operational
+S108001,SUP-08,stood in for zuul,stood_in_unspecified,absence_excused_or_unclear
+S107901,SUP-09,"late handover, waiting on paperwork",late_handover,operational
+S102369,SUP-05,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S108833,SUP-23,"buffer machine kaput, did the floor by hand..",equipment_failure,operational
+S107059,SUP-01,"worked through, Dlamini at the clinic..",colleague_sick_or_leave,absence_excused_or_unclear
+S101604,SUP-10,"client wanted etra man on the gate for the event, approved..",client_requested,client
+S107331,SUP-17,"covering Wyk post, no show no call",colleague_no_show,operational
+S103251,SUP-11,all quiet,nothing_useful,no_info
+S102109,SUP-09,all good,nothing_useful,no_info
+S103776,SUP-22,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S104996,SUP-19,"additional cover requested by site manager, signed off",client_requested,client
+S107964,SUP-08,"covering Mavuso post, no show no call !",colleague_no_show,operational
+S107361,SUP-13,"control room says relief coming, nobody came",relief_no_show,operational
+S106102,SUP-03,fine,nothing_useful,no_info
+S104779,SUP-04,double shift bc relief never pitched,relief_no_show,operational
+S107267,SUP-08,no issues on site,nothing_useful,no_info
+S109331,SUP-17,,nothing_useful,no_info
+S100873,SUP-11,as per normal,nothing_useful,no_info
+S108180,SUP-23,"generator fault, stayed to monitor",equipment_failure,operational
+S103781,SUP-19,"additional cover requested by site manager, signed off..",client_requested,client
+S105156,SUP-06,double shift because relief never pitched,relief_no_show,operational
+S100630,SUP-23,"Dlamini didnt come in, covered the post",colleague_no_show,operational
+S101058,SUP-10,"took Fourie shift as well, 2 poosts 1 guard",colleague_no_show,operational
+S108709,SUP-21,all good,nothing_useful,no_info
+S102622,SUP-10,client signed for the extra hours but real reason is relief no show again,relief_no_show,operational
+S105088,SUP-03,"Maluleke absent, took her rounds as wlel",colleague_no_show,operational
+S102662,SUP-16,Client requested deeep clean before the audit - aproved..,client_requested,client
+S101209,SUP-07,"handover late again, keys missing",late_handover,operational
+S107717,SUP-06,"Sibiya didnt come in, covered the post",colleague_no_show,operational
+S104651,SUP-15,"double duty today, Ndovu on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S100579,SUP-05,Centre mgr requested additional coer for stocktake,client_requested,client
+S106967,SUP-02,"machine down agn, took twice as long",equipment_failure,operational
+S102050,SUP-09,"gedk vir Sithole, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S105339,SUP-08,Covered for Mahlangu agn - 3rd time this month,colleague_no_show,operational
+S105952,SUP-02,"gedek vir Sibiya, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S105834,SUP-09,"generator fault, stayed to monitor",equipment_failure,operational
+S104442,SUP-01,"client wanted extra man on the gate for the event, approved",client_requested,client
+S104531,SUP-01,"gedek vir Motaung, siek geemld",colleague_sick_or_leave,absence_excused_or_unclear
+S100817,SUP-15,all good,nothing_useful,no_info
+S102880,SUP-23,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S108544,SUP-16,Covered for Zulu again - 3rd time this month,colleague_no_show,operational
+S108079,SUP-13,"late handover, waiting on paperwork",late_handover,operational
+S107287,SUP-15,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S109328,SUP-10,extra hrs approved by client for the event setup,client_requested,client
+S102181,SUP-10,Covered for Naidoo again - 3rd tie this month,colleague_no_show,operational
+S105471,SUP-07,all good,nothing_useful,no_info
+S106973,SUP-18,"client asked us to stay for the delivery, ok'd by centre mgmt..",client_requested,client
+S100088,SUP-08,"coering Blaoyi post, no show no call..",colleague_no_show,operational
+S105483,SUP-14,centre mgr requested additional covre for stocktake,client_requested,client
+S108451,SUP-12,"took Botha shift as well, 2 posts 1 guard",colleague_no_show,operational
+S100501,SUP-18,"generator fault, styed to mointor",equipment_failure,operational
+S102158,SUP-08,"uTshabalala akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S107206,SUP-09,nothing to report,nothing_useful,no_info
+S108767,SUP-08,Client asked for extra patrol after the break-in Tuesday..,client_requested,client
+S103619,SUP-08,"extra patrol per client emil, approved by office",client_requested,client
+S105340,SUP-14,relief no show AGAIN,relief_no_show,operational
+S106430,SUP-13,fine,nothing_useful,no_info
+S100294,SUP-20,"late handover, waiting on paperwork",late_handover,operational
+S107595,SUP-08,as per normal,nothing_useful,no_info
+S108470,SUP-04,"next shift akafikanga, ngihlale kuze kube 0600",relief_no_show,operational
+S109238,SUP-21,,nothing_useful,no_info
+S100975,SUP-17,"late handover, waiting on paperwork",late_handover,operational
+S108288,SUP-21,"still on site, relief was suppose to come 6am",relief_no_show,operational
+S104068,SUP-18,"client wantd extra man on the gate for the event, approved",client_requested,client
+S103397,SUP-04,Covering for Khumalo - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S104116,SUP-06,"uMaluleke akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S103456,SUP-08,"extra patrol per client email, approevd by office",client_requested,client
+S106546,SUP-18,"khumalo didnt come in, covered the post",colleague_no_show,operational
+S100717,SUP-07,"next shift akafikanga, ngihlale kuze kube 6am",relief_no_show,operational
+S106042,SUP-15,client requested deep clean before the audit - approved,client_requested,client
+S104526,SUP-06,,nothing_useful,no_info
+S108657,SUP-23,client asked for extra patrol after the break--in tuesday,client_requested,client
+S100595,SUP-01,client signed for the extra hours but real reason is relief no show agn..,relief_no_show,operational
+S107088,SUP-06,"additional cover requested by site mgr, signed off",client_requested,client
+S107885,SUP-13,extra hours approved by client for the event setup,client_requested,client
+S107627,SUP-12,"gnerator fault, stayed to monitor..",equipment_failure,operational
+S106573,SUP-12,"Naidoo didt come in, covered the post",colleague_no_show,operational
+S107746,SUP-21,"still on site, relief was suppose to come 06h00",relief_no_show,operational
+S107218,SUP-07,ntr,nothing_useful,no_info
+S106989,SUP-09,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S100301,SUP-21,"still on site, relief was suppose to come 06:00",relief_no_show,operational
+S104331,SUP-24,"molefe absent, took her rounds as well",colleague_no_show,operational
+S102253,SUP-21,all quiet,nothing_useful,no_info
+S107504,SUP-21,ok,nothing_useful,no_info
+S100384,SUP-03,"control room says relief coming, nobody came",relief_no_show,operational
+S106492,SUP-08,"requested by centre management for load in, signed off",client_requested,client
+S105436,SUP-11,"machine down again, took twice as long",equipment_failure,operational
+S102650,SUP-10,all quiet,nothing_useful,no_info
+S103589,SUP-12,relief no show AGAIN,relief_no_show,operational
+S106553,SUP-12,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S107376,SUP-03,"next shift akafikanga, ngihlale kuze kube 6 !",relief_no_show,operational
+S105329,SUP-08,double shift because relief never picthed !,relief_no_show,operational
+S109293,SUP-14,"waited 45 min for handover, OB book not signed",late_handover,operational
+S106233,SUP-13,Mokoena off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S106536,SUP-14,"double duty today, Sithole on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S109261,SUP-06,"handover late agn, keys missing",late_handover,operational
+S103809,SUP-02,"waited for relief, nobody caame through",relief_no_show,operational
+S105550,SUP-15,extra hrs apprvoed by clietn for the event setp,client_requested,client
+S102179,SUP-19,"waited 40 min for handover, OB book not signed",late_handover,operational
+S102377,SUP-18,"late handover, waiting on paperwork",late_handover,operational
+S105071,SUP-08,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S105155,SUP-11,sharp,nothing_useful,no_info
+S106680,SUP-03,Client asked for extra patrool after the break-in Tuesday,client_requested,client
+S107580,SUP-17,"geddek vir wyk, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S102879,SUP-13,"waited 25 min for handover, OB book not signed",late_handover,operational
+S101725,SUP-16,ok,nothing_useful,no_info
+S105880,SUP-03,"late handover, waiting on paperwork",late_handover,operational
+S106235,SUP-19,"gedek vir Tshabalala, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S106457,SUP-16,"USIBIYA AKEZANA NAMHLANJE, NGIMELE YENA..",colleague_no_show,operational
+S106046,SUP-16,"extra patrol per client email, approved by office",client_requested,client
+S107572,SUP-08,-,nothing_useful,no_info
+S106375,SUP-01,"still on site, relieef was suppose to come six",relief_no_show,operational
+S103012,SUP-20,Centre mgr requested additional cover for stocktae,client_requested,client
+S109078,SUP-19,ok,nothing_useful,no_info
+S101275,SUP-11,.,nothing_useful,no_info
+S103735,SUP-16,akukho lutho,nothing_useful,no_info
+S108835,SUP-08,"client wanted extra man on the gate for the event, approved",client_requested,client
+S107894,SUP-16,"relief only arrived 0600, stayed until then",relief_no_show,operational
+S108026,SUP-11,"srubber broke down, had to do the floor manually",equipment_failure,operational
+S108082,SUP-14,quiet shift,nothing_useful,no_info
+S108285,SUP-02,"took Zulu shift as well, 2 posts 1 guard",colleague_no_show,operational
+S101069,SUP-13,,nothing_useful,no_info
+S107875,SUP-03,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S103391,SUP-17,"relief never arrived, stayed on till six",relief_no_show,operational
+S101905,SUP-13,.,nothing_useful,no_info
+S103424,SUP-04,Client requested deep clean before the audit - approved,client_requested,client
+S103988,SUP-22,"buffeer machine kaput, did the floor by hand",equipment_failure,operational
+S105735,SUP-12,"worked through, sibiya at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S102953,SUP-04,"gate motoor failed, manned it by hadn till 6",equipment_failure,operational
+S106580,SUP-22,"umolefe akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S108038,SUP-06,"Ndlovu absent, took her rounds as well",colleague_no_show,operational
+S103338,SUP-20,"late hanodver, waiting on paperwork",late_handover,operational
+S106132,SUP-16,Covering for Wyk - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S107079,SUP-23,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S101822,SUP-11,"uSibiya akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S105051,SUP-09,"handover late again, keys missing",late_handover,operational
+S103751,SUP-04,"still on site, relief was suppose to come six",relief_no_show,operational
+S108478,SUP-18,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S106097,SUP-01,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S104397,SUP-04,nothing to report,nothing_useful,no_info
+S108061,SUP-16,shift handover delayed by 30 min,late_handover,operational
+S102528,SUP-23,"generator fault, stayed to monitor !",equipment_failure,operational
+S100587,SUP-14,Nkosi off sick. agn. coveredd.,colleague_sick_or_leave,absence_excused_or_unclear
+S109297,SUP-15,"uBotha akezanga namhlanjje, ngimele yena",colleague_no_show,operational
+S104857,SUP-18,"client says stay till 06h00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S101939,SUP-15,"waited 50 min for handover, OB book not signed",late_handover,operational
+S104803,SUP-07,"took Mokoena shift as well, 2 posts 1 guard",colleague_no_show,operational
+S103509,SUP-06,"double duty today, Baloyi on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S104449,SUP-09,sharp,nothing_useful,no_info
+S100032,SUP-08,"control room says relef coming, nobody came",relief_no_show,operational
+S101590,SUP-10,"control room says relief coming, nobody came",relief_no_show,operational
+S104355,SUP-16,"additional cover requested by site mgr, signed off",client_requested,client
+S103661,SUP-08,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S102838,SUP-16,"client asked us to stay for the delivery, ok'd by centre mgmt..",client_requested,client
+S106807,SUP-13,CLIENT ASKED FOR EXTRA PATROL AFTER THE BREAK-IN TUESDAY,client_requested,client
+S105053,SUP-20,klient het ekstra ure gevra vir stocktake !,client_requested,client
+S102453,SUP-06,ntr,nothing_useful,no_info
+S101640,SUP-24,all fine,nothing_useful,no_info
+S105352,SUP-24,"client says stay till six, dont know if office approved",client_unconfirmed,client_unconfirmed
+S106225,SUP-24,"GENERATOR FAULT, STAYED TO MONITOR..",equipment_failure,operational
+S104164,SUP-10,"scrubber broke don, had to do the floor manually",equipment_failure,operational
+S100309,SUP-01,Jacobs off sick. ag.n covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S103077,SUP-14,no relif. stayed. someone must please sort the roster,relief_no_show,operational
+S102386,SUP-19,"took Mabaso shift as well, 2 posts 1 guard",colleague_no_show,operational
+S101769,SUP-11,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S104379,SUP-23,"uBotha akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S108123,SUP-04,ntr,nothing_useful,no_info
+S101704,SUP-11,"buffer machine kaput, did the floor by hand !",equipment_failure,operational
+S108837,SUP-04,no issues on site,nothing_useful,no_info
+S103018,SUP-07,"next shift akafikanga, ngihlale kuzze kube 06h00",relief_no_show,operational
+S106806,SUP-20,"Naidoo didnt come in, covered the post..",colleague_no_show,operational
+S106376,SUP-03,"took Nkosi shift as well, 2 posts 1 guard",colleague_no_show,operational
+S106252,SUP-10,"took Naidoo shift as well, 2 posts 1 guard",colleague_no_show,operational
+S103649,SUP-11,"uNaidoo akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S107240,SUP-10,"extra patrol per client email, approved by ofice",client_requested,client
+S108016,SUP-12,"client says stay till 06h00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S104249,SUP-03,all quiet,nothing_useful,no_info
+S106902,SUP-22,"client says stay till 0600, dont know if office approved",client_unconfirmed,client_unconfirmed
+S102656,SUP-18,"Ngcobo absent, took her rounds as well..",colleague_no_show,operational
+S109305,SUP-08,"Mokoena absent, took her rounds as well",colleague_no_show,operational
+S105537,SUP-01,"nkosi absent, took her rounds as well !",colleague_no_show,operational
+S102317,SUP-14,nothing to report,nothing_useful,no_info
+S104575,SUP-02,no issues on site,nothing_useful,no_info
+S103458,SUP-19,no relief. stayed. someone must please sort the roster !,relief_no_show,operational
+S102929,SUP-06,"next shift akafikanga, ngihlale kuze kube 6",relief_no_show,operational
+S101338,SUP-11,nothing to report,nothing_useful,no_info
+S104868,SUP-09,niks om te rapporteer nie,nothing_useful,no_info
+S107133,SUP-22,relief no show again..,relief_no_show,operational
+S102570,SUP-09,"sill on site, relief was spupose to come 6am",relief_no_show,operational
+S106476,SUP-20,"lift out of order, everything carried up stairs, took lng",equipment_failure,operational
+S100784,SUP-10,"worked through, ndlovu at the clinic..",colleague_sick_or_leave,absence_excused_or_unclear
+S106925,SUP-02,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S107886,SUP-22,shift handover delayed by 50 min,late_handover,operational
+S102295,SUP-01,"jacobs absent, took her rounds as well",colleague_no_show,operational
+S100775,SUP-06,quiet shift,nothing_useful,no_info
+S103402,SUP-21,"machine down agn, took twice as long",equipment_failure,operational
+S105318,SUP-16,client signed for the extra hours but real reason is relief no show agn !,relief_no_show,operational
+S101812,SUP-13,ntr,nothing_useful,no_info
+S102723,SUP-13,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105460,SUP-17,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S101597,SUP-08,"double duty today, maluleke on family responsibility leave..",colleague_sick_or_leave,absence_excused_or_unclear
+S105342,SUP-04,"umthembu akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S103470,SUP-10,shft handover dealyed by 25 min,late_handover,operational
+S103005,SUP-08,"took dlaminni shift as well, 2 posts 1 guard",colleague_no_show,operational
+S107332,SUP-01,"gedek vir Hendricks, siek geemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S104121,SUP-10,client requested deep clean before the audt - approved,client_requested,client
+S103105,SUP-21,fine,nothing_useful,no_info
+S105346,SUP-17,"machien down agn, took twice as long",equipment_failure,operational
+S101120,SUP-16,Zulu off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107414,SUP-04,shift handovver delayed by 50 min,late_handover,operational
+S100713,SUP-18,Naidoo off sick. again. covered..,colleague_sick_or_leave,absence_excused_or_unclear
+S106901,SUP-07,"took mthembu shift as well, 2 pots 1 guard",colleague_no_show,operational
+S100603,SUP-24,"waited for relief, nobody came through",relief_no_show,operational
+S107506,SUP-17,"took Wyk shift as well, 2 posts 1 guard",colleague_no_show,operational
+S105585,SUP-12,"scrubber broke dwn, had to do the floor mnually",equipment_failure,operational
+S104423,SUP-06,"DLAMINI DIDNT COME IN, COVERED THE POST",colleague_no_show,operational
+S104093,SUP-21,"client wanted extra man on the gate for the event, approved",client_requested,client
+S109323,SUP-18,"gate motor failed, manned it by hand till 6..",equipment_failure,operational
+S103163,SUP-09,,nothing_useful,no_info
+S102367,SUP-01,"took Tshabalala shift as well, 2 posts 1 guadr",colleague_no_show,operational
+S104076,SUP-06,no incidents,nothing_useful,no_info
+S101592,SUP-17,"additional cover requested by site mgr, signed off..",client_requested,client
+S108943,SUP-15,niks om te rapporteer nie,nothing_useful,no_info
+S108665,SUP-09,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S101471,SUP-01,"handover late agn, keys missing",late_handover,operational
+S108186,SUP-10,COVERED FOR NDLOVU AGAIN - 3RD TIME THIS MONTH,colleague_no_show,operational
+S102372,SUP-04,client signed for the extra hours but real reason is relief no show agn,relief_no_show,operational
+S105629,SUP-16,"waited for relief, nobody came through",relief_no_show,operational
+S100238,SUP-02,extra hrs approved by client for the event setup,client_requested,client
+S103418,SUP-11,extra hours approved by client for the event setup,client_requested,client
+S108305,SUP-17,klient het ekstra ure gevra vir stocktake,client_requested,client
+S102972,SUP-13,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S102449,SUP-18,centre mgr requested additional cover for stocktake..,client_requested,client
+S104536,SUP-18,"COVERING DLAMINI POST, NO SHOW NO CALL",colleague_no_show,operational
+S108855,SUP-02,"requested by centre management for load in, signed off",client_requested,client
+S106382,SUP-22,double shift bc relief never pitched,relief_no_show,operational
+S104699,SUP-15,"waited 40 min for handover, ob book not signed",late_handover,operational
+S100284,SUP-04,"double duty today, Sithole on family responsibility leave..",colleague_sick_or_leave,absence_excused_or_unclear
+S106896,SUP-07,Centre manager requested additional cover for stocktake,client_requested,client
+S102287,SUP-12,extra hrs approved by client for the event setup,client_requested,client
+S100470,SUP-12,"covering Mabaso post, no show no call..",colleague_no_show,operational
+S103051,SUP-24,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S101438,SUP-16,"handover late agn, keys missing",late_handover,operational
+S104956,SUP-06,-,nothing_useful,no_info
+S102887,SUP-14,client signed for the extra hrs but real reason is relieef no show again,relief_no_show,operational
+S105496,SUP-13,"relief never arrived, stayed on till 06h00 !",relief_no_show,operational
+S107708,SUP-06,Covering for Ngcobo - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S106406,SUP-23,"additional cover requested by site manager, signed off",client_requested,client
+S101394,SUP-20,,nothing_useful,no_info
+S108604,SUP-16,"relief only arrived six, stayed until then",relief_no_show,operational
+S101046,SUP-05,"gate motor failed, manned it by hand till six",equipment_failure,operational
+S106395,SUP-06,"covering Mthembu postt, no show no call",colleague_no_show,operational
+S108405,SUP-10,"gate motor failed, manned it by hand till 06:00",equipment_failure,operational
+S102416,SUP-18,"generator fault, stayed to monitor",equipment_failure,operational
+S104541,SUP-08,"Adams didnt come in, covered the post",colleague_no_show,operational
+S108993,SUP-01,"next shift akafikanga, ngihlale kuze kube 6",relief_no_show,operational
+S105190,SUP-24,as per normal,nothing_useful,no_info
+S106985,SUP-15,"extra patrol per client email, approved by officce",client_requested,client
+S103441,SUP-10,relief no show AGAIN,relief_no_show,operational
+S101222,SUP-20,all good,nothing_useful,no_info
+S100315,SUP-12,"no repacement sent, ngicela sort this out",relief_no_show,operational
+S108612,SUP-02,double shift because reief never pitched,relief_no_show,operational
+S104092,SUP-21,"handover late agn, keys missing",late_handover,operational
+S107148,SUP-13,all quiet,nothing_useful,no_info
+S109322,SUP-20,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S103819,SUP-07,"uJacobs akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S101795,SUP-13,"machine down agn, took twice as long..",equipment_failure,operational
+S106892,SUP-24,"control room sasy relief coming, nobody came",relief_no_show,operational
+S100706,SUP-13,"cllient says stay till 6, dont know if office approved",client_unconfirmed,client_unconfirmed
+S100443,SUP-14,all fine,nothing_useful,no_info
+S108441,SUP-20,"bufefr machine kapu, did the floor by hand",equipment_failure,operational
+S102862,SUP-11,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S102601,SUP-18,Client asked for extra ptrol after the break-in Tuesday,client_requested,client
+S107530,SUP-14,"uFourie akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S101714,SUP-22,"relief only arrived 06:00, stayed until then..",relief_no_show,operational
+S103445,SUP-22,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S100171,SUP-11,Client asked for extra patrol after the break-in Tuesday..,client_requested,client
+S105092,SUP-15,fine,nothing_useful,no_info
+S105372,SUP-22,sharp,nothing_useful,no_info
+S107478,SUP-19,centre manager requested additional cover for stocktake,client_requested,client
+S103330,SUP-21,klent het ekstra ure gevra vir stocktake,client_requested,client
+S103627,SUP-12,cliient signed for the extra hours but real reeason is relief no show agn,relief_no_show,operational
+S104250,SUP-17,nothing to report,nothing_useful,no_info
+S104099,SUP-02,,nothing_useful,no_info
+S107066,SUP-19,"requested by centre management for load in, signed off",client_requested,client
+S103601,SUP-22,jacobs off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S105011,SUP-11,Client requested deep clean before the audit - approved,client_requested,client
+S103634,SUP-17,ntr,nothing_useful,no_info
+S103549,SUP-14,klient het ekstra ure gevra vir stocktake,client_requested,client
+S106414,SUP-13,"waited 40 min for handover, OB book not signed",late_handover,operational
+S102937,SUP-18,stood in for Molefe,stood_in_unspecified,absence_excused_or_unclear
+S106884,SUP-08,"GEDEK VIR HENDRICKS, SIEK GEMELD",colleague_sick_or_leave,absence_excused_or_unclear
+S107859,SUP-22,,nothing_useful,no_info
+S107514,SUP-19,"client wanted extra man on the gate for the event, approved",client_requested,client
+S101947,SUP-06,"covering Mabaso post, no show no cll",colleague_no_show,operational
+S108374,SUP-12,"relief only arrived 06h00, stayyed until then",relief_no_show,operational
+S104492,SUP-19,relief no show AGGAIN,relief_no_show,operational
+S109335,SUP-16,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S108103,SUP-20,no incidents,nothing_useful,no_info
+S101011,SUP-23,"handover late again, keys missing",late_handover,operational
+S107101,SUP-10,quiet shift,nothing_useful,no_info
+S100886,SUP-09,klient het ekstra ure gevra vir stocktake,client_requested,client
+S103065,SUP-24,"waited 40 min for handover, OB book not signed",late_handover,operational
+S105811,SUP-11,"still on site, relief was suppose to come 0600",relief_no_show,operational
+S100922,SUP-19,"client wanted extra man on the gate for the event, approved",client_requested,client
+S107253,SUP-03,"machine down again, took twice as long",equipment_failure,operational
+S100473,SUP-17,"clint says stay till six, doont know if office approved",client_unconfirmed,client_unconfirmed
+S101512,SUP-13,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S105973,SUP-18,"Naidoo abset, took her runds as weell",colleague_no_show,operational
+S109203,SUP-06,"Fourie absen, took her rounds as well",colleague_no_show,operational
+S102376,SUP-20,"extra patrol per client emaail, apprroved by office",client_requested,client
+S104162,SUP-17,quiet shift,nothing_useful,no_info
+S108378,SUP-23,"covering Jacobs post, no show no call",colleague_no_show,operational
+S102860,SUP-23,"relief never arrived, stayed on till six..",relief_no_show,operational
+S108045,SUP-06,Covered for Sithole agn - 3rd time this month,colleague_no_show,operational
+S100416,SUP-16,"extra patrol per client email, approved by office",client_requested,client
+S100553,SUP-24,"control room says relief coming, nobody came",relief_no_show,operational
+S106578,SUP-24,centre manager requested additional cover for stocktake !,client_requested,client
+S103436,SUP-16,"fourie didnt come in, covered the post",colleague_no_show,operational
+S106657,SUP-09,"waited 30 min for handover, OB book not signed..",late_handover,operational
+S100222,SUP-20,,nothing_useful,no_info
+S102131,SUP-11,"client asked us to stay for the deliivery, ok'd by centre mgmt",client_requested,client
+S102206,SUP-24,all good,nothing_useful,no_info
+S107980,SUP-11,"control room sayys relief coming, noboddy came",relief_no_show,operational
+S101027,SUP-04,ntr,nothing_useful,no_info
+S102265,SUP-13,ok,nothing_useful,no_info
+S105840,SUP-14,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S104369,SUP-05,"covering sibiya post, no show no call",colleague_no_show,operational
+S109245,SUP-22,no issues on site,nothing_useful,no_info
+S106428,SUP-14,"waited for relief, nobody came through",relief_no_show,operational
+S106726,SUP-14,all quiet,nothing_useful,no_info
+S104286,SUP-04,all good,nothing_useful,no_info
+S109318,SUP-17,"control room says relief coming, nobody came",relief_no_show,operational
+S107314,SUP-03,"gedek vir ngcobo, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S101268,SUP-24,"took Jacobs shift as wel, 2 posts 1 guard",colleague_no_show,operational
+S103801,SUP-24,sharp,nothing_useful,no_info
+S102117,SUP-17,shift handover delayed by 25 min,late_handover,operational
+S103605,SUP-08,Ngcobo off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S105649,SUP-05,Covered for Zulu again - 3rd time this month,colleague_no_show,operational
+S103805,SUP-10,"covering Zulu post, no sow no call",colleague_no_show,operational
+S104662,SUP-15,"worked through, Botha at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S108863,SUP-09,"double duty today, sithole on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S108464,SUP-17,"next shift akafikanga, ngihlale kuze kue six",relief_no_show,operational
+S103768,SUP-01,"client wanted extra man on the gate for the event, approved",client_requested,client
+S106467,SUP-22,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S107876,SUP-17,"relief never arrived, sayed on till 6am",relief_no_show,operational
+S108453,SUP-14,"waited 30 min for handover, OB book not signed",late_handover,operational
+S106960,SUP-23,Client asked for extra patrol after the break-in Tuessday,client_requested,client
+S107620,SUP-10,client signed for the extra hours but real reason is relief no show again,relief_no_show,operational
+S106436,SUP-12,"control room says relief coming, nobody came",relief_no_show,operational
+S100015,SUP-20,quiet shift,nothing_useful,no_info
+S109351,SUP-01,"waited 45 min for handover, OB book not signed..",late_handover,operational
+S101865,SUP-17,"handover late again, keys missing",late_handover,operational
+S100343,SUP-08,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S102628,SUP-18,"lift out of orrder, everything carried up stairs, took long",equipment_failure,operational
+S105144,SUP-22,,nothing_useful,no_info
+S106167,SUP-23,Client asked for extra patrol after the break-in Tuseday,client_requested,client
+S109291,SUP-02,"COVERING MOLEFE POST, NO SHOW NO CALL",colleague_no_show,operational
+S107036,SUP-24,all quiet,nothing_useful,no_info
+S101324,SUP-10,"requested by centre management for load in, signed off",client_requested,client
+S102771,SUP-06,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S103828,SUP-09,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S106963,SUP-01,double shift bc relief never pitched..,relief_no_show,operational
+S100350,SUP-21,"took Maluleke shiift as well, 2 posts 1 guard..",colleague_no_show,operational
+S105251,SUP-11,no incidents,nothing_useful,no_info
+S109337,SUP-07,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S107030,SUP-19,akukho lutho,nothing_useful,no_info
+S107531,SUP-09,"MACHINE DOWN AGN, TOOK TWICE AS LONG",equipment_failure,operational
+S103094,SUP-06,"uNaidoo akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S108359,SUP-02,"gaate motor failed, manned it by hand till 06:00",equipment_failure,operational
+S107983,SUP-20,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S106270,SUP-08,ntr,nothing_useful,no_info
+S104755,SUP-12,as per normal,nothing_useful,no_info
+S108437,SUP-01,"relief never arrived, stayed on till 6",relief_no_show,operational
+S108936,SUP-05,all good,nothing_useful,no_info
+S104485,SUP-12,,nothing_useful,no_info
+S107191,SUP-07,Mthembu off sicck. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107032,SUP-02,"oorhandiging was laat, gewag vir sleutels..",late_handover,operational
+S107658,SUP-02,Jacobs off sic. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S102474,SUP-20,akukho lutho,nothing_useful,no_info
+S108807,SUP-20,"gate motor failed, manned it by hand till 06:00",equipment_failure,operational
+S105639,SUP-21,as per normal,nothing_useful,no_info
+S103380,SUP-17,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S100305,SUP-02,"uBaloyi akezanga namhlanje, ngimele yena..",colleague_no_show,operational
+S106612,SUP-18,sharp,nothing_useful,no_info
+S104114,SUP-13,"relief never arrived, stayed on till 6am",relief_no_show,operational
+S107752,SUP-13,"generator fault, stayed to monitor",equipment_failure,operational
+S103631,SUP-09,"WAITED FOR RELIEF, NOBODY CAME THROUGH",relief_no_show,operational
+S101281,SUP-17,akukho lutho,nothing_useful,no_info
+S107724,SUP-09,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S108830,SUP-21,"requested by cenre management for load in, siged off",client_requested,client
+S106222,SUP-17,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S105604,SUP-11,"ndlovu absent, took her rounds as well",colleague_no_show,operational
+S104081,SUP-07,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S107132,SUP-17,stood in for Motaug,stood_in_unspecified,absence_excused_or_unclear
+S104538,SUP-21,ok,nothing_useful,no_info
+S106341,SUP-06,"double duty today, sibiya on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S107889,SUP-22,"additional cover requested by site manager, signed off",client_requested,client
+S101533,SUP-02,"gate motor failed, manned it by hand till 06h00",equipment_failure,operational
+S103759,SUP-20,"client wanted extra man on the gate for the event, approved",client_requested,client
+S105298,SUP-05,nothing to report,nothing_useful,no_info
+S104929,SUP-21,"uMolefe akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S103561,SUP-13,"toook motaung shift as well, 2 posts 1 guard",colleague_no_show,operational
+S106152,SUP-05,no issues on site,nothing_useful,no_info
+S103404,SUP-21,"took Dlamini shiift as well, 2 psots 1 guard",colleague_no_show,operational
+S108615,SUP-16,wyk off sick. again. covered..,colleague_sick_or_leave,absence_excused_or_unclear
+S100880,SUP-05,"Ndlovu absent, took her rounds as well",colleague_no_show,operational
+S106530,SUP-17,shift handover delayed by 25 min,late_handover,operational
+S107460,SUP-17,"stocktake ran over, client asked us to remain, they know they pay for it..",client_requested,client
+S105794,SUP-19,Covered for Sithole again - 3rd time this month,colleague_no_show,operational
+S108813,SUP-21,Client asked for extra patrol after the brea-kin Tuesday,client_requested,client
+S105097,SUP-16,"still on site, relief was suppose to come 06:00",relief_no_show,operational
+S104127,SUP-17,"client asked us to stay for the delivery, ok'd by centre mgmt..",client_requested,client
+S107343,SUP-15,"umabaso akezanga namhlanje, ngimele yena..",colleague_no_show,operational
+S107062,SUP-09,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S100273,SUP-22,Covering for Molefe - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S108901,SUP-16,fine,nothing_useful,no_info
+S108349,SUP-15,klieent het ekstra ure gevra vir stocktake,client_requested,client
+S107147,SUP-22,"machine down again, took twice as long..",equipment_failure,operational
+S100281,SUP-19,"requested by centre management for load in, signed off !",client_requested,client
+S100538,SUP-23,"client asked us to stay for the delivery, ok'd by centre mgmt..",client_requested,client
+S106516,SUP-23,"handover late again, keys missing..",late_handover,operational
+S108299,SUP-08,no issues on site,nothing_useful,no_info
+S100596,SUP-07,shift handover delayed by 45 min,late_handover,operational
+S102082,SUP-24,"covering Ndlovu post, no show no call",colleague_no_show,operational
+S104102,SUP-23,"usibiya akezanga namhlanje, ngimele yena..",colleague_no_show,operational
+S100691,SUP-18,"machine down again, took twice as long",equipment_failure,operational
+S104098,SUP-20,fine,nothing_useful,no_info
+S105612,SUP-20,"Botha absent, took her rounds as well..",colleague_no_show,operational
+S101811,SUP-11,Next shifft guard did not pitch. Had to cover.,relief_no_show,operational
+S100381,SUP-09,"still on site, relief was supose to come six",relief_no_show,operational
+S108015,SUP-15,"COVERING SIBIYA POST, NO SHOW NO CALL",colleague_no_show,operational
+S106575,SUP-16,"took Mthembu shift as well, 2 possts 1 guard",colleague_no_show,operational
+S104461,SUP-08,no incidents,nothing_useful,no_info
+S109344,SUP-11,motaung off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S105742,SUP-01,"Motaung absent, took her rounds as well",colleague_no_show,operational
+S107902,SUP-04,"next shift akafikanga, ngihlale kuze kube 06h00",relief_no_show,operational
+S108847,SUP-04,"reequested by centre management for load in, signed off..",client_requested,client
+S109070,SUP-11,"gedek vir Wyk, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S105652,SUP-20,"handover late agn, keys missing",late_handover,operational
+S108189,SUP-19,Client requested deep clean before the audit - approved..,client_requested,client
+S101786,SUP-03,"handover late agian, keys missing",late_handover,operational
+S107322,SUP-10,"client says stay till 06h00, dont know if office apprved",client_unconfirmed,client_unconfirmed
+S108597,SUP-01,"handover late an, keys missing..",late_handover,operational
+S101542,SUP-18,"relief never arrived, stayed on till 06:00",relief_no_show,operational
+S102467,SUP-07,sharp,nothing_useful,no_info
+S101960,SUP-04,"requested by centre management for load in, signed off",client_requested,client
+S103581,SUP-07,extra hrs approved by client for the event setup,client_requested,client
+S100291,SUP-16,fine,nothing_useful,no_info
+S100640,SUP-19,quiet shift,nothing_useful,no_info
+S103417,SUP-22,stood in for maluleke,stood_in_unspecified,absence_excused_or_unclear
+S103787,SUP-07,"generator fault, stayed to monitor",equipment_failure,operational
+S106663,SUP-22,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S109355,SUP-20,no incidents,nothing_useful,no_info
+S101494,SUP-03,all quiet,nothing_useful,no_info
+S106413,SUP-05,double shift beccause relief never pitched,relief_no_show,operational
+S102366,SUP-21,"nxet shift akafikanga, ngihlale kuze kube 06:00",relief_no_show,operational
+S109381,SUP-18,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S105820,SUP-01,extra hrs approved by client for the event setup,client_requested,client
+S103804,SUP-10,all fine,nothing_useful,no_info
+S100567,SUP-21,clint requested deep clean before the audit - approved,client_requested,client
+S107814,SUP-13,"scrubber broke down, had to do the floor manually !",equipment_failure,operational
+S106214,SUP-14,double shift because relief never pitched,relief_no_show,operational
+S104104,SUP-24,"client asked us to saty for the delivery, ok'd by centre mgmt !",client_requested,client
+S108438,SUP-04,stood in for Fuorie..,stood_in_unspecified,absence_excused_or_unclear
+S106101,SUP-02,"aflos het nie opgedaag nie, mooes aanbly",relief_no_show,operational
+S101900,SUP-09,"extra patrol per client email, approved by office",client_requested,client
+S101758,SUP-14,Client requested deep clean before the audit - approved,client_requested,client
+S103750,SUP-08,"gate motor failed, manned it by hand till six",equipment_failure,operational
+S104210,SUP-15,"Tshabalala didnt come in, covered the post..",colleague_no_show,operational
+S102428,SUP-05,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S101589,SUP-03,"conntrol room says relief coming, nobody came",relief_no_show,operational
+S108459,SUP-07,"scrubber broe down, had to do the floor manually",equipment_failure,operational
+S106458,SUP-18,"client says stay till 6am, dont know if office approved",client_unconfirmed,client_unconfirmed
+S104579,SUP-13,"handover late agn, keys missing",late_handover,operational
+S102522,SUP-18,"client says stay till 06:00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S101853,SUP-05,"client says stay till 6, dont know if office approved",client_unconfirmed,client_unconfirmed
+S101531,SUP-03,Covered for Wyk again - 3rd time this month,colleague_no_show,operational
+S101187,SUP-16,,nothing_useful,no_info
+S107895,SUP-21,"still on siet, relief was suppose to come 06:00..",relief_no_show,operational
+S106397,SUP-19,client signed for the extra hrs but real reason is relief no show agn,relief_no_show,operational
+S106711,SUP-17,ntr,nothing_useful,no_info
+S103587,SUP-23,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S100408,SUP-23,ok,nothing_useful,no_info
+S106940,SUP-17,"Dlmini asent, took her rounds as well",colleague_no_show,operational
+S106816,SUP-16,no relief. stayed. someone must please sort the rooster,relief_no_show,operational
+S100299,SUP-11,"waited for relief, nobody came through",relief_no_show,operational
+S100549,SUP-18,"requested by centre management for load in, signed off",client_requested,client
+S101396,SUP-23,"uMolefe akezanga namhlanje, ngimele yena..",colleague_no_show,operational
+S100266,SUP-01,klient het ekstra ure gevra vir stocktake,client_requested,client
+S106166,SUP-06,"double duty today, Fourie on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S107510,SUP-14,"covering Mahlangu post, no show no call",colleague_no_show,operational
+S106069,SUP-24,"gate motor failed, manned it by hand till 0h600",equipment_failure,operational
+S107921,SUP-06,extra hours approved by client for the event setup,client_requested,client
+S100277,SUP-18,shift handover delayed by 20 min,late_handover,operational
+S100712,SUP-01,adams off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S104567,SUP-11,as per normal,nothing_useful,no_info
+S100797,SUP-09,ok,nothing_useful,no_info
+S108503,SUP-22,sharp,nothing_useful,no_info
+S106863,SUP-07,no issues on site,nothing_useful,no_info
+S105139,SUP-17,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S108280,SUP-15,stood in for sibiya,stood_in_unspecified,absence_excused_or_unclear
+S109124,SUP-23,Clieent requested deep clean before the audit - approved,client_requested,client
+S106093,SUP-05,"waited for relief, nobody came through",relief_no_show,operational
+S106268,SUP-11,as per normal,nothing_useful,no_info
+S105124,SUP-08,double shift because relief never pitched,relief_no_show,operational
+S102948,SUP-22,"relief only arrived six, stayed until then..",relief_no_show,operational
+S101081,SUP-01,nothing to report,nothing_useful,no_info
+S105625,SUP-16,"additional cover requested by site manager, signed off",client_requested,client
+S104037,SUP-01,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S105960,SUP-22,"radebe absent, took her rounds as well",colleague_no_show,operational
+S100537,SUP-11,Covering for Mavuso - booked off sick..,colleague_sick_or_leave,absence_excused_or_unclear
+S109200,SUP-20,ntr,nothing_useful,no_info
+S102385,SUP-12,stood in for Naidoo,stood_in_unspecified,absence_excused_or_unclear
+S101042,SUP-03,"uNdlovu akezanga namhlanje, ngimele yean",colleague_no_show,operational
+S108254,SUP-24,Covering for Fourie - booked off siick,colleague_sick_or_leave,absence_excused_or_unclear
+S106011,SUP-12,"extra patrol per client email, approved by office",client_requested,client
+S101573,SUP-16,"uNkosi akezanga namhlanje, ngimele yeena",colleague_no_show,operational
+S105696,SUP-24,"uNkosi akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S103370,SUP-21,"coovering Baloyi post, no show no call",colleague_no_show,operational
+S100181,SUP-17,"still on sitee, relief was suppose to come 6am",relief_no_show,operational
+S108268,SUP-18,Radebe off sikc. again. cvered..,colleague_sick_or_leave,absence_excused_or_unclear
+S105572,SUP-02,fine,nothing_useful,no_info
+S103808,SUP-10,"coverign Mavuso post, no show no call",colleague_no_show,operational
+S101817,SUP-23,double shift because relief never pitched,relief_no_show,operational
+S108371,SUP-15,.,nothing_useful,no_info
+S108540,SUP-23,"next shift akafikanga, ngihlale kuze kube 06h00",relief_no_show,operational
+S106935,SUP-15,"stocktake ran over, client asked us to remain, they knnow they pay for it",client_requested,client
+S109156,SUP-10,"generator fault, stayed to monitor",equipment_failure,operational
+S100726,SUP-09,"gate motor failed, manned it by hand till six",equipment_failure,operational
+S103382,SUP-18,"waited for relief, nobody came through",relief_no_show,operational
+S102640,SUP-04,"machine dowwn aggn, took twice as long",equipment_failure,operational
+S103033,SUP-16,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S109286,SUP-08,"client wanted extra man on the gate for the event, approved",client_requested,client
+S103604,SUP-20,stood in for Mokoena,stood_in_unspecified,absence_excused_or_unclear
+S100052,SUP-16,Client requested deep clean before the audit - approved,client_requested,client
+S107154,SUP-15,sharp,nothing_useful,no_info
+S107291,SUP-09,extra hrs approved by client for the event setup,client_requested,client
+S106495,SUP-20,"client wanted extra man on the gate for the event, approved..",client_requested,client
+S105669,SUP-01,,nothing_useful,no_info
+S106182,SUP-13,all quiet,nothing_useful,no_info
+S103440,SUP-20,"generator fault, stayed to monitor..",equipment_failure,operational
+S100516,SUP-15,"double duy today, adams on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S105883,SUP-15,-,nothing_useful,no_info
+S100363,SUP-20,"generator fault, stayed to monitor..",equipment_failure,operational
+S106025,SUP-10,"client says stay till six, dont know if office approved",client_unconfirmed,client_unconfirmed
+S103703,SUP-02,doouble shift bc relief never pitched,relief_no_show,operational
+S103757,SUP-20,centre manager requested additional cover for stocktake,client_requested,client
+S101612,SUP-19,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S102247,SUP-15,"waited 20 min for handover, OB book not signed",late_handover,operational
+S109254,SUP-02,"client says stay till six, dont know if office approved..",client_unconfirmed,client_unconfirmed
+S101501,SUP-16,"late handover, waiting on paperwork",late_handover,operational
+S107309,SUP-13,no incidents,nothing_useful,no_info
+S102584,SUP-24,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S100200,SUP-09,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S103476,SUP-03,"SCRUBBER BROKE DOWN, HAD TO DO THE FLOOR MANUALLY",equipment_failure,operational
+S108439,SUP-07,"lift out of order, everything carried up stairs, took lng",equipment_failure,operational
+S108057,SUP-09,"double duty today, Sithole on family responsibility leave !",colleague_sick_or_leave,absence_excused_or_unclear
+S108088,SUP-22,"masjien is stkkend, alles met die hand geddoen",equipment_failure,operational
+S103864,SUP-24,ok,nothing_useful,no_info
+S101330,SUP-09,akukho lutho,nothing_useful,no_info
+S108094,SUP-17,"lift out of orde,r everything carried up stairs, took long",equipment_failure,operational
+S108510,SUP-22,ok,nothing_useful,no_info
+S101480,SUP-14,stood in for Dlamini,stood_in_unspecified,absence_excused_or_unclear
+S109289,SUP-21,client signed for the extra hrs but real reason is relief no show agn,relief_no_show,operational
+S102835,SUP-01,"relef only arrived 6am, stayed until then..",relief_no_show,operational
+S108064,SUP-17,baloyi off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S100548,SUP-05,stood in for fourie,stood_in_unspecified,absence_excused_or_unclear
+S105079,SUP-05,"control room says relief coming, nobody came",relief_no_show,operational
+S107135,SUP-11,Centre mgr requested additional cover for stocktake,client_requested,client
+S104344,SUP-23,"Jacobs absent, took her rounds as well",colleague_no_show,operational
+S101630,SUP-10,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S103170,SUP-09,fine,nothing_useful,no_info
+S101566,SUP-01,sharp,nothing_useful,no_info
+S102828,SUP-24,akukho lutho,nothing_useful,no_info
+S107529,SUP-07,"worked through, Zulu at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S107515,SUP-06,akukho lutho,nothing_useful,no_info
+S108864,SUP-11,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S108457,SUP-17,shitf handover delayed by 25 min,late_handover,operational
+S106995,SUP-04,"double duty today, Adams on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S104151,SUP-02,"handover late again, keys missing",late_handover,operational
+S103790,SUP-01,"worked through, dlamini at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S101197,SUP-11,ntr,nothing_useful,no_info
+S101718,SUP-12,fine,nothing_useful,no_info
+S101587,SUP-17,"late handover, waitng on paperwork",late_handover,operational
+S107156,SUP-21,"usithole akezanga namhlanje, ngimeel yena",colleague_no_show,operational
+S101092,SUP-11,no issues on site,nothing_useful,no_info
+S106356,SUP-22,"worked through, Sithole at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S102632,SUP-24,"uMahlangu akezanga namhlanje, ngimele yena..",colleague_no_show,operational
+S107359,SUP-08,"additional cover requested by site manager, signed off",client_requested,client
+S102118,SUP-19,all quiet,nothing_useful,no_info
+S108650,SUP-14,"double duty today, Hendricks on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S105655,SUP-05,"handover late agn, keys missing",late_handover,operational
+S107623,SUP-04,Centre manager requested additional cover for stocktake,client_requested,client
+S108743,SUP-11,"worked through, Mokoena at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S100665,SUP-11,"Molefe absent, took her rounds as well",colleague_no_show,operational
+S103435,SUP-16,"gedek vir Wyk, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S106108,SUP-15,RELIEF NO SHOW AGAIN,relief_no_show,operational
+S105842,SUP-16,"relief never arrived, stayed on till six",relief_no_show,operational
+S106086,SUP-24,"extra patrol per client email, approved by office !",client_requested,client
+S104859,SUP-09,"extra patrol per client email, approved by office",client_requested,client
+S107212,SUP-09,,nothing_useful,no_info
+S103756,SUP-05,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S104304,SUP-22,double shift because relief never pitched,relief_no_show,operational
+S100332,SUP-18,"covering Zulu post, no show no call",colleague_no_show,operational
+S102371,SUP-15,Khumalo off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107991,SUP-08,Covered for Ndlovu agn - 3rd time this month,colleague_no_show,operational
+S100302,SUP-24,client requested deep clean before the audit - approved,client_requested,client
+S102062,SUP-07,"double duty today, Pillay on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S107810,SUP-03,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S106116,SUP-08,"gedek vir Zulu, siek gemeld..",colleague_sick_or_leave,absence_excused_or_unclear
+S104043,SUP-23,"waited 25 min for handover, OB book not signed",late_handover,operational
+S104333,SUP-19,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S104906,SUP-01,"machine down agn, took twice as long",equipment_failure,operational
+S105451,SUP-01,all quiet,nothing_useful,no_info
+S108872,SUP-10,"late handover, waiting on paperwork",late_handover,operational
+S108027,SUP-10,klient het ekstra ure gevra vir stocktake,client_requested,client
+S107476,SUP-20,"worked through, Sibiya at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S102766,SUP-20,.,nothing_useful,no_info
+S103672,SUP-19,no issues on site,nothing_useful,no_info
+S105472,SUP-22,-,nothing_useful,no_info
+S107747,SUP-12,"machine down agn, took twice as long",equipment_failure,operational
+S107208,SUP-21,shift handover delayed by 30 min !,late_handover,operational
+S107555,SUP-14,SHIFT HANDOVER DELAYED BY 40 MIN,late_handover,operational
+S100891,SUP-10,no relief. stayed. someone must please srt the roster,relief_no_show,operational
+S106282,SUP-05,"CLIENT ASKED US TO STAY FOR THE DELIVERY, OK'D BY CENTRE MGMT",client_requested,client
+S102843,SUP-10,as per normal,nothing_useful,no_info
+S109339,SUP-05,double shift beacuse relief never pitched,relief_no_show,operational
+S104674,SUP-04,quiet shift,nothing_useful,no_info
+S102694,SUP-16,ok,nothing_useful,no_info
+S101629,SUP-14,Cetre manager requested additional cover for stocktake,client_requested,client
+S109086,SUP-09,nothing to report,nothing_useful,no_info
+S108692,SUP-06,klient het ekstra ure gevra vir stocktake,client_requested,client
+S107462,SUP-23,"handover late again, keys missing",late_handover,operational
+S106103,SUP-09,covered for molefe again - 3rd time this month,colleague_no_show,operational
+S105103,SUP-22,-,nothing_useful,no_info
+S106879,SUP-14,"uMavuso akezana namhlanje, ngimele yean",colleague_no_show,operational
+S104654,SUP-13,"handover late again, keys missing",late_handover,operational
+S101764,SUP-20,"STOCKTAKE RAN OVER, CLIENT ASKD US TO REMAIN, THEY KNOW THEY PAY FOR IT..",client_requested,client
+S100498,SUP-01,"stocktake ran over, client asked us to remain, they know tehy pay for it",client_requested,client
+S102011,SUP-17,all good,nothing_useful,no_info
+S103449,SUP-15,"client asked us to stay for the deliverry, ok'd by centre mgmt..",client_requested,client
+S105682,SUP-04,all quiet,nothing_useful,no_info
+S106607,SUP-07,"wroked through, Mabaso at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S102744,SUP-22,Client requested deep clean before the audit - approved !,client_requested,client
+S103824,SUP-21,nothing to report,nothing_useful,no_info
+S107616,SUP-21,-,nothing_useful,no_info
+S106424,SUP-01,covering for molefe - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S106137,SUP-21,"waited 45 min for handover, ob book not signed",late_handover,operational
+S102719,SUP-14,"machine down agn, took twice as long",equipment_failure,operational
+S101504,SUP-24,"took Sithole shift as well, 2 posts 1 guard",colleague_no_show,operational
+S102874,SUP-02,"Ngcobo didnt come in, covered the post",colleague_no_show,operational
+S105098,SUP-24,"requessted by centre management for load in, signed off",client_requested,client
+S105180,SUP-11,"took Baloyi shift as well, 2 posts 1 guard",colleague_no_show,operational
+S107046,SUP-22,"waited 40 min for handover, OB book not signed",late_handover,operational
+S102676,SUP-10,"worked through, motaung at the clinic !",colleague_sick_or_leave,absence_excused_or_unclear
+S105322,SUP-16,extra hours approved by client for the event setup,client_requested,client
+S107350,SUP-06,Centre manager requested additional cover for stocktake,client_requested,client
+S107707,SUP-10,no relief. stayed. someone must pls sort the roster,relief_no_show,operational
+S106277,SUP-08,"Fourie didnt come in, covered the post",colleague_no_show,operational
+S108049,SUP-20,"client wanted extra man on the gate for the event, approved",client_requested,client
+S101735,SUP-09,as per normal,nothing_useful,no_info
+S103842,SUP-23,"took Radebe shift as well, 2 posts 1 guard",colleague_no_show,operational
+S100398,SUP-19,"double duty today, adams on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S100319,SUP-18,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S108777,SUP-14,no incidents,nothing_useful,no_info
+S106576,SUP-05,"control room says relief coming, nobody came",relief_no_show,operational
+S108538,SUP-14,nothing to report,nothing_useful,no_info
+S106370,SUP-08,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S107336,SUP-04,"client wanted extra man on the gate for the event, approved",client_requested,client
+S106801,SUP-07,"took Sibiya shift as well, 2 posts 1 gurad !",colleague_no_show,operational
+S100331,SUP-14,"late handover, waitting on paperwork..",late_handover,operational
+S101887,SUP-24,extra hrs approved by client for the event setup..,client_requested,client
+S100525,SUP-19,"requested by centre management for load in, signed off",client_requested,client
+S102246,SUP-03,"next shift akafikanga, ngihlale kuze kube six",relief_no_show,operational
+S108330,SUP-12,ok,nothing_useful,no_info
+S105314,SUP-24,"khumalo didnt comme in, covered the post",colleague_no_show,operational
+S103111,SUP-06,"requested by centre management for load in, signed off",client_requested,client
+S106974,SUP-24,covering for wyk - booked off sck,colleague_sick_or_leave,absence_excused_or_unclear
+S102866,SUP-13,"aflos het nie opgedaag nie, moes aanbly",relief_no_show,operational
+S101384,SUP-24,stod in for Sithole,stood_in_unspecified,absence_excused_or_unclear
+S106096,SUP-18,"ufourie akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S107944,SUP-02,"requested by centre management for load in, signed off",client_requested,client
+S101166,SUP-18,klient het ekstra ure gevra vir stocktake,client_requested,client
+S104424,SUP-24,all quiet,nothing_useful,no_info
+S102408,SUP-18,"wated 40 min for handover, OB book not signed",late_handover,operational
+S106818,SUP-06,.,nothing_useful,no_info
+S107060,SUP-13,Covered for Botha again - 3rd time this month..,colleague_no_show,operational
+S100307,SUP-17,"additional cover requested by site mgr, signed off",client_requested,client
+S103057,SUP-07,no incidents,nothing_useful,no_info
+S106569,SUP-21,"gedek vir Mokoena, siek gemeld..",colleague_sick_or_leave,absence_excused_or_unclear
+S100134,SUP-11,"waited 20 min for handover, OB book not signed",late_handover,operational
+S100649,SUP-07,Client requested deep clean before the audit - approved,client_requested,client
+S102054,SUP-05,kllient het ekstra ure gevra vir stocktake,client_requested,client
+S106281,SUP-03,Covred for Mavuso again - 3rd time this month,colleague_no_show,operational
+S105582,SUP-11,"generator fault, stayed to monitor",equipment_failure,operational
+S103702,SUP-05,stood in for Mokoena,stood_in_unspecified,absence_excused_or_unclear
+S100773,SUP-21,as per normal,nothing_useful,no_info
+S103475,SUP-14,all good,nothing_useful,no_info
+S101458,SUP-10,"COVERING MAHLANGU POST, NO SHOW NO CALL",colleague_no_show,operational
+S108745,SUP-04,"late handover, waiting on paperwork",late_handover,operational
+S108265,SUP-24,no relief. stayed. someone mut please sort the roster,relief_no_show,operational
+S107404,SUP-24,,nothing_useful,no_info
+S107077,SUP-04,stood in for Sibiya,stood_in_unspecified,absence_excused_or_unclear
+S105755,SUP-11,"lift out of order, everything carried up stairs, took loong",equipment_failure,operational
+S106286,SUP-10,"late handover, waiting on paperwork",late_handover,operational
+S106440,SUP-13,"next shift akafikanga, ngihlale kuze kube six",relief_no_show,operational
+S102086,SUP-18,all quiet,nothing_useful,no_info
+S103486,SUP-19,"worked through, Wyk at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S103158,SUP-10,"waited 25 min for handover, OB book not signed",late_handover,operational
+S102971,SUP-12,extra hours approved by client for the event setup,client_requested,client
+S101051,SUP-08,fine,nothing_useful,no_info
+S105647,SUP-05,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S101820,SUP-07,"covering Ngcobo post, no show no call",colleague_no_show,operational
+S101768,SUP-24,"generator fault, stayed to monitor",equipment_failure,operational
+S106091,SUP-02,"worked through, mavuso at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S105295,SUP-10,,nothing_useful,no_info
+S107709,SUP-20,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S107617,SUP-17,"handover lae again, keys missing",late_handover,operational
+S103039,SUP-05,"waited 50 min for handover, OB book not signed",late_handover,operational
+S101609,SUP-02,"covering Cele post, no show no call",colleague_no_show,operational
+S109137,SUP-14,extra hours approved by client for the event setup,client_requested,client
+S105287,SUP-15,as per normal,nothing_useful,no_info
+S105958,SUP-11,quiet shift,nothing_useful,no_info
+S109346,SUP-21,all good,nothing_useful,no_info
+S108892,SUP-18,"worked through, Sibiya at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S107950,SUP-03,"handover late again, keys missiing",late_handover,operational
+S108035,SUP-04,"client wanted extra man on the gate for the event, approved",client_requested,client
+S102930,SUP-24,"additional cover requested by site manager, signed off",client_requested,client
+S107017,SUP-01,niks om te rapporteer nie,nothing_useful,no_info
+S101524,SUP-07,"control room says relief coming, nobody camme",relief_no_show,operational
+S106728,SUP-23,"nexxt shift akafikanga, ngihlale kuze kube 06h00",relief_no_show,operational
+S106394,SUP-11,klient het ekstrra ure gevra vir stocktake,client_requested,client
+S104415,SUP-02,Covered for Mthembu agn - 3rd time this month,colleague_no_show,operational
+S103765,SUP-21,"extra patrol per client email, approved by office",client_requested,client
+S100558,SUP-22,"requested by centre management for load in, signed off",client_requested,client
+S103614,SUP-13,"additional cover requested by site manager, signed off",client_requested,client
+S105922,SUP-16,Covered for Wyk again - 3rd time this month..,colleague_no_show,operational
+S106407,SUP-16,Naidoo off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S101313,SUP-22,sharp,nothing_useful,no_info
+S106100,SUP-18,"waited 50 min for handover, ob book not signed",late_handover,operational
+S101614,SUP-16,"aflos het nie opgedaag ne, moes aanbly",relief_no_show,operational
+S105641,SUP-05,"double dutty today, molefe on fmaily responsibility leave..",colleague_sick_or_leave,absence_excused_or_unclear
+S104433,SUP-02,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S100057,SUP-19,sharp,nothing_useful,no_info
+S101497,SUP-24,,nothing_useful,no_info
+S105204,SUP-10,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S108450,SUP-06,"extra patrol per client email, approved by office",client_requested,client
+S105609,SUP-18,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S100795,SUP-08,-,nothing_useful,no_info
+S104407,SUP-12,"relief only arrived 0600, stayed until then",relief_no_show,operational
+S105854,SUP-21,ntr,nothing_useful,no_info
+S107175,SUP-15,no incidents,nothing_useful,no_info
+S107368,SUP-11,"client says sttay till six, dont know if office approved",client_unconfirmed,client_unconfirmed
+S101748,SUP-16,Centre manager requested additional cover for stocktake,client_requested,client
+S104326,SUP-21,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S108683,SUP-16,"additional cover requested by site manager, signed off",client_requested,client
+S105737,SUP-20,fine,nothing_useful,no_info
+S109177,SUP-17,ok,nothing_useful,no_info
+S107873,SUP-17,Sibiya off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S100114,SUP-15,"waited 25 min for handover, ob book not signed",late_handover,operational
+S103831,SUP-06,"uWyk akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S102079,SUP-03,all good,nothing_useful,no_info
+S104665,SUP-12,Client asekd for extra patrol after the break-in Tuesday,client_requested,client
+S105651,SUP-09,"oorhandiging was lata, gewag vir sleutels",late_handover,operational
+S100389,SUP-01,"masjien is stukkedn, alles met die hand gedoen..",equipment_failure,operational
+S107711,SUP-15,SHIFT HANDOVER DELAYED BY 40 MIN,late_handover,operational
+S108496,SUP-17,no incidents,nothing_useful,no_info
+S106753,SUP-19,"took botha shift as well, 2 posts 1 guard",colleague_no_show,operational
+S103779,SUP-21,"control room says relief coming, nobody came",relief_no_show,operational
+S105658,SUP-03,Client requested deep clean befre the audit - approved,client_requested,client
+S106880,SUP-19,"extra patrol per client email, approved by ofice",client_requested,client
+S100276,SUP-09,"late handover, waiting on paperwork",late_handover,operational
+S106220,SUP-16,Client requested deep clean before the audit - approved,client_requested,client
+S107418,SUP-01,all quiet,nothing_useful,no_info
+S104901,SUP-20,"generator fault, stayed to monitor",equipment_failure,operational
+S107297,SUP-22,double shift because relief never pitched,relief_no_show,operational
+S108899,SUP-01,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S102709,SUP-15,-,nothing_useful,no_info
+S107372,SUP-20,"uNgcobo akezanga namhlanje, ngimele ynea",colleague_no_show,operational
+S109370,SUP-22,"still on site, relief was suppose to come 06:00",relief_no_show,operational
+S109272,SUP-13,"generator fault, stayed to monitor",equipment_failure,operational
+S103799,SUP-09,"relief never arrived, stayed on till 06h00",relief_no_show,operational
+S104108,SUP-22,next shift guard did not pitch. had to cover..,relief_no_show,operational
+S102977,SUP-12,"gedek vir Mthembu, siek gemeld !",colleague_sick_or_leave,absence_excused_or_unclear
+S103868,SUP-04,"requested by centre management for load in, signed off",client_requested,client
+S107802,SUP-07,.,nothing_useful,no_info
+S104312,SUP-02,.,nothing_useful,no_info
+S107243,SUP-08,"worked through, Sibiya at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S100325,SUP-19,klient het ekstra ure gevra vir stocktake,client_requested,client
+S101773,SUP-15,"client says stay till 06h00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S108846,SUP-13,"handover late agn, keys missing",late_handover,operational
+S101203,SUP-19,"gedek vir Mthembu, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S106597,SUP-19,"client says stay till 06h00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S101888,SUP-10,no relief. stayed. someone mut please sort the roster..,relief_no_show,operational
+S107461,SUP-08,"aflos het nie opgedaag nie, moes aanly",relief_no_show,operational
+S106344,SUP-20,"umaluleke akezanga namhlanje, ngimele yeena",colleague_no_show,operational
+S109397,SUP-07,fine,nothing_useful,no_info
+S105504,SUP-03,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S102288,SUP-02,extra hrs approved by client for the event setup,client_requested,client
+S104628,SUP-07,Covering for Adams - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S106519,SUP-15,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S104644,SUP-06,niks om te rapporteer nie,nothing_useful,no_info
+S100172,SUP-19,"uSibiya akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S108096,SUP-18,RELIEF NO SHOW AGAIN,relief_no_show,operational
+S103599,SUP-03,shift handover deelayed by 40 min !,late_handover,operational
+S108176,SUP-18,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S105643,SUP-21,"handover late again, keys missing",late_handover,operational
+S101740,SUP-14,extra hrs approved by client for the event setup,client_requested,client
+S102995,SUP-24,as per normal,nothing_useful,no_info
+S104319,SUP-16,"Tshabalala absent, took her rounds as well",colleague_no_show,operational
+S106228,SUP-06,"extra patrol per client email, approved by office",client_requested,client
+S107960,SUP-21,"covering Naidoo post, no show no call",colleague_no_show,operational
+S104406,SUP-12,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S103004,SUP-05,"requested by centre managemennt for load in, signed off !",client_requested,client
+S104421,SUP-05,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S103392,SUP-17,"next shift akafikanga, ngihlale kuze kube 6..",relief_no_show,operational
+S101089,SUP-09,"masjien is stukkend, ales met die hand gedoen !",equipment_failure,operational
+S107862,SUP-05,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S100345,SUP-11,"uMahlangu akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S106623,SUP-19,"double duty today, Hendricks on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S108674,SUP-22,"client says stay till 0600, dont know if office approved",client_unconfirmed,client_unconfirmed
+S108192,SUP-05,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S104689,SUP-12,"Maluleke didnt come in, covered the post",colleague_no_show,operational
+S104878,SUP-19,"double duty today, Jacobs on family responsibility leae..",colleague_sick_or_leave,absence_excused_or_unclear
+S108196,SUP-10,"client wanted extra man on the gate for the event, approved !",client_requested,client
+S107497,SUP-02,"double duty today, Motaung on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S103401,SUP-14,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S100710,SUP-13,"no replacment sent, ngicela sort this out",relief_no_show,operational
+S105319,SUP-10,"double duty today, Sibiya on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S103592,SUP-23,"relief only arrived sxi, stayed until then..",relief_no_show,operational
+S108446,SUP-06,kliennt het ekstra ure gevra vir stocktake,client_requested,client
+S107986,SUP-16,"extra patrol per client email, approved by office",client_requested,client
+S106383,SUP-16,"ungcobo akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S109100,SUP-05,"client wanted extra man on the gate for the event, approved",client_requested,client
+S104885,SUP-17,"late handover, waiting on paperwork !",late_handover,operational
+S103044,SUP-16,double shift bc relief never pitched,relief_no_show,operational
+S105817,SUP-09,ok,nothing_useful,no_info
+S103443,SUP-18,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S105267,SUP-24,"bfufer machine kaput, did the floor by hand",equipment_failure,operational
+S106432,SUP-08,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S107698,SUP-11,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S106374,SUP-09,Centre mgr requested additional cvoer for stocktake,client_requested,client
+S107985,SUP-18,stood in for zulu,stood_in_unspecified,absence_excused_or_unclear
+S105143,SUP-21,"lift out of order, everything caried up stairs, took long",equipment_failure,operational
+S105302,SUP-17,"double duty today, Fourie on famiy responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S101859,SUP-24,klient het ekstra ure gevra vir stocktake,client_requested,client
+S100868,SUP-24,ntr,nothing_useful,no_info
+S100269,SUP-10,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S108858,SUP-16,"botha didnt come in, covered the post..",colleague_no_show,operational
+S108494,SUP-19,"client says stay till 6, dont kow if office approved",client_unconfirmed,client_unconfirmed
+S100283,SUP-06,"oorhandiging was laat, gewag vir sleutles !",late_handover,operational
+S108586,SUP-22,"handover latte again, keys missing",late_handover,operational
+S100771,SUP-10,Covered for Fourie again - 3rd time this month..,colleague_no_show,operational
+S105780,SUP-05,ntr,nothing_useful,no_info
+S104883,SUP-14,ok,nothing_useful,no_info
+S107995,SUP-05,stood in for mabaso,stood_in_unspecified,absence_excused_or_unclear
+S106316,SUP-04,extra hrs appproved by client for the event setup,client_requested,client
+S103446,SUP-07,"generator fault, stayed to monitor",equipment_failure,operational
+S100535,SUP-03,"generator falut, stayed to monitor",equipment_failure,operational
+S107049,SUP-23,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S102839,SUP-19,"aflos het nie opgedaag nie, moes aanblly",relief_no_show,operational
+S103610,SUP-16,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S104382,SUP-16,niks om te rapporteer nie,nothing_useful,no_info
+S108357,SUP-05,"covering Ndlovu post, no show no call",colleague_no_show,operational
+S103685,SUP-08,"generator fault, stayd to monitor",equipment_failure,operational
+S106148,SUP-18,"handover late again, keys missing",late_handover,operational
+S102498,SUP-13,ntr,nothing_useful,no_info
+S107042,SUP-24,"covering Molefe post, no show no call",colleague_no_show,operational
+S104646,SUP-02,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S101526,SUP-14,"worked throuugh, September at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S107967,SUP-07,"waited for releif, nobody came through",relief_no_show,operational
+S107549,SUP-06,,nothing_useful,no_info
+S105630,SUP-08,shift handover delayed by 30 min,late_handover,operational
+S105327,SUP-10,Covering for Botha - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S108130,SUP-08,"additional cover requested by site mgr, signed off",client_requested,client
+S106201,SUP-20,-,nothing_useful,no_info
+S106899,SUP-24,"uMokoena akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S107524,SUP-19,"double duty today, Sibiya on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S103153,SUP-14,"worked through, Sibiya at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S104338,SUP-16,"Nkosi didnt come in, covered the post",colleague_no_show,operational
+S100724,SUP-07,"client wanted extra man on the gate for the evvent, approved !",client_requested,client
+S104648,SUP-18,.,nothing_useful,no_info
+S104083,SUP-01,"september absent, took her rounds as well",colleague_no_show,operational
+S107344,SUP-08,"handover late agn, keys missing",late_handover,operational
+S103612,SUP-14,shift hadnover delayed by 30 min,late_handover,operational
+S102378,SUP-07,"client waned extra man on the gate for the event, approved",client_requested,client
+S106888,SUP-05,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105165,SUP-19,"aflos het nie opgedaga niie, moes anbly",relief_no_show,operational
+S105888,SUP-19,klient het ekstra ure gevra vir stocktake..,client_requested,client
+S102710,SUP-06,"tshabalala absent, took her rounds as well",colleague_no_show,operational
+S106661,SUP-20,"waited 30 min for handover, OB book not signed..",late_handover,operational
+S102302,SUP-02,"gedek vir Adams, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S107989,SUP-15,"control room says relief comin, nobody came",relief_no_show,operational
+S105809,SUP-19,"control room says relief coming, nobody came !",relief_no_show,operational
+S103143,SUP-05,stood in for Baloyi,stood_in_unspecified,absence_excused_or_unclear
+S102309,SUP-24,all good,nothing_useful,no_info
+S107728,SUP-10,stood in for Maluleke,stood_in_unspecified,absence_excused_or_unclear
+S107898,SUP-07,"relief only arrived 6am, stayed until then",relief_no_show,operational
+S106422,SUP-08,"late handover, waiiting on paperwork",late_handover,operational
+S106283,SUP-23,extra hrs approved by client for the event setup,client_requested,client
+S106415,SUP-20,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S106276,SUP-04,nothing to report,nothing_useful,no_info
+S103020,SUP-10,Botha off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S108204,SUP-08,klient het ekstra ure gevra vir stocktake,client_requested,client
+S101096,SUP-05,"tok Botha shift as well, 2 posts 1 guard",colleague_no_show,operational
+S105634,SUP-18,"requested by centre management for load in, signed off",client_requested,client
+S101833,SUP-15,"uhendrciks akezanga namhlanje, ngimele yena..",colleague_no_show,operational
+S108364,SUP-12,"additional cover requested by site manager, signed off",client_requested,client
+S103068,SUP-02,"Wyk didnt coome in, covered the post",colleague_no_show,operational
+S101059,SUP-15,"WORKED THROUGH, SIBIYA AT THE CLINIC..",colleague_sick_or_leave,absence_excused_or_unclear
+S100360,SUP-13,"gate motor failed, manned it by hand tilll 0600..",equipment_failure,operational
+S102441,SUP-19,covering for maluleke - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S105488,SUP-17,akukho lutho,nothing_useful,no_info
+S107400,SUP-21,all fine,nothing_useful,no_info
+S102824,SUP-01,"control room says relief coming, nobody came",relief_no_show,operational
+S107235,SUP-09,nothing to report,nothing_useful,no_info
+S106874,SUP-01,"baloyi didnt come in, covered the post",colleague_no_show,operational
+S106788,SUP-22,"additional cover requested by site mgr, signed off",client_requested,client
+S107521,SUP-06,"relief only arrived 06:00, stayyed until then",relief_no_show,operational
+S107155,SUP-20,quiet shift,nothing_useful,no_info
+S107308,SUP-15,all good,nothing_useful,no_info
+S107072,SUP-03,"still on site, relief was suppose to come six !",relief_no_show,operational
+S101898,SUP-22,"Sibiya didnt come in, covered the post",colleague_no_show,operational
+S104077,SUP-18,"took Ngcobo shift as well, 2 posts 1 guard",colleague_no_show,operational
+S102140,SUP-12,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S106906,SUP-01,next shift guard did not pitch. had to cover..,relief_no_show,operational
+S106659,SUP-17,"Wyk absent, took her rounds as well",colleague_no_show,operational
+S108596,SUP-12,all fine,nothing_useful,no_info
+S109349,SUP-05,,nothing_useful,no_info
+S104858,SUP-20,Covering for Ngcobo - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S100523,SUP-12,relief no show AGAIN,relief_no_show,operational
+S104204,SUP-08,"covering molefe post, no show no call",colleague_no_show,operational
+S103595,SUP-12,"umolefe akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S108047,SUP-02,all quiet,nothing_useful,no_info
+S109308,SUP-12,"uZulu akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S105050,SUP-15,stood in for Pillay..,stood_in_unspecified,absence_excused_or_unclear
+S106433,SUP-15,extra hrs approved by client for the event setup,client_requested,client
+S103585,SUP-13,no relief. stayed. someone must pls sort the roster,relief_no_show,operational
+S100972,SUP-02,all quiet,nothing_useful,no_info
+S102704,SUP-20,ntr,nothing_useful,no_info
+S105748,SUP-04,"Mavuso didnt come in, covered the post..",colleague_no_show,operational
+S109111,SUP-22,,nothing_useful,no_info
+S102010,SUP-16,shift hanndover delayed by 30 min,late_handover,operational
+S105626,SUP-18,"covering Mahlangu post, no show no call",colleague_no_show,operational
+S101392,SUP-24,"handover late again, keys missing",late_handover,operational
+S107771,SUP-01,-,nothing_useful,no_info
+S104924,SUP-19,"Naidoo absent, tok her roudns as well",colleague_no_show,operational
+S100849,SUP-06,no issues on site,nothing_useful,no_info
+S107541,SUP-01,fine,nothing_useful,no_info
+S103960,SUP-23,"no replacement sent, ngicela sort this out",relief_no_show,operational
+S102399,SUP-18,"worked through, Molefe at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S104498,SUP-03,"requested by centre management for load in, signed off",client_requested,client
+S100311,SUP-16,no relief. stayed. someone must please sort the roster..,relief_no_show,operational
+S107355,SUP-20,Covering for Naidoo - booked off sick..,colleague_sick_or_leave,absence_excused_or_unclear
+S105207,SUP-02,sharp,nothing_useful,no_info
+S102913,SUP-14,quiet shift,nothing_useful,no_info
+S104834,SUP-22,,nothing_useful,no_info
+S104231,SUP-08,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S104030,SUP-10,"waited for relief, nobody came through",relief_no_show,operational
+S100774,SUP-18,Centre manager requested additional cover for stocktake,client_requested,client
+S101839,SUP-16,quiet shift,nothing_useful,no_info
+S102944,SUP-18,,nothing_useful,no_info
+S103411,SUP-08,ceentre manager rqeuested additional cover for stocktake,client_requested,client
+S108179,SUP-06,"Motaung didnt come in, covered the post",colleague_no_show,operational
+S106154,SUP-04,"waited 20 min for handover, ob book not signed !",late_handover,operational
+S106133,SUP-07,stood in for Wyk,stood_in_unspecified,absence_excused_or_unclear
+S103061,SUP-17,"generator fault, stayed to monitor..",equipment_failure,operational
+S100584,SUP-13,"still on site, reelief was suppose to come 06:00",relief_no_show,operational
+S101099,SUP-03,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105363,SUP-09,"uJacobs akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S103710,SUP-09,shift handover delayed by 20 min,late_handover,operational
+S108037,SUP-18,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S105002,SUP-19,Clint requsted deep clean before the audit - approved,client_requested,client
+S100043,SUP-23,nothing to report,nothing_useful,no_info
+S102847,SUP-08,etxra hrs approved by client for the event setup,client_requested,client
+S106613,SUP-10,sharp,nothing_useful,no_info
+S105431,SUP-13,stood in for Nkosi,stood_in_unspecified,absence_excused_or_unclear
+S107244,SUP-07,"waited 25 min for handover, OB book not signed",late_handover,operational
+S107699,SUP-12,no incidents,nothing_useful,no_info
+S106140,SUP-01,sharp,nothing_useful,no_info
+S106965,SUP-12,"requested by centre maangement for load in, signed off",client_requested,client
+S108481,SUP-21,ntr,nothing_useful,no_info
+S106021,SUP-01,Client asked for extra patrol after the break-in Tuesdaay,client_requested,client
+S107465,SUP-02,fine,nothing_useful,no_info
+S104653,SUP-15,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S103535,SUP-12,all quiet,nothing_useful,no_info
+S101987,SUP-14,quiet shift,nothing_useful,no_info
+S108585,SUP-06,"worked through, Adams at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S108003,SUP-22,"covering Hendrricks post, no show no call",colleague_no_show,operational
+S108898,SUP-12,"ujacobs akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S100600,SUP-08,Covering for Mavuso - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S102555,SUP-23,"gedek vir molefe, siek gemeld..",colleague_sick_or_leave,absence_excused_or_unclear
+S104010,SUP-10,"took Ndlovu shift as well, 2 psots 1 guard",colleague_no_show,operational
+S103664,SUP-09,.,nothing_useful,no_info
+S100894,SUP-18,"cliennt says stay till 6, dont know if office approved..",client_unconfirmed,client_unconfirmed
+S109246,SUP-07,fine,nothing_useful,no_info
+S103010,SUP-11,Centre mgr requested additional cover for stocktake..,client_requested,client
+S102008,SUP-18,"worked through, Naidoo at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S106263,SUP-10,"gate motor failed, manned it by hand till 06:00",equipment_failure,operational
+S100576,SUP-05,Covered for Mokoena agn - 3rd time this month,colleague_no_show,operational
+S100488,SUP-23,fine,nothing_useful,no_info
+S107977,SUP-23,"late hanover, wating on paperwork",late_handover,operational
+S100274,SUP-01,,nothing_useful,no_info
+S103348,SUP-01,Centre manager requested additional cover for stocktake,client_requested,client
+S103560,SUP-08,all good,nothing_useful,no_info
+S103409,SUP-11,covered for khumalo again - 3rd time this month,colleague_no_show,operational
+S108084,SUP-15,"late handover, waiting on paperwork",late_handover,operational
+S102102,SUP-08,as per normal,nothing_useful,no_info
+S102296,SUP-04,,nothing_useful,no_info
+S102234,SUP-16,no incidents,nothing_useful,no_info
+S106403,SUP-03,"took molefe shift as well, 2 posts 1 guard",colleague_no_show,operational
+S102186,SUP-07,relief no show AGAIN,relief_no_show,operational
+S104964,SUP-02,"client says stay till 06h00, dont know if office approved",client_unconfirmed,client_unconfirmed
+S105846,SUP-12,"Cele absent, took her rounds as well",colleague_no_show,operational
+S108065,SUP-10,"Jacobs didnt come in, covered the post",colleague_no_show,operational
+S107516,SUP-10,,nothing_useful,no_info
+S105839,SUP-17,"late handover, waiting on paperwork",late_handover,operational
+S105619,SUP-15,sharp,nothing_useful,no_info
+S102607,SUP-09,extra hours approved by client for the eent setup..,client_requested,client
+S101094,SUP-23,.,nothing_useful,no_info
+S108677,SUP-24,"stocktake ran over, client asked us to remain, they know they pay for it..",client_requested,client
+S103485,SUP-14,nothing to report,nothing_useful,no_info
+S102391,SUP-10,"masjien is stukkend, alles met die hand gedoen..",equipment_failure,operational
+S106343,SUP-06,ntr,nothing_useful,no_info
+S100444,SUP-09,quiet shift,nothing_useful,no_info
+S103629,SUP-01,quiet shift,nothing_useful,no_info
+S102490,SUP-12,all fine,nothing_useful,no_info
+S107573,SUP-06,-,nothing_useful,no_info
+S106955,SUP-21,maluleke off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S102351,SUP-19,"handover late again, keys missing",late_handover,operational
+S107970,SUP-16,Covered for Fourie again - 3rd time this month,colleague_no_show,operational
+S102872,SUP-17,.,nothing_useful,no_info
+S103390,SUP-19,Mavuso off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S103663,SUP-07,Next sift guuard did not pitch. Had to cover,relief_no_show,operational
+S108607,SUP-01,ok,nothing_useful,no_info
+S107110,SUP-02,"double duty today, Maluleke on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S108272,SUP-15,"aflos het nie opgedaag nie, moes aanbly..",relief_no_show,operational
+S101015,SUP-14,"waited for relief, nobody caem throuhg",relief_no_show,operational
+S105970,SUP-06,"generator fault, stayed to monitor",equipment_failure,operational
+S102398,SUP-05,fine,nothing_useful,no_info
+S100890,SUP-15,COVERED FOR FOURIE AGAIN - 3RD TIME THIS MONTH,colleague_no_show,operational
+S108525,SUP-01,.,nothing_useful,no_info
+S101514,SUP-19,"control room says relief coming, nobody came",relief_no_show,operational
+S103076,SUP-04,"stlil on site, relief was suppose to comme 6am",relief_no_show,operational
+S106703,SUP-01,Client asked for extra patrol affter the break-in Tuesday,client_requested,client
+S105099,SUP-24,"next shift akafikanga, ngihlale kuze kube 06:00",relief_no_show,operational
+S101736,SUP-08,"tok bothha shift as wlel, 2 posts 1 guard",colleague_no_show,operational
+S100768,SUP-11,"handover late agn, keys missing",late_handover,operational
+S103771,SUP-22,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S108483,SUP-14,Covering for Molefe - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S107757,SUP-12,,nothing_useful,no_info
+S100188,SUP-03,"worked through, Wyk at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S102703,SUP-07,as per normal,nothing_useful,no_info
+S100541,SUP-12,,nothing_useful,no_info
+S103562,SUP-15,"waitde 40 min for handover, OB book not signed",late_handover,operational
+S109114,SUP-06,Covering for Sibiya - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S100401,SUP-17,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S107329,SUP-08,"covering jacobs post, no show no call",colleague_no_show,operational
+S106542,SUP-06,"covering Ndlovu post, no show no call",colleague_no_show,operational
+S106384,SUP-16,Centre manager requested additional cover for stocktake,client_requested,client
+S108050,SUP-11,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S104560,SUP-08,"still on site, relief was suppose to come 06h00",relief_no_show,operational
+S104444,SUP-21,"relief only arrived six, stayed until then",relief_no_show,operational
+S101563,SUP-01,Mokoena off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107377,SUP-13,sharp,nothing_useful,no_info
+S105447,SUP-05,all fine,nothing_useful,no_info
+S109353,SUP-20,"FOURIE DIDNT COME IN, COVERED THE POST",colleague_no_show,operational
+S103389,SUP-02,shift handover delayed by 25 min,late_handover,operational
+S100108,SUP-03,niks om te rapporteer nie,nothing_useful,no_info
+S108169,SUP-17,CLIENT REQUESTED DEEP CLEAN BEFORE THE AUDIT - APPROVED,client_requested,client
+S105080,SUP-06,"client says stay till 6am, dont know if office approved",client_unconfirmed,client_unconfirmed
+S108856,SUP-01,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S105331,SUP-21,"tshabalala didnt come in, covered the post",colleague_no_show,operational
+S105996,SUP-07,akukho lutho,nothing_useful,no_info
+S106246,SUP-11,"extra patrol per client email, approved by office",client_requested,client
+S109266,SUP-03,stood in for Jacobs,stood_in_unspecified,absence_excused_or_unclear
+S103118,SUP-10,KLIENT HET EKSTRA URE GEVRA VIR STOCKTAKE,client_requested,client
+S103564,SUP-18,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S106895,SUP-19,COVERED FOR NAIDOO AGAIN - 3RD TIME THIS MONH,colleague_no_show,operational
+S104664,SUP-10,"gate motor failed, manned it by hand till 6am",equipment_failure,operational
+S104110,SUP-14,"Mahlangu didnt come in, covvered the post",colleague_no_show,operational
+S102815,SUP-22,Client requested deep clean before the audit - approved..,client_requested,client
+S106531,SUP-20,reliief no show AGAIN,relief_no_show,operational
+S105761,SUP-16,"scrubber broke down, had to do the floor manually !",equipment_failure,operational
+S104827,SUP-10,fine,nothing_useful,no_info
+S109104,SUP-24,"covering ncobo post, no show no call",colleague_no_show,operational
+S101256,SUP-21,no incidents,nothing_useful,no_info
+S108577,SUP-08,fine,nothing_useful,no_info
+S107482,SUP-16,"covering tshabalala post, no show no call",colleague_no_show,operational
+S102168,SUP-21,"requested by centre management for load in, signed off",client_requested,client
+S108588,SUP-03,"Mokoena didnt come in, covered the post",colleague_no_show,operational
+S102903,SUP-15,fine,nothing_useful,no_info
+S107590,SUP-13,,nothing_useful,no_info
+S107990,SUP-20,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S104917,SUP-06,"client wantde extra man on the gate for the event, approved",client_requested,client
+S106054,SUP-19,,nothing_useful,no_info
+S106651,SUP-06,"covering mavuso post, no show no call",colleague_no_show,operational
+S105903,SUP-02,,nothing_useful,no_info
+S108918,SUP-06,"gate motor failed, manned it by hand till six",equipment_failure,operational
+S103566,SUP-13,fine,nothing_useful,no_info
+S100580,SUP-04,"scrubber broke down, had to do the floor manually !",equipment_failure,operational
+S102756,SUP-23,no incidents,nothing_useful,no_info
+S108062,SUP-14,"uBotha akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S102048,SUP-23,all quiet,nothing_useful,no_info
+S101479,SUP-20,stood in for mavuso !,stood_in_unspecified,absence_excused_or_unclear
+S100486,SUP-23,"waited for relif, noody came through",relief_no_show,operational
+S100254,SUP-17,klient het ekstra ure gevra vir stocktake,client_requested,client
+S103600,SUP-24,"requested by centre management for load in, signed off",client_requested,client
+S109196,SUP-15,ok,nothing_useful,no_info
+S104748,SUP-15,"next shift akafikanga, ngihlale kuze kube 6..",relief_no_show,operational
+S104029,SUP-20,"handover late again, keys missing",late_handover,operational
+S107997,SUP-15,"waited 25 min for handover, OB book not signed",late_handover,operational
+S101101,SUP-17,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S106368,SUP-13,"took Mthembu sift as well, 2 posts 1 guard",colleague_no_show,operational
+S100650,SUP-13,"hanodver late again, keys missing",late_handover,operational
+S102313,SUP-12,"scrubber broke dow, had to do the floor manually",equipment_failure,operational
+S105832,SUP-21,no relief. stayed. someone must pleasse sort the roster,relief_no_show,operational
+S106260,SUP-23,"Fourie absent, took her rounds as well",colleague_no_show,operational
+S102468,SUP-04,"gedek vir Sibiya, siek gmeld !",colleague_sick_or_leave,absence_excused_or_unclear
+S103572,SUP-14,"still on site, relief was suppose to come 6am",relief_no_show,operational
+S105038,SUP-15,"covering Khumalo poost, no show no call",colleague_no_show,operational
+S108041,SUP-18,stood in for Sibiya,stood_in_unspecified,absence_excused_or_unclear
+S105104,SUP-17,"client says stay till 6am, dont know if office approved",client_unconfirmed,client_unconfirmed
+S106517,SUP-11,"covering Ngcobo post, no show no call",colleague_no_show,operational
+S103677,SUP-24,"EXTRA PATROL PER CLIENT EMAIL, APPROVED BY OFFICE",client_requested,client
+S108890,SUP-20,"coverng Mokoena post, no show no call",colleague_no_show,operational
+S104902,SUP-13,"took Zulu shift as well, 2 posts 1 guard",colleague_no_show,operational
+S106815,SUP-21,"uKhumalo akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S106110,SUP-12,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S103096,SUP-12,"still on site, relief was suppose to come 0h600",relief_no_show,operational
+S103034,SUP-18,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S100272,SUP-18,"extra patrol per client email, approved by office",client_requested,client
+S109168,SUP-01,"took radebe shift as well, 2 posts 1 guard",colleague_no_show,operational
+S106426,SUP-24,"sibiya didnt come in, covered the post",colleague_no_show,operational
+S106302,SUP-09,"oorhandiging was laat, gewag vir sleutels..",late_handover,operational
+S101930,SUP-24,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S104426,SUP-20,"Jacobs ddnt come in, covered the post",colleague_no_show,operational
+S100225,SUP-20,,nothing_useful,no_info
+S102621,SUP-02,all good,nothing_useful,no_info
+S105134,SUP-08,fine,nothing_useful,no_info
+S106959,SUP-13,shift handover delayed by 30 min,late_handover,operational
+S100776,SUP-13,"client wanted extra man on the gate for the event, approved",client_requested,client
+S107712,SUP-03,relief no show AGAIN,relief_no_show,operational
+S101017,SUP-09,akukho lutho,nothing_useful,no_info
+S103042,SUP-08,Covering for Adams - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S101783,SUP-14,"Mthembu absent, took her rounds as well",colleague_no_show,operational
+S101489,SUP-17,"KHUMALO ABSENT, TOOK HER ROUNDS AS WELL",colleague_no_show,operational
+S101625,SUP-12,klient het ekstra ure gevra vir stocktake,client_requested,client
+S106255,SUP-15,nothing to report,nothing_useful,no_info
+S100111,SUP-20,no issues on site,nothing_useful,no_info
+S101389,SUP-08,"requested by centre management for load in, signed off",client_requested,client
+S101594,SUP-01,Covering for Motaung - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S108714,SUP-17,.,nothing_useful,no_info
+S101860,SUP-14,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S104813,SUP-14,"client wanted extra man on the gate for the event, approved",client_requested,client
+S102738,SUP-14,"no replacement sen, ngicela sort this out",relief_no_show,operational
+S102457,SUP-18,"GEDEK VIR TSHABALALA, SIEK GEMELD",colleague_sick_or_leave,absence_excused_or_unclear
+S109258,SUP-16,,nothing_useful,no_info
+S104065,SUP-01,klient het ekstra ure gevra vir stocktake,client_requested,client
+S106134,SUP-14,klient het ekstra ure gevra vir stokctake,client_requested,client
+S104737,SUP-03,ntr,nothing_useful,no_info
+S108111,SUP-13,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S107379,SUP-04,"uTshabalala akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S105790,SUP-13,extra hours approved by client for the event setup,client_requested,client
+S101975,SUP-07,centre mgr requested additional cover for socktake,client_requested,client
+S103015,SUP-10,"requested by centre management for load in, signed off",client_requested,client
+S108376,SUP-23,"relief only arrived six, stayed until then",relief_no_show,operational
+S107834,SUP-09,sharp,nothing_useful,no_info
+S105111,SUP-17,no incidents,nothing_useful,no_info
+S102752,SUP-03,"requested by centre management for load in, signed off",client_requested,client
+S104303,SUP-01,"umavuso akezanga namhlaje, ngimele yena",colleague_no_show,operational
+S101503,SUP-20,"double duty today, Mabaso on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S107725,SUP-20,,nothing_useful,no_info
+S106111,SUP-04,COVERED FOR MOLEFE AGAIN - 3RD TIME THIS MONTH,colleague_no_show,operational
+S103023,SUP-23,niks om te rapporteer nie,nothing_useful,no_info
+S100589,SUP-03,stood in for Mavuso,stood_in_unspecified,absence_excused_or_unclear
+S100308,SUP-06,"UBOTHA AKEZANGA NAMHLANJE, NGIMELE YENA..",colleague_no_show,operational
+S104634,SUP-20,covered for ngcobo again - 3rd time this month,colleague_no_show,operational
+S106676,SUP-15,Centre mgr requested additional cover for stocktake,client_requested,client
+S101329,SUP-06,"late handover, waiting on ppaerwork..",late_handover,operational
+S103782,SUP-20,.,nothing_useful,no_info
+S100173,SUP-08,relief no show AGAIN,relief_no_show,operational
+S103024,SUP-12,stood in for Fourie,stood_in_unspecified,absence_excused_or_unclear
+S104314,SUP-04,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S101799,SUP-16,"took Wyk shfit as well, 2 posts 1 guard",colleague_no_show,operational
+S106226,SUP-19,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S101914,SUP-07,"client wanted extra man on the gate for the event, approved",client_requested,client
+S103983,SUP-01,ok,nothing_useful,no_info
+S100260,SUP-09,"requested by centre management for laod in, siigned off",client_requested,client
+S106095,SUP-18,relief no show AGAIN..,relief_no_show,operational
+S104101,SUP-12,double shift because relief nevre pitched !,relief_no_show,operational
+S102185,SUP-13,"gate motor faied, manned it by hand till 06:00",equipment_failure,operational
+S101029,SUP-23,all quiet,nothing_useful,no_info
+S106177,SUP-19,niks om te rapporteer nie,nothing_useful,no_info
+S101540,SUP-23,"relief never arriived, stayed on till 6am..",relief_no_show,operational
+S103555,SUP-09,Covering for Mabaso - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S100187,SUP-01,"late handover, waiting on paperwork..",late_handover,operational
+S100994,SUP-14,shift handover delayed by 30 min,late_handover,operational
+S108396,SUP-20,akukho lutho,nothing_useful,no_info
+S108964,SUP-11,"macine down again, took twice as long..",equipment_failure,operational
+S105197,SUP-09,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S108086,SUP-08,"generator fault, stayed to monitor..",equipment_failure,operational
+S104812,SUP-24,"gedek vir Wyk, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S103937,SUP-12,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S108875,SUP-24,all quiet,nothing_useful,no_info
+S109345,SUP-03,"waited 25 min for handover, OB book not signed",late_handover,operational
+S103752,SUP-21,stood in for Ndlovu,stood_in_unspecified,absence_excused_or_unclear
+S105864,SUP-20,all good,nothing_useful,no_info
+S103788,SUP-12,"additional cover requested by site manager, signed off",client_requested,client
+S108707,SUP-19,extra hours approved by client for the event setup..,client_requested,client
+S105904,SUP-22,"waited 45 min for handover, OB book not signed",late_handover,operational
+S108183,SUP-08,"double duty today, Radebe on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S106897,SUP-24,client asked for extra patrol after the break-in tuesday,client_requested,client
+S101626,SUP-06,"control room says relief coming, nobody came..",relief_no_show,operational
+S108720,SUP-22,"took botha shift as welll, 2 posts 1 guard",colleague_no_show,operational
+S100151,SUP-19,"no replacement sent, ngicla sort this out",relief_no_show,operational
+S108351,SUP-01,Client asked for extra patrol after the break-n Tuesday,client_requested,client
+S101876,SUP-24,"gedek vir Sibiya, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S107598,SUP-11,"double dtuy today, Mabaso on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S101611,SUP-10,"additional cover requested by site manager, signed off",client_requested,client
+S100686,SUP-01,"double dtuy today, sibiya on family responsibility leave..",colleague_sick_or_leave,absence_excused_or_unclear
+S105135,SUP-20,ntr,nothing_useful,no_info
+S105437,SUP-18,"late handoverr, waiting on paperwork..",late_handover,operational
+S107612,SUP-18,shift handover delayed by 30 min,late_handover,operational
+S105334,SUP-11,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S107907,SUP-11,"relief only arrived 0600, stayed until then",relief_no_show,operational
+S100176,SUP-23,relief no show AGAIN,relief_no_show,operational
+S105236,SUP-18,quiet shift,nothing_useful,no_info
+S102422,SUP-12,fine,nothing_useful,no_info
+S106865,SUP-11,"waited 40 min for handover, OB book not signed",late_handover,operational
+S109275,SUP-04,"next shift akafikanga, ngihlale kuze kbue 0600",relief_no_show,operational
+S101634,SUP-05,"client wanted extra man on the gate for the event, approved",client_requested,client
+S103504,SUP-18,-,nothing_useful,no_info
+S108589,SUP-24,"gate motor failed, manned it by hand till 6am",equipment_failure,operational
+S107748,SUP-19,Covering for Raddebe - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S100722,SUP-18,"no replacement sent, ngiceela sort thiis out",relief_no_show,operational
+S106105,SUP-16,"client wanted extra man on the gate for the event, approved",client_requested,client
+S108840,SUP-03,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S104494,SUP-04,all good,nothing_useful,no_info
+S104059,SUP-06,"handover late agn, keys missing",late_handover,operational
+S107987,SUP-16,"control room says relief coming, nobody came",relief_no_show,operational
+S105786,SUP-07,"client asked us to stay for the delivery, ok'd by centre mgmt !",client_requested,client
+S101880,SUP-06,"generator fault, stayed to monitor",equipment_failure,operational
+S103591,SUP-14,"client says stay till 06h000, dont know if office approved",client_unconfirmed,client_unconfirmed
+S107064,SUP-24,"generator fault, stayed to monitor",equipment_failure,operational
+S100258,SUP-08,"took Zulu shift as well, 2 posts 1 guard",colleague_no_show,operational
+S101493,SUP-04,"extra patrol per client email, approved by ofice..",client_requested,client
+S108173,SUP-06,"jacobs didnt come in, covered the psot",colleague_no_show,operational
+S107362,SUP-18,"gate motor failed, manned it by hand till 6am",equipment_failure,operational
+S106155,SUP-23,"relief only arrived 06h00, stayed until then..",relief_no_show,operational
+S105417,SUP-19,"covering Baloyi post, no show no call",colleague_no_show,operational
+S107630,SUP-15,ok,nothing_useful,no_info
+S101106,SUP-13,"gedek vir sibiya, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S104193,SUP-08,quiet shift,nothing_useful,no_info
+S100708,SUP-18,relief no show AGAN,relief_no_show,operational
+S100746,SUP-08,covering for mthembu - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S104863,SUP-23,"handover late again, keys missing",late_handover,operational
+S104353,SUP-18,quiet shift,nothing_useful,no_info
+S108312,SUP-23,"lift out of order, everything carried up stairs, took long",equipment_failure,operational
+S107015,SUP-15,shift handover delayed by 25 min,late_handover,operational
+S105321,SUP-08,"generator fault, stayed to monitor",equipment_failure,operational
+S101345,SUP-19,"oorhandiging was laat, gewag vir sleutels..",late_handover,operational
+S105442,SUP-15,niks om te rapporteer nie,nothing_useful,no_info
+S109354,SUP-18,"late handover, waiting on paperwork",late_handover,operational
+S106794,SUP-03,as per normal,nothing_useful,no_info
+S108276,SUP-04,"machine down agn, toook twice as long",equipment_failure,operational
+S105716,SUP-23,no relief. stayed. someone must pls sort the roster,relief_no_show,operational
+S107347,SUP-08,"covering Mabaso pst, no show no call",colleague_no_show,operational
+S109303,SUP-17,"took Molefe shift as well, 2 posts 1 guard",colleague_no_show,operational
+S106462,SUP-21,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S107420,SUP-01,"waited 30 min for handover, OB book not signed..",late_handover,operational
+S108102,SUP-04,"requested by centre management for load in, signed off",client_requested,client
+S104907,SUP-07,"machine down ang, took twice as long..",equipment_failure,operational
+S104285,SUP-17,Client requested deep clean bfore the audit - approved,client_requested,client
+S106215,SUP-01,"late handover, waiting on paperwork",late_handover,operational
+S106269,SUP-15,"Radebe didnt come in, covered the pst",colleague_no_show,operational
+S106418,SUP-07,client requested deep clean before the audit - approved,client_requested,client
+S104318,SUP-05,double shift bc relief never pitched..,relief_no_show,operational
+S103038,SUP-22,"client asked us to stay for the delivery, ok'd by centre mgmt !",client_requested,client
+S101593,SUP-13,"next shift akafikanga, ngihlale kuze kube 06h00",relief_no_show,operational
+S108484,SUP-19,fine,nothing_useful,no_info
+S102184,SUP-02,"client wanted extra man on the gate for the event, approved",client_requested,client
+S103827,SUP-18,"handover late again, keys missing",late_handover,operational
+S102641,SUP-19,ok,nothing_useful,no_info
+S106425,SUP-13,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S106887,SUP-04,relief no show AGAIN,relief_no_show,operational
+S106310,SUP-16,stood in for botha,stood_in_unspecified,absence_excused_or_unclear
+S103769,SUP-23,Covering for Molefe - booked off sick !,colleague_sick_or_leave,absence_excused_or_unclear
+S109125,SUP-07,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S105330,SUP-05,all quiet,nothing_useful,no_info
+S105128,SUP-07,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S103548,SUP-19,"requested by centre management for load in, signed off",client_requested,client
+S107828,SUP-06,"scrubbr broke dwon, had to do the floor manually",equipment_failure,operational
+S107360,SUP-09,NDLOVU OFF SICK. AGN. COVERED.,colleague_sick_or_leave,absence_excused_or_unclear
+S100250,SUP-03,"relief onnly arrived sixx, styed until then",relief_no_show,operational
+S105607,SUP-17,"gate motor failed, manned it by hand till 0600..",equipment_failure,operational
+S104909,SUP-09,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S105715,SUP-04,"jacobs absent, took her rounds as well",colleague_no_show,operational
+S108256,SUP-04,"extra patrol per client email, approved by office",client_requested,client
+S107025,SUP-15,as per normal,nothing_useful,no_info
+S107860,SUP-10,Client requested deep clean before the audit - approved,client_requested,client
+S108314,SUP-06,no issues on site,nothing_useful,no_info
+S101579,SUP-16,"handover late agin, kys missing",late_handover,operational
+S102325,SUP-16,no issues on site,nothing_useful,no_info
+S100961,SUP-11,akukho lutho,nothing_useful,no_info
+S103659,SUP-13,"requested by centre management for load in, signed off",client_requested,client
+S107788,SUP-10,"generator fault, stayed to monitor",equipment_failure,operational
+S106525,SUP-22,Naidoo off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S100335,SUP-13,"stocktake ran over, client asked us to remain, they know they pay for it !",client_requested,client
+S107697,SUP-15,"next shift akafikanga, ngihlale kuze kube 06h00..",relief_no_show,operational
+S101797,SUP-24,"double duty today, Baloi on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S101653,SUP-06,"client wanted extra man on the gate for the event, approved",client_requested,client
+S104126,SUP-06,"took ngcobo shift as well, 2 posts 1 guard !",colleague_no_show,operational
+S104313,SUP-06,client signde for the extra hours but real reaon is relief no show agn,relief_no_show,operational
+S105082,SUP-09,Centre mgr requested additional cover for stocktake,client_requested,client
+S107328,SUP-04,Ngcobo off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S100559,SUP-18,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S107027,SUP-14,"worked through, Botha at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S100512,SUP-19,extra houurs approvved by client for the event setup,client_requested,client
+S108843,SUP-23,"relief only arrived 0600, stayed until then",relief_no_show,operational
+S102407,SUP-12,"waited 25 min for handover, OB book not signed",late_handover,operational
+S103766,SUP-10,"Baloyi absent, toook her rounds as well !",colleague_no_show,operational
+S100247,SUP-24,"gate motor failed, manned it by hand till 6..",equipment_failure,operational
+S107594,SUP-18,"gedek vir Mthembu, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S107463,SUP-12,"masjien is stukkend, alles met die hnd gedoen..",equipment_failure,operational
+S105085,SUP-13,"covering Motaung pst, no show no call",colleague_no_show,operational
+S108449,SUP-09,"STILL ON SITE, RELIEF WAS SUPPOSE TO COME 6AM",relief_no_show,operational
+S100638,SUP-17,"covering Molefe post, no show no call",colleague_no_show,operational
+S108375,SUP-10,Client requested deep clean before the audit - approved,client_requested,client
+S103818,SUP-10,stood in for Hendricks,stood_in_unspecified,absence_excused_or_unclear
+S103385,SUP-17,adams off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S109204,SUP-22,shift handover delayed by 40 min,late_handover,operational
+S100519,SUP-17,quiet shift,nothing_useful,no_info
+S100263,SUP-10,"machhine down agnn, took twice as long",equipment_failure,operational
+S105110,SUP-16,"requested by centre management for load in, signed off",client_requested,client
+S102851,SUP-14,"Fourie didnt come in, covered the post",colleague_no_show,operational
+S101066,SUP-16,Client requested deep clean beefore the audit - approved,client_requested,client
+S109119,SUP-03,"next shift akafikanga, ngihlale kuze kube 0600..",relief_no_show,operational
+S102485,SUP-01,"covering Mahlnagu post, no show no call..",colleague_no_show,operational
+S106307,SUP-08,"oorhandiging was laat, gewag vir sleutles",late_handover,operational
+S104640,SUP-14,"late handover, waitng on paperwork",late_handover,operational
+S108060,SUP-17,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S101897,SUP-08,"generator fault, stayed to monitor",equipment_failure,operational
+S103510,SUP-11,akukho lutho,nothing_useful,no_info
+S100721,SUP-18,"oorhandiging was laat, gewag vir slutels",late_handover,operational
+S109244,SUP-05,"covering dlamini post, no show no call",colleague_no_show,operational
+S106524,SUP-17,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S104048,SUP-22,"Botha didnt come in, covered the post..",colleague_no_show,operational
+S106279,SUP-17,Client asked for extra patrol after the break-in Tuesday,client_requested,client
+S100658,SUP-06,quiet shift,nothing_useful,no_info
+S109007,SUP-21,-,nothing_useful,no_info
+S106677,SUP-18,"client wanted extra man on the gate for the eent, approved",client_requested,client
+S100303,SUP-17,sharp,nothing_useful,no_info
+S104262,SUP-15,klient het ekstra ure gevra vir stocktakke,client_requested,client
+S104829,SUP-02,.,nothing_useful,no_info
+S103758,SUP-10,extra hours approved by client for the event setup,client_requested,client
+S108053,SUP-12,"uMotaung akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S100287,SUP-23,.,nothing_useful,no_info
+S105435,SUP-10,"waited 25 min for handover, ob book not signed",late_handover,operational
+S108377,SUP-20,extra hours approved by client for the event setup,client_requested,client
+S100543,SUP-03,"gate motor failed, manned it by hand till 0600..",equipment_failure,operational
+S106048,SUP-07,"stocktake ran over, client asked us to remain, they know thy pay for it",client_requested,client
+S106627,SUP-11,extra hrs approved by client for the evetn setup !,client_requested,client
+S104317,SUP-01,"machine down again, took twice as long",equipment_failure,operational
+S100585,SUP-11,extra hrs approved by client for the event setup,client_requested,client
+S103322,SUP-01,"clent asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S107281,SUP-03,Client asked for extra patrol after the break-in Tuesday..,client_requested,client
+S101613,SUP-15,no issues on site,nothing_useful,no_info
+S105263,SUP-04,"oorhandiging was laat, gewag vir sleutels..",late_handover,operational
+S104844,SUP-17,"double duty today, Baloyi on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S109257,SUP-07,"UDLAMINI AKEZANGA NAMHLANJE, NGIMELE YENA..",colleague_no_show,operational
+S101852,SUP-18,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S107993,SUP-14,no relief. stayed. soemone must please sort the roster,relief_no_show,operational
+S101673,SUP-20,quiet shift,nothing_useful,no_info
+S100900,SUP-14,no relief. stayed. someone must pls sort the roster,relief_no_show,operational
+S104782,SUP-06,"took Sibiya shift as well, 2 posts 1 guard !",colleague_no_show,operational
+S100369,SUP-07,"control room says relief coming, nobody came",relief_no_show,operational
+S107249,SUP-06,client requested deep clean before the audit - approved,client_requested,client
+S100812,SUP-10,"client asked us to stay for the delivery, ok'd by centre mgmt !",client_requested,client
+S105004,SUP-16,"Maluleke didnt come in, covered the pot..",colleague_no_show,operational
+S108127,SUP-15,.,nothing_useful,no_info
+S104866,SUP-10,"late handover, waiting on paperwork",late_handover,operational
+S104565,SUP-11,"masjien is stukkend, alles met die hand gedoen..",equipment_failure,operational
+S103823,SUP-16,STOOD IN FOR BALOYI,stood_in_unspecified,absence_excused_or_unclear
+S100337,SUP-10,Centre mgr requested additional cover for stocktake,client_requested,client
+S102380,SUP-24,Client requested deep clean before the audit - approved,client_requested,client
+S108008,SUP-08,Client requested deep claen before the audit - approved,client_requested,client
+S108054,SUP-09,CLIENT SIGNED FOR THE EXTRA HRS BUT REAL REASON IS RELIEF NO SHOW AGAIN,relief_no_show,operational
+S105116,SUP-16,,nothing_useful,no_info
+S107505,SUP-17,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S104470,SUP-10,sharp,nothing_useful,no_info
+S103327,SUP-06,"EXTRA PATROL PER CLIENT EMAIL, APPROVED BY OFFICE",client_requested,client
+S106369,SUP-17,"handover late agn, keys missing",late_handover,operational
+S104425,SUP-15,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S106790,SUP-22,as per normal,nothing_useful,no_info
+S101341,SUP-17,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S105660,SUP-14,"covering Adams post, no show no call",colleague_no_show,operational
+S103413,SUP-24,-,nothing_useful,no_info
+S108598,SUP-09,double shift becaue relief never pitched,relief_no_show,operational
+S101586,SUP-07,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S103803,SUP-04,"Motaung absent, took her rounds as well",colleague_no_show,operational
+S108867,SUP-11,"still on site, relief was suppose to come 06:00",relief_no_show,operational
+S107569,SUP-18,Baloyi off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S107801,SUP-09,akukho lutho,nothing_useful,no_info
+S109139,SUP-16,Baloyi off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S100883,SUP-22,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S105070,SUP-19,"machine down agn, took twice as long..",equipment_failure,operational
+S106909,SUP-14,"relief never arrived, stayed on till 0600",relief_no_show,operational
+S104559,SUP-11,"extra patrol per client email, apprved by office",client_requested,client
+S108156,SUP-24,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S106567,SUP-06,"uZuulu akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S108365,SUP-15,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S106218,SUP-19,"covering Naido post, no show no call",colleague_no_show,operational
+S101683,SUP-10,covering for khumalo - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S104118,SUP-24,ntr,nothing_useful,no_info
+S105077,SUP-14,Covered for Mokoena agaiin - 3rd time this month,colleague_no_show,operational
+S104723,SUP-10,ok,nothing_useful,no_info
+S104246,SUP-13,covering for dlamini - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S102918,SUP-12,"control room says relief coming, nobody came",relief_no_show,operational
+S103872,SUP-10,.,nothing_useful,no_info
+S108608,SUP-17,"worked through, botha at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S104021,SUP-20,"umahlangu akezanga namhlanje, ngimele yena",colleague_no_show,operational
+S100496,SUP-20,,nothing_useful,no_info
+S108206,SUP-11,September off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S104343,SUP-09,"worked through, Dlamini at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S105740,SUP-10,nothing to report,nothing_useful,no_info
+S108052,SUP-15,.,nothing_useful,no_info
+S101602,SUP-12,"extra patrol per client email, approved by office",client_requested,client
+S100080,SUP-03,sharp,nothing_useful,no_info
+S102635,SUP-22,"covering Hendricks post, no sow no call..",colleague_no_show,operational
+S100562,SUP-08,stood in for Sibiya,stood_in_unspecified,absence_excused_or_unclear
+S104070,SUP-23,,nothing_useful,no_info
+S108355,SUP-10,"gate motor failled, manned it by hand till 06:00",equipment_failure,operational
+S100623,SUP-24,no issues on site,nothing_useful,no_info
+S106964,SUP-14,"next shift akafikanga, ngihlale kuze kube 6",relief_no_show,operational
+S101119,SUP-11,"requested by centre management for load in, signed off",client_requested,client
+S103645,SUP-04,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S106135,SUP-09,client signed for the extra hrs but real reason is relief no show agn,relief_no_show,operational
+S108455,SUP-02,client asked for extra patrol after the break-in tuesday,client_requested,client
+S102759,SUP-18,ok,nothing_useful,no_info
+S105779,SUP-23,,nothing_useful,no_info
+S105906,SUP-10,"double duty today, Adams on family responsibility leave",colleague_sick_or_leave,absence_excused_or_unclear
+S107067,SUP-20,"ADDITIONAL COVER REQUESTED BY SIITE MANAGER, SIGNED OFF !",client_requested,client
+S103580,SUP-08,"requested by centre management for load in, signed off",client_requested,client
+S100556,SUP-12,Client requested deep clean before the audit - approved,client_requested,client
+S107252,SUP-24,"covering mabaso post, no show no call !",colleague_no_show,operational
+S101765,SUP-12,all good,nothing_useful,no_info
+S101796,SUP-17,extra hours approved by client for the event setup,client_requested,client
+S102693,SUP-07,Sithoel off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S101519,SUP-22,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S107164,SUP-09,"stocktake ran over, client ased us to remain, they know they pay for it",client_requested,client
+S108036,SUP-21,"client asked us to stay for the delivery, ok'd by centre mgmt..",client_requested,client
+S109315,SUP-07,"machine down agn, took twice as long",equipment_failure,operational
+S103762,SUP-10,"Ngcobo didnt come in, covered the post",colleague_no_show,operational
+S100709,SUP-11,"client asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S105296,SUP-20,"client says stay till six, dont knwo if office approved",client_unconfirmed,client_unconfirmed
+S101569,SUP-07,"generator fault, stayed to monitor..",equipment_failure,operational
+S105347,SUP-21,ntr,nothing_useful,no_info
+S103252,SUP-10,client asked for extra patrol after the breaki-n tuesday !,client_requested,client
+S101449,SUP-07,-,nothing_useful,no_info
+S100550,SUP-23,"tok Ndlovu shift as well, 2 posts 1 guard",colleague_no_show,operational
+S108961,SUP-17,ntr,nothing_useful,no_info
+S106637,SUP-22,"covering motaung post, no show no call",colleague_no_show,operational
+S104009,SUP-19,"took Manuel shift as well, 2 posts 1 guard..",colleague_no_show,operational
+S103027,SUP-12,"gedek vir Mthembu, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S106515,SUP-08,"aflos het nie opgedaag nie, mes aanbly",relief_no_show,operational
+S106388,SUP-19,no relief. stayed. someone must please sort the roster,relief_no_show,operational
+S100356,SUP-03,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S107006,SUP-03,"clieent asked us to stay for the delivery, ok'd by centre mgmt",client_requested,client
+S100645,SUP-02,double shift bc releif never pitched,relief_no_show,operational
+S102980,SUP-07,Sithole off sick. agn. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S102720,SUP-18,ntr,nothing_useful,no_info
+S104617,SUP-09,"client wanted extra man on the gate for the event, approved",client_requested,client
+S101508,SUP-09,"BFUFER MACHINE KAPUT, DID THE FLOOR BY HAND",equipment_failure,operational
+S106544,SUP-06,"double duty today, Molefe on family responsibillity leave",colleague_sick_or_leave,absence_excused_or_unclear
+S108184,SUP-11,"gedek vir Tshabalala, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S101615,SUP-24,"control room says relief coming, nobody came",relief_no_show,operational
+S107722,SUP-11,as per normal,nothing_useful,no_info
+S104547,SUP-20,"waited 25 min for handover, OB book not signed",late_handover,operational
+S103554,SUP-02,"oorhandiging was laat, gewag vir sleutels",late_handover,operational
+S100703,SUP-14,"additional cover requested by site mgr, signed off",client_requested,client
+S109320,SUP-14,centre managger requested additoinal coevr for stocktake,client_requested,client
+S102163,SUP-15,"Hendricks didnt come in, covered the psot",colleague_no_show,operational
+S102922,SUP-22,"requested by centre management for load in, siged off",client_requested,client
+S101063,SUP-19,"handover late agn, keys missing",late_handover,operational
+S107410,SUP-16,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S107063,SUP-20,stood in for molefe,stood_in_unspecified,absence_excused_or_unclear
+S100720,SUP-23,Wyk off sick. again. covered.,colleague_sick_or_leave,absence_excused_or_unclear
+S103641,SUP-23,"client says stay till 0600, dont know if office approoved..",client_unconfirmed,client_unconfirmed
+S101110,SUP-13,extra hrs approved by client for the event settup,client_requested,client
+S100472,SUP-15,quiet shift,nothing_useful,no_info
+S104332,SUP-17,"next shift akafikanga, ngihlale kuze kube 6",relief_no_show,operational
+S103216,SUP-10,"waited 50 min for handover, ob book not signed",late_handover,operational
+S102518,SUP-15,DOUBLE SHIFT BECAUSE RELIEF NEVER PITCHED,relief_no_show,operational
+S100338,SUP-24,"client wanted extra man on the gate for the event, approved",client_requested,client
+S105613,SUP-01,"client wanted extra man on the gate for the event, approved",client_requested,client
+S103748,SUP-13,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S109340,SUP-01,stood in for nkosi,stood_in_unspecified,absence_excused_or_unclear
+S108023,SUP-12,covered for september again - 3rd time this month,colleague_no_show,operational
+S107298,SUP-08,"double duty today, naidoo on fammily responsibility leave..",colleague_sick_or_leave,absence_excused_or_unclear
+S103767,SUP-16,CLIENT REQUESTED DEEP CLEAN BEFORE THE AUDIT - APPROVED,client_requested,client
+S104346,SUP-01,"stocktake ran over, client asked us to remain, they know they pay for it",client_requested,client
+S105195,SUP-15,"gedek vir Baloyi, siek gemeld",colleague_sick_or_leave,absence_excused_or_unclear
+S100144,SUP-03,Next shift guard did not pitch. Had to cover.,relief_no_show,operational
+S105423,SUP-07,"worked through, nkosi at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S105333,SUP-05,"took Adams shift as well, 2 posts 1 guard",colleague_no_show,operational
+S107610,SUP-08,ok,nothing_useful,no_info
+S107767,SUP-08,"waited for relief, nobody came througgh",relief_no_show,operational
+S107972,SUP-10,"client asked us to stay for the delivery, okd' by centre mgmt",client_requested,client
+S107177,SUP-06,"client asked us to stay for the delivery, okd' by centre mgmt",client_requested,client
+S109105,SUP-03,"masjien is stukkend, alles met die hand gedoen",equipment_failure,operational
+S100969,SUP-05,all fine,nothing_useful,no_info
+S105370,SUP-14,"covering Ndlovu post, no show no call !",colleague_no_show,operational
+S106526,SUP-13,no incidents,nothing_useful,no_info
+S103981,SUP-15,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S109295,SUP-13,"extra patrol per client email, approved by office",client_requested,client
+S102075,SUP-02,mabaso off sick. agn. covered..,colleague_sick_or_leave,absence_excused_or_unclear
+S102160,SUP-24,klient het ektra ure gevra vir stocktake,client_requested,client
+S104074,SUP-02,"scrubber broke down, had to do the floor manually",equipment_failure,operational
+S100166,SUP-15,"buffer machine kaput, did the floor by hand",equipment_failure,operational
+S102535,SUP-06,quiet shift,nothing_useful,no_info
+S105844,SUP-21,"client asked us to stay for the delivery, ok'd by centre mgmt..",client_requested,client
+S100735,SUP-11,"requested by centre management for load in, signed off",client_requested,client
+S105683,SUP-24,klient het ekstra ure gevra vir stocktake,client_requested,client
+S107998,SUP-22,"control room says relief coming, nobody came..",relief_no_show,operational
+S100574,SUP-06,covering for ngcobo - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S103505,SUP-06,Covering for Mavuso - booked off sick,colleague_sick_or_leave,absence_excused_or_unclear
+S104752,SUP-21,.,nothing_useful,no_info
+S100876,SUP-24,"worked through, Mavuso at the clinic",colleague_sick_or_leave,absence_excused_or_unclear
+S102156,SUP-12,kliennt het ekstra ure gevra vir stocktake,client_requested,client
+S106609,SUP-17,shift handover delayed by 25 min,late_handover,operational
+S103588,SUP-15,"late handover, waiting on paperwork",late_handover,operational
+S101813,SUP-11,ntr,nothing_useful,no_info
+S106469,SUP-16,CENTRE MANAGER REQUESTED ADDITIONAL COVER FOR STOCKTAKE,client_requested,client
+S101115,SUP-19,"control room says relief coming, nobody came",relief_no_show,operational
+S108703,SUP-10,"scrubber broke down, had to do the floor manually",equipment_failure,operational

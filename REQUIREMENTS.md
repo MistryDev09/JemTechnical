@@ -43,16 +43,16 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [ ] TODO: keep track of what has been reported (a reported or escalated state per item), so the same item is not reported twice
 
 ### Supervisor notes
-- [ ] Taxonomy of reasons for extra hours, including a "nothing useful" category
-- [ ] Overtime split into hours the client asked for versus hours caused by operational failures, and where that split is concentrated
-- [ ] Self-designed check of the sorting (hand-labelled sample and/or two methods compared), including where the sorting was wrong
-- [ ] `note_classifications.csv` with one row per note in `shift_notes.csv`, exactly the columns `shift_id,category,note`
+- [x] Taxonomy of reasons for extra hours, including a "nothing useful" category (9 categories, 4 piles; `shift_classification.ipynb`)
+- [x] Overtime split into hours the client asked for versus hours caused by operational failures (55% operational, 24% client, reported as a range), and where it is concentrated (it is not: supervisors, guards, sites, weekdays)
+- [x] Self-designed check of the sorting: blind hand-labelled sample of 205 plus two methods compared, with pre-fix and post-fix scores and where it was wrong. TODO: you hand-label the 50 ambiguous notes in `evaluation/labels/notes_to_label_by_you.csv` for a check that does not share my judgement
+- [x] `note_classifications.csv` with one row per note in `shift_notes.csv`, exactly the columns `shift_id,category,note` (2,117 rows)
 
 ### Loading new data
 - [x] Upload of any of the files in the dashboard, overwrite or append per file, with file, column and value checks and clear messages
 - [x] Everything reprocesses end to end with no developer and no hardcoded dates, weekdays or employee IDs (cutoff weekday taken from the data)
 - [x] Regenerated `predictions.csv` available to download after an upload
-- [ ] `note_classifications.csv` available to download (waits for the notes feature)
+- [ ] `note_classifications.csv` available to download in the dashboard (the file exists; the classifier is still only in the notebook, not in `src/` or the app)
 
 ### Repo and submission
 - [ ] `NOTES.md`, half a page: assumptions, how the note-sorting was checked and what it found, what a trained model would learn that this approach does not, and how to test it on about 200 people without fooling yourself

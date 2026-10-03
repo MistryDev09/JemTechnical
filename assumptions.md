@@ -55,6 +55,14 @@
 - Cost analysis (`cost_analysis.ipynb`, separate from the dashboard): an hour is paid at 2x on a Sunday or public holiday; otherwise 1.5x once the person's running weekly total passes 45 hours, otherwise 1x. Sunday and holiday hours count toward the 45. There is no stacking (never 3x). Hours are taken in time order and each hour is paid at its own employee ID's rate. Only complete weeks are priced.
   - It reads `employee_id` and `hourly_rate` from `payroll_details.csv` and shows hourly rates in the notebook (chosen for this notebook only). Bank and tax numbers are never shown, and the dashboard and `predictions.csv` still use no payroll values other than for the duplicate check.
   - Method A is the client's way (clock-in date, one row per ID, no merging, missing clock-outs as 0; hours match `weekly_summary.csv` exactly). A0 prices the summary alone (no Sunday/holiday detail) and A1 adds the Sunday/holiday hours from the shifts. Method B is the greater-portion rule, with the duplicate people removed (all their employee IDs are held for escalation and not paid, because our system detects them), then the lower site on a two-site day removed (one employee ID with hours at two different sites on the same attributed day cannot be real, so only the site with the most hours is paid; ties keep the first site ID), and then any overlapping time left removed (the later of two overlapping shifts of one employee ID is paid only for the time after the earlier one ends). This is our reading of the README's 1.5x and 2x, not payroll's actual rule.
+- Supervisor notes (`shift_classification.ipynb`, `note_classifications.csv`):
+  - Categories (9): client requested, client unconfirmed (client asked, office approval unknown), relief no-show or late, colleague no-show, colleague sick or on leave, stood in (reason not stated), late handover, equipment or site failure, nothing useful. Piles for the split: client asked, client asked (approval unknown), operational failure (relief, colleague no-show, late handover, equipment), absence excused or unclear (sick/leave, stood in), no information.
+  - When a note contains both a client cue and a failure cue, the failure wins ("client signed for the extra hrs but real reason is relief no show again" is operational).
+  - No language model: the notes are about 60 repeated sentences with typos, names and times, so typo-tolerant keyword rules are enough. A trained classifier would need labels that only our own rules could supply.
+  - Notes are one per shift and are joined to `shifts.csv` by `shift_id` for site, date and hours. Overtime is a weekly figure and a note is about one shift, so the split is shown by number of notes and by three hours weights (shift hours, hours above 9, hours of noted shifts in weeks over 45); they agree within two points.
+  - The split is shown on notes that say something (not "nothing useful") and as a range for the judgement calls: sick/leave and "stood in" cover as a separate pile (main, 55% operational) or as operational (74%), and "took X's shift as well" / "covered for X again" as no-shows (60%).
+  - The check is a blind hand-labelled sample of 205 notes (120 random, 40 minority templates, 45 heavy typos) written before either method, labelled by Claude, not a client expert; plus Method B (clusters labelled once by reading) compared with the rules. The supplied `shift_notes_labelled.csv` came from someone else's classifier, so it is used only as a third opinion, not as an answer key. Pre-fix accuracy of the rules (99.0%) is the honest number; the fixed rules (100%) are tuned.
+  - Concentration is tested against chance with Bonferroni correction (24 supervisors, 30 surnames, 6 sites). "No meaningful concentration" is the finding.
 
 ## 2. Assumptions inferred
 
@@ -65,14 +73,6 @@
 - Employees whose only shifts this week have no clock-out (E1182, E1094) show 0 hours so far, and are listed as open shifts for review.
 
 ## 3. Assumptions not yet decided
-
-### Supervisor notes
-- Notes cover only some shifts, so conclusions about where overtime is concentrated come from a subset.
-- Overtime is a weekly figure but notes attach to single shifts, so a rule is needed to attribute weekly overtime hours to shifts.
-- The categories ("client asked for" vs "operational failure" vs "nothing useful") are not yet defined.
-- Notes where the stated reason conflicts with the real one (e.g. "client signed for the extra hrs but real reason is relief no show again") need a rule for which reason wins.
-- Notes in isiZulu and Afrikaans, typos and filler (".", "-", "ok") need handling; whether to use an LLM, rules, or both is undecided.
-- How the note-sorting will be checked given there is no answer sheet.
 
 ### Submission
 - The README says the repo must contain "four files" but lists three. The fourth is unclear.

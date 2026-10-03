@@ -1,0 +1,206 @@
+shift_id,note,sample,category
+S108951,quiet shift,random,nothing_useful
+S105124,double shift because relief never pitched,random,relief_no_show
+S107322,"client says stay till 06h00, dont know if office apprved",random,client_unconfirmed
+S107983,"stocktake ran over, client asked us to remain, they know they pay for it",random,client_requested
+S105318,client signed for the extra hours but real reason is relief no show agn !,random,relief_no_show
+S101576,"waited 30 min for handover, OB book not signed !",random,late_handover
+S105460,"lift out of order, everything carried up stairs, took long",random,equipment_failure
+S105761,"scrubber broke down, had to do the floor manually !",random,equipment_failure
+S100498,"stocktake ran over, client asked us to remain, they know tehy pay for it",random,client_requested
+S101223,Client requested deep clean before the audit - approved,random,client_requested
+S100181,"still on sitee, relief was suppose to come 6am",random,relief_no_show
+S102062,"double duty today, Pillay on family responsibility leave",random,colleague_sick_or_leave
+S104093,"client wanted extra man on the gate for the event, approved",random,client_requested
+S103051,"buffer machine kaput, did the floor by hand",random,equipment_failure
+S100346,"gate motor faled, manned it by hand till 06h00",random,equipment_failure
+S107993,no relief. stayed. soemone must please sort the roster,random,relief_no_show
+S104901,"generator fault, stayed to monitor",random,equipment_failure
+S108492,fine,random,nothing_useful
+S103440,"generator fault, stayed to monitor..",random,equipment_failure
+S101860,"oorhandiging was laat, gewag vir sleutels",random,late_handover
+S105807,klient het ekstra ure gevra vir stockake,random,client_requested
+S102386,"took Mabaso shift as well, 2 posts 1 guard",random,stood_in_unspecified
+S102432,"oorhandiging was laat, gewag vir sleutels",random,late_handover
+S102866,"aflos het nie opgedaag nie, moes aanbly",random,relief_no_show
+S105251,no incidents,random,nothing_useful
+S106979,"covering mthembu post, no show no call",random,colleague_no_show
+S101592,"additional cover requested by site mgr, signed off..",random,client_requested
+S108056,Nexxt shift guuard did not pitch. Had to cover.,random,relief_no_show
+S105165,"aflos het nie opgedaga niie, moes anbly",random,relief_no_show
+S105844,"client asked us to stay for the delivery, ok'd by centre mgmt..",random,client_requested
+S106262,"covering Molefe post, no sow no call..",random,colleague_no_show
+S105442,niks om te rapporteer nie,random,nothing_useful
+S107350,Centre manager requested additional cover for stocktake,random,client_requested
+S102756,no incidents,random,nothing_useful
+S101099,"oorhandiging was laat, gewag vir sleutels",random,late_handover
+S108108,"aflos het nie opgedaag nie, moes aanbly",random,relief_no_show
+S108589,"gate motor failed, manned it by hand till 6am",random,equipment_failure
+S106575,"took Mthembu shift as well, 2 possts 1 guard",random,stood_in_unspecified
+S103038,"client asked us to stay for the delivery, ok'd by centre mgmt !",random,client_requested
+S100188,"worked through, Wyk at the clinic",random,colleague_sick_or_leave
+S102694,ok,random,nothing_useful
+S108856,no relief. stayed. someone must please sort the roster,random,relief_no_show
+S108374,"relief only arrived 06h00, stayyed until then",random,relief_no_show
+S108355,"gate motor failled, manned it by hand till 06:00",random,equipment_failure
+S100693,"handover late agn, keys missing !",random,late_handover
+S100360,"gate motor failed, manned it by hand tilll 0600..",random,equipment_failure
+S101589,"conntrol room says relief coming, nobody came",random,relief_no_show
+S106383,"ungcobo akezanga namhlanje, ngimele yena",random,colleague_no_show
+S100277,shift handover delayed by 20 min,random,late_handover
+S107400,all fine,random,nothing_useful
+S103068,"Wyk didnt coome in, covered the post",random,colleague_no_show
+S100592,"client asked us to stay for the delivery, ok'd by centre mgmt",random,client_requested
+S101725,ok,random,nothing_useful
+S106236,extra hours approved by clent for the event setup,random,client_requested
+S102468,"gedek vir Sibiya, siek gmeld !",random,colleague_sick_or_leave
+S108525,.,random,nothing_useful
+S102720,ntr,random,nothing_useful
+S101047,Centre manager requested additional cover for stocktake,random,client_requested
+S105080,"client says stay till 6am, dont know if office approved",random,client_unconfirmed
+S106544,"double duty today, Molefe on family responsibillity leave",random,colleague_sick_or_leave
+S102725,-,random,nothing_useful
+S102254,"client says stay till 6, dont know if office approved",random,client_unconfirmed
+S102559,no incidents,random,nothing_useful
+S101106,"gedek vir sibiya, siek gemeld",random,colleague_sick_or_leave
+S106255,nothing to report,random,nothing_useful
+S105817,ok,random,nothing_useful
+S104433,"lift out of order, everything carried up stairs, took long",random,equipment_failure
+S108089,"conntrol room says relief coming, nobody came",random,relief_no_show
+S101905,.,random,nothing_useful
+S103659,"requested by centre management for load in, signed off",random,client_requested
+S106422,"late handover, waiiting on paperwork",random,late_handover
+S100818,"worked through, mthembu at the clinic",random,colleague_sick_or_leave
+S100710,"no replacment sent, ngicela sort this out",random,relief_no_show
+S108254,Covering for Fourie - booked off siick,random,colleague_sick_or_leave
+S100969,all fine,random,nothing_useful
+S100287,.,random,nothing_useful
+S103759,"client wanted extra man on the gate for the event, approved",random,client_requested
+S101500,"Sithole absent, took her rounds as well",random,colleague_no_show
+S105737,fine,random,nothing_useful
+S105451,all quiet,random,nothing_useful
+S108332,"stocktake ran over, client asked us to remain, they knnow tey pay for it",random,client_requested
+S102054,kllient het ekstra ure gevra vir stocktake,random,client_requested
+S103808,"coverign Mavuso post, no show no call",random,colleague_no_show
+S107465,fine,random,nothing_useful
+S106788,"additional cover requested by site mgr, signed off",random,client_requested
+S101930,"buffer machine kaput, did the floor by hand",random,equipment_failure
+S103027,"gedek vir Mthembu, siek gemeld",random,colleague_sick_or_leave
+S106553,Next shift guard did not pitch. Had to cover.,random,relief_no_show
+S100384,"control room says relief coming, nobody came",random,relief_no_show
+S104442,"client wanted extra man on the gate for the event, approved",random,client_requested
+S101773,"client says stay till 06h00, dont know if office approved",random,client_unconfirmed
+S101612,"client asked us to stay for the delivery, ok'd by centre mgmt",random,client_requested
+S103409,covered for khumalo again - 3rd time this month,random,stood_in_unspecified
+S100168,all fine,random,nothing_useful
+S106978,"next shift akafikanga, ngihlale kuze kube six",random,relief_no_show
+S103627,cliient signed for the extra hours but real reeason is relief no show agn,random,relief_no_show
+S100284,"double duty today, Sithole on family responsibility leave..",random,colleague_sick_or_leave
+S100472,quiet shift,random,nothing_useful
+S101526,"worked throuugh, September at the clinic",random,colleague_sick_or_leave
+S103105,fine,random,nothing_useful
+S107697,"next shift akafikanga, ngihlale kuze kube 06h00..",random,relief_no_show
+S107612,shift handover delayed by 30 min,random,late_handover
+S104651,"double duty today, Ndovu on family responsibility leave",random,colleague_sick_or_leave
+S105777,"client asked us to stay for the delivery, ok'd by centre mgmt",random,client_requested
+S100713,Naidoo off sick. again. covered..,random,colleague_sick_or_leave
+S101089,"masjien is stukkend, ales met die hand gedoen !",random,equipment_failure
+S109353,"FOURIE DIDNT COME IN, COVERED THE POST",random,colleague_no_show
+S104307,"requested by centre management for load in, signed off",random,client_requested
+S100691,"machine down again, took twice as long",random,equipment_failure
+S109295,"extra patrol per client email, approved by office",random,client_requested
+S107725,,random,nothing_useful
+S100315,"no repacement sent, ngicela sort this out",random,relief_no_show
+S104919,double shift bc relief never pitched,random,relief_no_show
+S100975,"late handover, waiting on paperwork",random,late_handover
+S109346,all good,random,nothing_useful
+S102953,"gate motoor failed, manned it by hadn till 6",random,equipment_failure
+S102786,Covering for Mahlangu - booked off sick,random,colleague_sick_or_leave
+S105984,"late handover, waiting on paperwork",random,late_handover
+S106652,"still on site, relief was suppoes to come 6am",random,relief_no_show
+S103015,"requested by centre management for load in, signed off",random,client_requested
+S108023,covered for september again - 3rd time this month,minority_template,stood_in_unspecified
+S105299,n/a,minority_template,nothing_useful
+S105607,"gate motor failed, manned it by hand till 0600..",minority_template,equipment_failure
+S104784,"machine down agn, took twice as long..",minority_template,equipment_failure
+S108045,Covered for Sithole agn - 3rd time this month,minority_template,stood_in_unspecified
+S106804,"masjien is stukkend, alles met die hand gedoen",minority_template,equipment_failure
+S105629,"waited for relief, nobody came through",minority_template,relief_no_show
+S107628,as per normal,minority_template,nothing_useful
+S106103,covered for molefe again - 3rd time this month,minority_template,stood_in_unspecified
+S103044,double shift bc relief never pitched,minority_template,relief_no_show
+S103800,nothing to report,minority_template,nothing_useful
+S100160,"aflos het nie opgedaag nie, moes aanbly",minority_template,relief_no_show
+S105070,"machine down agn, took twice as long..",minority_template,equipment_failure
+S107895,"still on siet, relief was suppose to come 06:00..",minority_template,relief_no_show
+S100486,"waited for relif, noody came through",minority_template,relief_no_show
+S106895,COVERED FOR NAIDOO AGAIN - 3RD TIME THIS MONH,minority_template,stood_in_unspecified
+S107970,Covered for Fourie again - 3rd time this month,minority_template,stood_in_unspecified
+S104560,"still on site, relief was suppose to come 06h00",minority_template,relief_no_show
+S107595,as per normal,minority_template,nothing_useful
+S108051,"masjien is stukkend, alles met die hand gedoen",minority_template,equipment_failure
+S108540,"next shift akafikanga, ngihlale kuze kube 06h00",minority_template,relief_no_show
+S102839,"aflos het nie opgedaag nie, moes aanblly",minority_template,relief_no_show
+S104630,"lift out of order, everything carried up stairs, took long",minority_template,equipment_failure
+S103960,"no replacement sent, ngicela sort this out",minority_template,relief_no_show
+S108538,nothing to report,minority_template,nothing_useful
+S105639,as per normal,minority_template,nothing_useful
+S109151,no incidents,minority_template,nothing_useful
+S106442,nothing to report,minority_template,nothing_useful
+S104304,double shift because relief never pitched,minority_template,relief_no_show
+S100983,no issues on site,minority_template,nothing_useful
+S100523,relief no show AGAIN,minority_template,relief_no_show
+S108186,COVERED FOR NDLOVU AGAIN - 3RD TIME THIS MONTH,minority_template,stood_in_unspecified
+S101512,"lift out of order, everything carried up stairs, took long",minority_template,equipment_failure
+S104567,as per normal,minority_template,nothing_useful
+S100324,"still on site, relief was suppose to come 06:00",minority_template,relief_no_show
+S100274,n/a,minority_template,nothing_useful
+S108438,stood in for Fuorie..,minority_template,stood_in_unspecified
+S109304,"MAASJIEN IS STUKKEND, ALLES MET DIE HAND GEDOEN",minority_template,equipment_failure
+S102439,all good,minority_template,nothing_useful
+S101017,akukho lutho,minority_template,nothing_useful
+S104313,client signde for the extra hours but real reaon is relief no show agn,typo_dense,relief_no_show
+S100329,client signed for the extra hours but real reason is relief no show again,typo_dense,relief_no_show
+S107620,client signed for the extra hours but real reason is relief no show again,typo_dense,relief_no_show
+S102622,client signed for the extra hours but real reason is relief no show again,typo_dense,relief_no_show
+S102887,client signed for the extra hrs but real reason is relieef no show again,typo_dense,relief_no_show
+S101599,client signed for the extra hours but real reason is relief no show agin,typo_dense,relief_no_show
+S102816,client signed for the extra hours but real reason is relief no show agn,typo_dense,relief_no_show
+S108054,CLIENT SIGNED FOR THE EXTRA HRS BUT REAL REASON IS RELIEF NO SHOW AGAIN,typo_dense,relief_no_show
+S106793,client signed for the extra hours but real reason is relief no show agn..,typo_dense,relief_no_show
+S106900,client signed for the extra hrs but real reason is relief no show again,typo_dense,relief_no_show
+S103760,client signed for the extra hours but real reason is relief no show agn,typo_dense,relief_no_show
+S100595,client signed for the extra hours but real reason is relief no show agn..,typo_dense,relief_no_show
+S102372,client signed for the extra hours but real reason is relief no show agn,typo_dense,relief_no_show
+S109348,client signed for the extra hours but real reason is relief no show agn,typo_dense,relief_no_show
+S104320,client signed for the extra hrs but real reason is relief no show again,typo_dense,relief_no_show
+S106397,client signed for the extra hrs but real reason is relief no show agn,typo_dense,relief_no_show
+S106135,client signed for the extra hrs but real reason is relief no show agn,typo_dense,relief_no_show
+S109289,client signed for the extra hrs but real reason is relief no show agn,typo_dense,relief_no_show
+S107132,stood in for Motaug,typo_dense,stood_in_unspecified
+S108001,stood in for zuul,typo_dense,stood_in_unspecified
+S108354,"gedek vir Tshabaala, siek gemeld",typo_dense,colleague_sick_or_leave
+S107557,Balloyi off sick. agn. covered,typo_dense,colleague_sick_or_leave
+S102693,Sithoel off sick. again. covered.,typo_dense,colleague_sick_or_leave
+S108003,"covering Hendrricks post, no show no call",typo_dense,colleague_no_show
+S101387,"gedek vir Adaams, siek gemeld",typo_dense,colleague_sick_or_leave
+S104429,"Septeember didnt come in, covered the post",typo_dense,colleague_no_show
+S101833,"uhendrciks akezanga namhlanje, ngimele yena..",typo_dense,colleague_no_show
+S102485,"covering Mahlnagu post, no show no call..",typo_dense,colleague_no_show
+S101736,"tok bothha shift as wlel, 2 posts 1 guard",typo_dense,stood_in_unspecified
+S107748,Covering for Raddebe - booked off sick,typo_dense,colleague_sick_or_leave
+S100088,"coering Blaoyi post, no show no call..",typo_dense,colleague_no_show
+S106940,"Dlmini asent, took her rounds as well",typo_dense,colleague_no_show
+S104408,"ugNcobo akezanga namhlanje, ngimele yena",typo_dense,colleague_no_show
+S100164,"uFouire akezanga namhlanje, ngimele yena",typo_dense,colleague_no_show
+S103005,"took dlaminni shift as well, 2 posts 1 guard",typo_dense,stood_in_unspecified
+S106567,"uZuulu akezanga namhlanje, ngimele yena",typo_dense,colleague_no_show
+S103829,"worked through, Jaobs at the clinic",typo_dense,colleague_sick_or_leave
+S109104,"covering ncobo post, no show no call",typo_dense,colleague_no_show
+S106218,"covering Naido post, no show no call",typo_dense,colleague_no_show
+S107050,"took Nosi shift as well, 2 pots 1 guard",typo_dense,stood_in_unspecified
+S105810,covered for mauel again - 3rd time this month,typo_dense,stood_in_unspecified
+S103478,"double dtuy today, Nkoi on family responsibility leave",typo_dense,colleague_sick_or_leave
+S100645,double shift bc releif never pitched,typo_dense,relief_no_show
+S100250,"relief onnly arrived sixx, styed until then",typo_dense,relief_no_show
+S101797,"double duty today, Baloi on family responsibility leave",typo_dense,colleague_sick_or_leave
