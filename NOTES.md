@@ -2,7 +2,7 @@
 
 **Live dashboard:** https://jemtechnical-lf2bceqkfzrdoab2mdyfvi.streamlit.app/ — I invite you to open the site on your phone or laptop. (Free hosting sleeps when it has not been used for a while; if you see a "wake up" button, press it and wait about a minute.)
 
-**Video (12 minutes(explaination of length in the first 30 seconds)):** https://www.loom.com/share/3668b148cb5f4628bd34b8765d69b255
+**Video (12 minutes(explaination of length in the first 30 seconds)):** https://www.loom.com/share/dc6dfcc95a344f35a5191da06fba2f91
 
 **Not done: requirement 2 (what to do about it).** I did not complete it, because of time. What exists today is partial: each person shows hours left and the usual shifts still to come, and the Resolve button only shows a message, nothing is sent. With more time I would build it like this:
 - Use the reason behind the hours (the sorted supervisor notes) to decide whether a case looks like a **one-off event** or like **fraud** or **client-side pressure**.  The first is a low-risk breach, the second two are high-risk.
