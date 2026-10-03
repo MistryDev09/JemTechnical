@@ -111,3 +111,26 @@ def test_the_30_to_50_percent_drop_down_level(full):
     assert (lvl == "High").sum() == 9 and (lvl == "Watch").sum() == 7
     watch = full.people[full.people.level == "Watch"]
     assert watch.risk_score.between(0.3, 0.5, inclusive="left").all()
+
+
+def test_dashboard_groups_by_risk(full):
+    p = full.people
+    assert p.band.value_counts().to_dict() == {"Low": 185, "High": 9, "Watch": 7, "Mid": 7}
+    assert p[p.band == "Mid"].risk_score.between(0.2, 0.3, inclusive="left").all()
+    assert p[p.band == "Low"].risk_score.lt(0.2).all() and p[p.band == "Watch"].risk_score.between(0.3, 0.5, inclusive="left").all()
+    assert p[p.band == "High"].level.eq("High").all() and len(p) == 208
+
+
+def test_notes_are_sorted_and_attached_to_people(full):
+    r = full.reasons
+    assert len(r) == 2117 and set(["person_key", "shift_date", "site_id", "category", "note", "this_week"]) <= set(r.columns)
+    assert int(r.this_week.sum()) == 109 and r.person_key.nunique() == 208 and (r.category != "unknown").all()
+    assert list(full.note_classes.columns) == ["shift_id", "category", "note"] and len(full.note_classes) == 2117
+    merged_key = full.people[full.people.employee_ids.apply(len) > 1].person_key.iloc[0]
+    assert r[r.person_key == merged_key].shape[0] > 0               # notes of both IDs land on the one person
+
+
+def test_without_notes_there_are_no_reasons(bundle):
+    b = {k: v for k, v in bundle.items() if k != "shift_notes"}
+    res = run(b)
+    assert res.reasons is None and res.note_classes is None and res.status == "model"

@@ -1,11 +1,14 @@
 """Streamlit entry point for the ops room dashboard: who is likely to go over 55 hours by Sunday, and where."""
 import html
 
+import pandas as pd
+
 import streamlit as st
 
 from src.dataset import apply_upload, code_version, content_hash, load_bundled
 from src.export import predictions_csv
 from src.forecast import CAP
+from src.notes import CATEGORY_LABELS, PILE
 from src.pipeline import run
 from src.validate import FILE_NAMES, check_file
 
@@ -44,6 +47,19 @@ a.tag.esc:hover {background: #b91c1c;}
 .legs {display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 8px 0 2px;}
 .leg {border: 1px solid rgba(128,128,128,.3); border-radius: 8px; padding: 6px 10px; font-size: .85rem;}
 .leg b {display: block;}
+.card.low {border-left-color: #9ca3af;}
+.card.compact {padding: 8px 12px; margin-bottom: 6px;}
+.card .line {font-size: .85rem; opacity: .85; margin-top: 2px;}
+details.why {margin-top: 8px;}
+details.why summary {cursor: pointer; display: inline-block; list-style: none; border: 1px solid rgba(128,128,128,.55); border-radius: 8px; padding: 2px 11px; font-size: .82rem; font-weight: 600;}
+details.why summary::-webkit-details-marker {display: none;}
+details.why[open] summary {background: rgba(128,128,128,.18);}
+details.why .whybody {font-size: .88rem; margin-top: 6px;}
+details.why .head {font-weight: 600; margin-bottom: 4px;}
+details.why ul {margin: 4px 0 0; padding-left: 1.1rem;}
+details.why li {margin-bottom: 3px;}
+.pill {display: inline-block; font-size: .75rem; font-weight: 700; border-radius: 999px; padding: 1px 9px; margin: 0 4px 3px 0; color: #fff; background: #6b7280;}
+.pill.client {background: #2563eb;} .pill.operational {background: #dc2626;} .pill.absence {background: #d97706;} .pill.none {background: #6b7280;}
 .status {opacity: .8; margin: -0.4rem 0 0.6rem;}
 .stButton button {padding: 0.15rem 0.9rem; min-height: 2rem;}
 /* message that drops in at the top for about two seconds, then goes away (two copies so it replays on every click) */
@@ -119,7 +135,47 @@ def pattern_note(p):
     return f"{usual}. That fits within the {p.hours_left:.1f} h left ({-gap:.1f} h to spare).{history}"
 
 
-def card(p, res, css="high"):
+def reason_index(res):
+    """person_key -> that person's sorted notes (newest first); None when no notes are loaded."""
+    if res.reasons is None:
+        return None
+    return {k: g for k, g in res.reasons.groupby("person_key")}
+
+
+def why_html(person_key, res, index):
+    """The 'Why the hours happened' control: this week's notes, or the last four weeks if there are none this week."""
+    if index is None:
+        return ""
+    mine = index.get(person_key)
+    if mine is None or mine.empty:
+        body = '<div class="head">No supervisor notes for this person.</div>'
+    else:
+        this = mine[mine["this_week"]]
+        recent = mine[mine["shift_date"] >= res.week_start - pd.Timedelta(days=28)]
+        count = lambda d: f"{len(d)} note{'s' if len(d) != 1 else ''}"
+        if (this["category"] != "nothing_useful").any():
+            shown, head = this, f"This week ({count(this)})"
+        elif (recent["category"] != "nothing_useful").any():
+            shown = recent
+            head = ("Nothing useful this week. " if len(this) else "No note this week. ") + f"Last 4 weeks ({count(recent)})"
+        else:
+            shown, head = recent, "No useful supervisor notes in the last 4 weeks."
+        body = f'<div class="head">{esc(head)}</div>'
+        if len(shown):
+            useful = shown[shown["category"] != "nothing_useful"]
+            counts = useful["category"].value_counts()
+            body += "".join(f'<span class="pill {PILE.get(c, "none")}">{esc(CATEGORY_LABELS.get(c, c))} · {n}</span>' for c, n in counts.items())
+            blank = len(shown) - len(useful)
+            if blank:
+                body += f'<span class="pill none">Nothing useful · {blank}</span>'
+            items = "".join(f"<li>{esc(f'{r.shift_date:%a %d %b}')} · {esc(site_text([r.site_id], res.site_labels))} · <b>{esc(CATEGORY_LABELS.get(r.category, r.category))}</b>"
+                            f" — “{esc(r.note)}”</li>" for r in useful.head(3).itertuples())
+            if items:
+                body += f"<ul>{items}</ul>"
+    return f'<details class="why"><summary>Why the hours happened</summary><div class="whybody">{body}</div></details>'
+
+
+def card(p, res, css="high", index=None, compact=False):
     labels = res.site_labels
     over = p.hours_so_far > CAP
     badge = f"Over by {p.hours_so_far - CAP:.1f} h" if over else (f"{p.risk_score:.0%} risk" if res.status == "model" else "Over")
@@ -131,13 +187,19 @@ def card(p, res, css="high"):
     worked = f"Worked this week: {esc(site_text(p.sites_worked, labels))}"
     note = pattern_note(p) if res.status == "model" else (f"Already over the {CAP}-hour cap by {p.hours_so_far - CAP:.1f} hours." if over else "")
     usual_stat = (f'<div><b>{p.usual_hours_to_go:.1f}</b><span>usual hours still to come</span></div>' if res.status == "model" else "")
+    why = why_html(p.person_key, res, index)
+    if compact:
+        line = f"{p.hours_so_far:.1f} h so far" + (f" · {p.usual_hours_to_go:.1f} usual hours still to come" if res.status == "model" else "")
+        return (f'<div class="card {css} compact"><div class="top"><span class="name">{esc(p.name)}</span>'
+                f'<span class="badge">{esc(badge)}</span></div><div class="sub">{sub}</div>'
+                f'<div class="line">{esc(line)}</div>{why}</div>')
     return (f'<div class="card {css}"><div class="top"><span class="name">{esc(p.name)}{esc(aka)}</span>'
             f'<span class="badge">{esc(badge)}</span></div><div class="sub">{sub}</div>'
             f'<div class="sub">{primary}{" · " if primary else ""}{worked}</div>'
             f'<div class="stats"><div><b>{p.hours_so_far:.1f}</b><span>hours so far</span></div>'
             f'<div><b>{int(p.shifts_so_far)}</b><span>shifts so far</span></div>'
             f'<div><b>{p.hours_left:.1f}</b><span>hours left to {CAP}</span></div>{usual_stat}</div>'
-            f'<div class="note">{esc(note)}</div></div>')
+            f'<div class="note">{esc(note)}</div>{why}</div>')
 
 
 def tiles(res):
@@ -191,13 +253,20 @@ def load_section(res):
             getattr(st, level)(text)
         if res.predictions is not None:
             st.download_button("Download predictions.csv", predictions_csv(res), "predictions.csv", "text/csv")
+        if res.note_classes is not None:
+            st.download_button("Download note_classifications.csv", res.note_classes.to_csv(index=False), "note_classifications.csv", "text/csv")
+
+
+GROUPS = [("Watch", "30 to 50%", "flag", False), ("Mid", "20 to 30%", "flag", False), ("Low", "0 to 20%", "low", True)]
 
 
 def flagged_section(res):
     p = res.people
+    index = reason_index(res)
     st.subheader("Who is likely to go over " + str(CAP) + " hours by Sunday" if res.status == "model" else "Who is over " + str(CAP) + " hours")
     if res.status == "model":
-        st.caption("People at 50% risk or higher are listed here. People at 30 to 50% are in the drop-down below. predictions.csv also includes lower-risk people.")
+        st.caption("People at 50% risk or higher are listed here. The drop-downs below hold people at 30 to 50%, 20 to 30% and 0 to 20%. "
+                   "predictions.csv includes everyone." + (" Press “Why the hours happened” on a box to see the supervisors' notes." if index is not None else ""))
     sites = res.sites.sort_values(["high_risk", "working"], ascending=False)
     options = ["All sites"] + list(sites["site"])
     by_label = dict(zip(sites["site"], sites["site_id"]))
@@ -205,20 +274,21 @@ def flagged_section(res):
     if choice != "All sites":
         sid = by_label[choice]
         p = p[p["sites_worked"].apply(lambda lst: sid in lst) | p["primary_sites"].apply(lambda lst: sid in lst)]
-    hot = p[p["level"].isin(HIGH_LEVELS)]
+    hot = p[p["band"] == "High"]
     if hot.empty:
         st.success("Nobody is " + ("at 50% risk or higher" if res.status == "model" else "over") + ("" if choice == "All sites" else " at this site") + ".")
     for row in hot.itertuples():
-        st.markdown(card(row, res), unsafe_allow_html=True)
+        st.markdown(card(row, res, index=index), unsafe_allow_html=True)
         if st.button("Resolve", key=f"resolve_{row.person_key}"):
             notify("resolving an overtime person", row.name)
     if res.status == "model":
-        watch = p[p["level"] == "Watch"]
-        with st.expander(f"People at 30 to 50% risk ({len(watch)})"):
-            if watch.empty:
-                st.caption("Nobody is at 30 to 50% risk" + ("" if choice == "All sites" else " at this site") + ".")
-            for row in watch.itertuples():
-                st.markdown(card(row, res, "flag"), unsafe_allow_html=True)
+        for band, title, css, compact in GROUPS:
+            group = p[p["band"] == band].sort_values(["risk_score", "hours_so_far"], ascending=False)
+            with st.expander(f"People at {title} risk ({len(group)})"):
+                if group.empty:
+                    st.caption(f"Nobody is at {title} risk" + ("" if choice == "All sites" else " at this site") + ".")
+                else:
+                    st.markdown("".join(card(row, res, css, index, compact) for row in group.itertuples()), unsafe_allow_html=True)
 
 
 def sites_section(res):

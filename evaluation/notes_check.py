@@ -6,25 +6,19 @@ Nothing here classifies a note; the classifiers live in the notebook.
 """
 import difflib
 import re
-import unicodedata
 
 import numpy as np
 import pandas as pd
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+from src.notes import normalise   # one normaliser for the classifier, the dashboard and this check
+
 SEED = 0
 N_RANDOM, N_MINORITY, N_TYPO = 120, 40, 45
 COMMON_MIN_ROWS = 10           # a spelling used in at least this many rows counts as a common spelling
 MINORITY_MAX_ROWS = 30          # a template cluster with fewer rows than this counts as a minority template
 CLUSTER_DISTANCE = 1.0          # average-linkage cut on char n-gram TF-IDF; gives about 68 clusters on the bundled notes
-
-
-def normalise(text):
-    """Lowercase, drop accents and punctuation, collapse spaces. No spell-correction (it breaks Afrikaans and isiZulu)."""
-    t = unicodedata.normalize("NFKD", str(text)).encode("ascii", "ignore").decode().lower()
-    t = re.sub(r"[^a-z0-9\s]", " ", t)
-    return re.sub(r"\s+", " ", t).strip()
 
 
 def surname_set(employees):

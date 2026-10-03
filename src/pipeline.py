@@ -11,10 +11,12 @@ import pandas as pd
 from .forecast import CAP, MIN_WEEKS, forecast
 from .hours import attribute_hours, data_cutoff, parse_shifts, quality_report
 from .integrity import add_person_key, find_duplicate_people, find_overlaps
+from .notes import classify_notes
 from .validate import cross_check
 
 HIGH_RISK = 0.5      # shown as a card with a Resolve button
-WATCH_RISK = 0.3     # 30% to 50%: shown in the drop-down below
+WATCH_RISK = 0.3     # 30% to 50%: shown in the first drop-down
+MID_RISK = 0.2       # 20% to 30%: second drop-down; below 20% is the last one
 KINDS = ("shifts", "employees", "sites", "public_holidays", "shift_notes", "payroll_details")
 DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -40,6 +42,8 @@ class Result:
     model: dict = field(default_factory=dict)
     site_labels: dict = field(default_factory=dict)
     n_weeks: int = 0
+    reasons: pd.DataFrame | None = None          # supervisor notes joined to a person: person_key, shift_date, site_id, category, note, this_week
+    note_classes: pd.DataFrame | None = None     # shift_id, category, note for every note (the note_classifications.csv columns)
 
 
 def _has(bundle, kind):
@@ -127,6 +131,9 @@ def run(bundle):
     else:
         people["level"] = np.where(over, "Over", "Unknown")
         people["will_breach"] = over.astype(int)
+    # the groups shown on the dashboard, by score (a person already over the cap is always in the top group)
+    risk = people["risk_score"].fillna(0.0)
+    people["band"] = np.where(over | (risk >= HIGH_RISK), "High", np.where(risk >= WATCH_RISK, "Watch", np.where(risk >= MID_RISK, "Mid", "Low")))
 
     # --- names, roles, sites
     site_names = dict(zip(sites["site_id"], sites["site_name"])) if sites is not None else {}
@@ -168,6 +175,15 @@ def run(bundle):
     overlaps_now = overlaps[overlaps["start_a"].dt.normalize() >= current_week].reset_index(drop=True)
     open_shifts = sh.loc[open_mask, ["shift_id", "employee_id", "site_id", "shift_date", "clock_in_time", "clock_out_time"]].reset_index(drop=True)
 
+    # --- why the hours happened: the supervisors' notes, sorted into reasons and attached to the person
+    reasons, note_classes = None, None
+    if avail["shift_notes"]:
+        note_classes = classify_notes(bundle["shift_notes"][["shift_id", "note"]].astype({"shift_id": str}).fillna({"note": ""}))
+        joined = note_classes.merge(sh[["shift_id", "employee_id", "site_id", "shift_date"]], on="shift_id", how="inner")
+        joined["person_key"] = joined["employee_id"].map(person_of)
+        joined["this_week"] = joined["shift_date"] >= current_week
+        reasons = joined.drop(columns="employee_id").sort_values("shift_date", ascending=False).reset_index(drop=True)
+
     # --- employee-level predictions (both IDs of a merged person get the same values)
     predictions = None
     if fc.status == "model":
@@ -187,6 +203,7 @@ def run(bundle):
     res.quality = quality_report(sh)
     res.site_labels = {s: _label(s, site_names) for s in set(sh["site_id"].dropna()) | set(site_names) | {x for lst in people["primary_sites"] for x in lst}}
     res.n_weeks = len(fc.weeks) if fc.weeks is not None else 0
+    res.reasons, res.note_classes = reasons, note_classes
     res.model = {"method": fc.method, "threshold": fc.threshold, "C": fc.C, "features": fc.features,
                  "folds": fc.folds, "pooled_pr_auc": fc.pooled_pr_auc, "min_weeks": MIN_WEEKS}
     return res

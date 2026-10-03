@@ -30,7 +30,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Each card shows the usual hours still to come this week (usual shifts left x usual shift length) next to the hours left before 55, with a plain-language note
 - [ ] TODO: Resolve only shows the message at the top. Decide what resolving means (for example record who resolved it and when, and remove the item from the list) and build it
 - [ ] Says what to do about each person or site, specific to the data (partly: each person shows hours left and how many usual shifts that allows; no site-level advice yet)
-- [ ] Shows why the hours happened, based on the supervisors' notes
+- [x] Shows why the hours happened, based on the supervisors' notes (a "Why the hours happened" button inside each person's box; rules in `src/notes.py`, shared with the notebook)
 
 ### Escalations (dashboard)
 - [x] Show duplicate people flagged for escalation (both IDs, evidence "same ID number / bank account / tax number", severity), never showing bank or tax values
@@ -52,7 +52,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Upload of any of the files in the dashboard, overwrite or append per file, with file, column and value checks and clear messages
 - [x] Everything reprocesses end to end with no developer and no hardcoded dates, weekdays or employee IDs (cutoff weekday taken from the data)
 - [x] Regenerated `predictions.csv` available to download after an upload
-- [ ] `note_classifications.csv` available to download in the dashboard (the file exists; the classifier is still only in the notebook, not in `src/` or the app)
+- [x] `note_classifications.csv` available to download in the dashboard (the classifier is in `src/notes.py`)
 
 ### Repo and submission
 - [x] `NOTES.md`, half a page: assumptions, how the note-sorting was checked and what it found, what a trained model would learn that this approach does not, and how to test it on about 200 people without fooling yourself

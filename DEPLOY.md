@@ -1,6 +1,6 @@
 # Deploying the dashboard (Streamlit Community Cloud, free)
 
-The app is `app.py` at the repo root. It needs only `requirements.txt` and the bundled `data/` folder.
+The app is `app.py` at the repo root. It needs only `requirements.txt` (including `rapidfuzz`, used by the notes sorting in `src/notes.py`) and the bundled `data/` folder.
 
 ## One-time setup (about 10 minutes)
 

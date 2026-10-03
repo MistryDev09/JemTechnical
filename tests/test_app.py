@@ -25,13 +25,31 @@ def test_bundled_data_renders_high_risk_people_sites_and_escalations():
     assert len(resolve) == 27 and "resolve_E1126" in {b.key for b in resolve}
 
 
-def test_people_at_30_to_50_percent_are_in_a_drop_down_without_resolve_buttons():
+def test_people_below_50_percent_are_in_three_drop_downs_without_resolve_buttons():
     at = AppTest.from_file(APP, default_timeout=180).run()
-    assert any(e.label == "People at 30 to 50% risk (7)" for e in at.expander)
+    labels = [e.label for e in at.expander]
+    assert "People at 30 to 50% risk (7)" in labels and "People at 20 to 30% risk (7)" in labels and "People at 0 to 20% risk (185)" in labels
     text = page_text(at)
     assert "Kagiso Molefe" in text and "45% risk" in text
     assert "resolve_E1121" not in {b.key for b in at.button}           # Kagiso Molefe is E1121: no button
-    assert "Refilwe Nkosi" in text and "28% risk" not in text           # below 30% is not shown
+    assert "Refilwe Nkosi" in text and "28% risk" in text               # 20 to 30% is now shown too
+    assert len([b for b in at.button if b.label == "Resolve"]) == 27   # still only the 50%+ people, duplicates and overlaps
+
+
+def test_every_box_has_a_why_the_hours_happened_control():
+    text = page_text(AppTest.from_file(APP, default_timeout=180).run())
+    assert text.count("<summary>Why the hours happened</summary>") == 9 + 7 + 7 + 185
+    assert "This week (" in text and "No note this week. Last 4 weeks (" in text and "Nothing useful this week. Last 4 weeks (" in text
+    assert "Late handover" in text or "Relief did not arrive or was late" in text
+
+
+def test_there_is_no_why_control_without_notes():
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    bundle = dict(at.session_state["bundle"])
+    bundle.pop("shift_notes")
+    at.session_state["bundle"] = bundle
+    at.run()
+    assert not at.exception and "Why the hours happened" not in page_text(at)
 
 
 def test_cards_show_the_usual_hours_still_to_come():
