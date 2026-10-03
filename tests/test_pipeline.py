@@ -16,14 +16,45 @@ def full(bundle):
     return run(bundle)
 
 
-def test_reproduces_the_notebook_predictions(full):
+def test_predictions_csv_is_what_the_pipeline_produces(full):
     expected = pd.read_csv("predictions.csv")
     got = full.predictions
     assert list(got.columns) == ["employee_id", "will_breach", "risk_score"]
     assert (got.employee_id.values == expected.employee_id.values).all()
     assert (got.will_breach.values == expected.will_breach.values).all()
     assert (got.risk_score - expected.risk_score).abs().max() < 1e-9
-    assert len(got) == 213 and int(got.will_breach.sum()) == 51
+    assert len(got) == 213 and int(got.will_breach.sum()) == 38
+
+
+DUPLICATE_PEOPLE = {"E1035", "E1090", "E1097", "E1126", "E1193"}
+DOUBLE_DIPPING = {"E1099", "E1100", "E1104", "E1111", "E1140", "E1143", "E1152", "E1202", "E1213"}
+
+
+def test_duplicate_and_double_dipping_people_are_kept_out_of_will_breach(full):
+    ex = full.excluded.set_index("person_key")
+    assert set(ex.index) == DUPLICATE_PEOPLE | DOUBLE_DIPPING
+    assert set(ex[ex.not_flagged_because == "duplicate person"].index) == DUPLICATE_PEOPLE
+    ids = {e for lst in ex.employee_ids for e in lst}
+    pred = full.predictions.set_index("employee_id")
+    assert (pred.loc[sorted(ids), "will_breach"] == 0).all()
+    # the model's score is kept, so the file shows why: E1126 is 0.95 with will_breach 0
+    assert pred.loc["E1126", "risk_score"] > 0.9 and pred.loc["E1127", "will_breach"] == 0
+    # everyone else keeps the model's flag
+    people = full.people.set_index("person_key")
+    others = [e for k, row in people.iterrows() if k not in ex.index for e in row.employee_ids]
+    assert (pred.loc[others, "will_breach"].values == people.loc[[k for k in people.index if k not in ex.index], "will_breach"].repeat(
+        [len(people.at[k, "employee_ids"]) for k in people.index if k not in ex.index]).values).all()
+
+
+def test_nobody_in_the_flag_list_is_a_duplicate_or_double_dipper(full):
+    flagged = full.predictions[full.predictions.will_breach == 1].employee_id
+    assert not (set(flagged) & ({e for lst in full.excluded.employee_ids for e in lst}))
+    assert len(flagged) == 38
+
+
+def test_the_dashboard_levels_do_not_change_with_the_exclusion(full):
+    p = full.people
+    assert int(p.level.isin(["High", "Watch", "Flagged"]).sum()) == 46 and p.band.value_counts().to_dict()["High"] == 9
 
 
 def test_the_week_and_days_are_derived_from_the_data(full):

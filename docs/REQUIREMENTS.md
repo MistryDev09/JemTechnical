@@ -21,7 +21,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 ## Not done
 
 ### The answer (must be correct)
-- [ ] Review `predictions.csv` (it is now reproduced exactly by `python -m src.pipeline data predictions.csv`)
+- [ ] Review `predictions.csv` (written by `python -m src.pipeline data predictions.csv`; 213 rows, 38 flagged; duplicate and double-dipping people are kept out of `will_breach` and named in `NOTES.md`)
 
 ### Dashboard
 - [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see docs/DEPLOY.md)

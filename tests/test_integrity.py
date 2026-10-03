@@ -1,8 +1,8 @@
 import pandas as pd
 import pytest
 
-from src.hours import parse_shifts
-from src.integrity import add_person_key, find_duplicate_people, find_overlaps
+from src.hours import attribute_hours, parse_shifts
+from src.integrity import add_person_key, find_cross_province_days, find_duplicate_people, find_overlaps
 from src.loader import load_employees, load_payroll, load_shifts, load_sites
 
 SITES = pd.DataFrame({
@@ -160,3 +160,29 @@ def test_outputs_never_contain_bank_or_tax_values(real):
     assert not ({"account_number", "tax_number"} & (set(people.columns) | set(o.columns)))
     text = people.to_csv() + o.to_csv()
     assert not any(v in text for v in banned)
+
+
+def _segments(*rows):
+    seg = attribute_hours(shifts(*rows))
+    return seg.assign(person_key=seg["employee_id"])
+
+
+def test_two_provinces_on_one_day_is_flagged_even_without_a_time_overlap():
+    seg = _segments(("E1", "ST-01", "2026-08-11", "06:00", "10:00"), ("E1", "ST-04", "2026-08-11", "14:00", "18:00"))
+    out = find_cross_province_days(seg, SITES)
+    assert list(out.person_key) == ["E1"] and out.sites.iloc[0] == 2
+
+
+def test_two_sites_in_the_same_province_on_one_day_are_not_flagged():
+    seg = _segments(("E1", "ST-01", "2026-08-11", "06:00", "10:00"), ("E1", "ST-02", "2026-08-11", "14:00", "18:00"))
+    assert find_cross_province_days(seg, SITES).empty
+
+
+def test_two_provinces_on_different_days_are_not_flagged():
+    seg = _segments(("E1", "ST-01", "2026-08-11", "06:00", "14:00"), ("E1", "ST-04", "2026-08-12", "06:00", "14:00"))
+    assert find_cross_province_days(seg, SITES).empty
+
+
+def test_no_province_information_gives_no_flags():
+    seg = _segments(("E1", "ST-01", "2026-08-11", "06:00", "10:00"), ("E1", "ST-04", "2026-08-11", "14:00", "18:00"))
+    assert find_cross_province_days(seg, SITES.drop(columns="province")).empty and find_cross_province_days(seg, None).empty

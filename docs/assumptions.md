@@ -65,6 +65,7 @@
   - The split is shown on notes that say something (not "nothing useful") and as a range for the judgement calls: sick/leave and "stood in" cover as a separate pile (main, 55% operational) or as operational (74%), and "took X's shift as well" / "covered for X again" as no-shows (60%).
   - The check is a blind hand-labelled sample of 205 notes (120 random, 40 minority templates, 45 heavy typos) written before either method, labelled by Claude, not a client expert; plus Method B (clusters labelled once by reading) compared with the rules. The supplied `shift_notes_labelled.csv` came from someone else's classifier, so it is used only as a third opinion, not as an answer key. Pre-fix accuracy of the rules (99.0%) is the honest number; the fixed rules (100%) are tuned.
   - Concentration is tested against chance with Bonferroni correction (24 supervisors, 30 surnames, 6 sites). "No meaningful concentration" is the finding.
+- `predictions.csv` keeps all 213 rows, but `will_breach` is 0 for duplicate people and for people double dipping in the week being predicted; their `risk_score` stays the model's. Double dipping = shifts that overlap in time, or two sites in different provinces on the same day (overlaps and two-province days in earlier weeks are not counted). Their hours still count in the model and on the dashboard, where they stay under Escalations. The file is written by `python -m src.pipeline data predictions.csv`, not by the notebook.
 
 ## 2. Assumptions inferred
 

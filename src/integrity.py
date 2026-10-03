@@ -1,4 +1,4 @@
-"""Integrity flags: duplicate people and overlapping shifts. These only report; hours are never removed.
+"""Integrity flags: duplicate people, overlapping shifts and two provinces on one day. These only report; hours are never removed.
 
 Wording is deliberately "potential" and "for review": a flag is a reason to escalate, not a finding.
 Bank account and tax number values are compared in memory and never appear in any output.
@@ -105,3 +105,19 @@ def find_overlaps(shifts, sites, people=None):
                "site_a", "site_b", "province_a", "province_b", "start_a", "end_a", "start_b", "end_b",
                "overlap_hours", "different_province", "severity", "flag"]
     return pd.DataFrame(rows, columns=columns).sort_values(["person_key", "start_a"]).reset_index(drop=True)
+
+
+def find_cross_province_days(segments, sites):
+    """People with hours at two different sites in different provinces on the same (attributed) day.
+
+    `segments` is the output of `hours.attribute_hours` with a `person_key` (see `add_person_key`); `sites` has site_id and
+    province. Returns one row per person-day. Empty when there is no province information. Only reports; hours stay counted.
+    """
+    columns = ["person_key", "attributed_date", "week_start", "sites"]
+    if sites is None or "province" not in sites or sites["province"].isna().all():
+        return pd.DataFrame(columns=columns)
+    province = sites.set_index("site_id")["province"]
+    d = segments.assign(province=segments["site_id"].map(province)).dropna(subset=["province"])
+    g = d.groupby(["person_key", "attributed_date"]).agg(week_start=("week_start", "first"), sites=("site_id", "nunique"),
+                                                         provinces=("province", "nunique")).reset_index()
+    return g[g["provinces"] > 1][columns].reset_index(drop=True)
