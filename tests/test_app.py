@@ -89,6 +89,20 @@ def test_pattern_mismatch_block_is_hidden_on_the_bundled_data_and_shown_when_the
     assert any(b.label == "Escalate all (20)" for b in at.button)             # 18 records + the 2 mismatches this week
 
 
+def test_the_app_reloads_src_when_it_changed_after_a_deploy(monkeypatch):
+    import sys
+
+    import src.pipeline as pipeline
+
+    AppTest.from_file(APP, default_timeout=180).run()                  # first load records the fingerprint of src/
+    original_run = pipeline.run
+    monkeypatch.setattr(pipeline, "run", lambda bundle: (_ for _ in ()).throw(RuntimeError("stale src module")))
+    monkeypatch.setattr(sys, "_jem_src_fingerprint", "an older version of src/")     # as if src/ changed since it was imported
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    assert not at.exception and "Lerato Motaung" in page_text(at)       # the stale module was reloaded, so the real run() was used
+    assert sys.modules["src.pipeline"].run is not None and original_run is not None
+
+
 def test_there_is_no_email_pop_up_any_more():
     text = page_text(AppTest.from_file(APP, default_timeout=180).run())
     assert "mailto:" not in text and "sitenumbersandnames" not in text and ">Report</a>" not in text

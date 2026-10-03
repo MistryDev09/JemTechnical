@@ -1,9 +1,28 @@
 """Streamlit entry point for the ops room dashboard: who is likely to go over 55 hours by Sunday, and where."""
 import html
+import importlib
+import sys
+from pathlib import Path
 
 import pandas as pd
 
 import streamlit as st
+
+# Streamlit re-runs this file after a deploy but keeps the modules in src/ it already imported, so the app could be new while
+# src/ is old (a result with missing fields). Reload src/ whenever its files have changed since it was last loaded.
+_SRC = Path(__file__).resolve().parent / "src"
+_SRC_ORDER = ["hours", "loader", "integrity", "notes", "forecast", "validate", "dataset", "export", "pipeline"]
+
+
+def _src_fingerprint():
+    return "".join(f"{p.name}:{p.stat().st_mtime_ns}:{p.stat().st_size};" for p in sorted(_SRC.glob("*.py")))
+
+
+if getattr(sys, "_jem_src_fingerprint", None) not in (None, _src_fingerprint()):
+    for _name in _SRC_ORDER:
+        if f"src.{_name}" in sys.modules:
+            importlib.reload(sys.modules[f"src.{_name}"])
+sys._jem_src_fingerprint = _src_fingerprint()
 
 from src.dataset import apply_upload, code_version, content_hash, load_bundled
 from src.export import predictions_csv
@@ -127,7 +146,7 @@ def span(start, end):
 
 def reason_index(res):
     """person_key -> that person's sorted notes (newest first); None when no notes are loaded."""
-    if res.reasons is None:
+    if getattr(res, "reasons", None) is None:
         return None
     return {k: g for k, g in res.reasons.groupby("person_key")}
 
@@ -225,7 +244,7 @@ def tiles(res):
     sites_hit = len({s for lst in high["sites_worked"] for s in lst})
     dup_items = 0 if res.duplicates is None else len(res.duplicates)
     over_items = 0 if res.overlaps_current is None else len(res.overlaps_current)
-    over_items += 0 if res.pattern_mismatches_current is None else len(res.pattern_mismatches_current)
+    over_items += 0 if getattr(res, "pattern_mismatches_current", None) is None else len(res.pattern_mismatches_current)
     open_n = 0 if res.open_shifts is None else len(res.open_shifts)
     first = "went over the cap" if res.status == "week_complete" else ("at 50%+ risk of going over" if res.status == "model" else "already over the cap")
     items = [("red" if len(high) else "", len(high), f"people {first}"),
@@ -271,7 +290,7 @@ def load_section(res):
             getattr(st, level)(text)
         if res.predictions is not None:
             st.download_button("Download predictions.csv", predictions_csv(res), "predictions.csv", "text/csv")
-        if res.note_classes is not None:
+        if getattr(res, "note_classes", None) is not None:
             st.download_button("Download note_classifications.csv", res.note_classes.to_csv(index=False), "note_classifications.csv", "text/csv")
 
 
@@ -324,8 +343,10 @@ def sites_section(res):
 def escalations_section(res):
     dups = res.duplicates if res.duplicates is not None else []
     over = res.overlaps_current if res.overlaps_current is not None else []
-    mism_all = res.pattern_mismatches if res.pattern_mismatches is not None else []
-    mism = res.pattern_mismatches_current if res.pattern_mismatches_current is not None else []
+    mism_all = getattr(res, "pattern_mismatches", None)
+    mism_all = mism_all if mism_all is not None else []
+    mism = getattr(res, "pattern_mismatches_current", None)
+    mism = mism if mism is not None else []
     if not len(dups) and not len(over) and (res.overlaps is None or res.overlaps.empty) and not len(mism_all):
         return
     names = res.people.set_index("person_key")["name"]
