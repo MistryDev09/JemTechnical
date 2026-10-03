@@ -12,26 +12,25 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Overlapping shifts detected and flagged as potential fraud, hours still counted (`src/integrity.py`, tested)
 - [x] Prediction model built and evaluated in `data_modeling.ipynb`: logistic regression beats the naive baselines on forward-in-time folds (PR-AUC 0.43 vs 0.33 for the best baseline), with leakage checks and sensitivity runs (notebook only, not yet in the app)
 - [x] Provisional `predictions.csv` with the exact columns, one row for each of the 213 employee IDs, both IDs of a merged person equal
+- [x] Model moved from the notebook into `src/` (forecast, pipeline, validation, dataset) with tests; the in-progress week and weekday come from the data
 - [x] Flagged-list length decided: keep the F2 threshold (46 people this week), revisit later if a better approach comes up
 - [x] Missing clock-outs and Sunday/holiday hours decided (excluded and flagged; Sunday and holiday hours count normally toward the cap)
 
 ## Not done
 
 ### The answer (must be correct)
-- [ ] Derive the in-progress week from the last date in the data, not today's date, with no hardcoded weekday
-- [ ] Move the model from the notebook into `src/` with tests, so the app and new weekly uploads use the same code
-- [ ] Review `predictions.csv` and regenerate it from the final pipeline
+- [ ] Review `predictions.csv` (it is now reproduced exactly by `python -m src.pipeline data predictions.csv`)
 
 ### Dashboard
-- [ ] Deployed on a public URL that works on a phone
-- [ ] Shows who goes over the 10-hour overtime cap by Sunday, ranked, with hours so far and projected hours
-- [ ] Says what to do about each person or site, specific to the data (not generic advice)
+- [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see DEPLOY.md)
+- [x] Shows who goes over the 10-hour overtime cap by Sunday, ranked by risk, with hours so far, hours left and sites (built, runs locally)
+- [ ] Says what to do about each person or site, specific to the data (partly: each person shows hours left and how many usual shifts that allows; no site-level advice yet)
 - [ ] Shows why the hours happened, based on the supervisors' notes
 
 ### Escalations (dashboard)
-- [ ] Show duplicate people flagged for escalation (both IDs, evidence "same ID number / bank account / tax number", severity), never showing bank or tax values
-- [ ] Show overlapping shifts flagged as potential fraud (person, sites, overlap hours, High if different provinces)
-- [ ] Wording is "potential" and "for review", not an accusation
+- [x] Show duplicate people flagged for escalation (both IDs, evidence "same ID number / bank account / tax number", severity), never showing bank or tax values
+- [x] Show overlapping shifts flagged as potential fraud (person, sites, overlap hours, High if different provinces)
+- [x] Wording is "potential" and "for review", not an accusation
 
 ### Supervisor notes
 - [ ] Taxonomy of reasons for extra hours, including a "nothing useful" category
@@ -40,9 +39,10 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [ ] `note_classifications.csv` with one row per note in `shift_notes.csv`, exactly the columns `shift_id,category,note`
 
 ### Loading new data
-- [ ] Upload of a new weekly export (same files, same columns, later week) in the dashboard, with column validation and clear errors
-- [ ] Everything reprocesses end to end with no developer and no hardcoded dates, weekdays or employee IDs
-- [ ] Regenerated `predictions.csv` and `note_classifications.csv` available to download after an upload
+- [x] Upload of any of the files in the dashboard, overwrite or append per file, with file, column and value checks and clear messages
+- [x] Everything reprocesses end to end with no developer and no hardcoded dates, weekdays or employee IDs (cutoff weekday taken from the data)
+- [x] Regenerated `predictions.csv` available to download after an upload
+- [ ] `note_classifications.csv` available to download (waits for the notes feature)
 
 ### Repo and submission
 - [ ] `NOTES.md`, half a page: assumptions, how the note-sorting was checked and what it found, what a trained model would learn that this approach does not, and how to test it on about 200 people without fooling yourself
