@@ -4,19 +4,19 @@ Requirements for the final project only. Status is split into Done and Not done.
 
 ## Done
 
-- [x] Data files read into pandas (`data_modeling.ipynb`)
+- [x] Data files read into pandas (`notebooks/data_modeling.ipynb`)
 - [x] Shift hours computed, overnight shifts handled (clock-out before clock-in adds 24h), shifts with no clock-out excluded (notebook only)
 - [x] First-pass list of people averaging over 45 hours a week, and a first small projection for the in-progress week (notebook only, not final)
 - [x] Shift hours attributed to a day and week with the greater-portion rule, including Sunday and public-holiday rates (`src/hours.py`, tested)
 - [x] Duplicate employee IDs (shared ID number, bank account or tax number) detected, severity Escalate or Review, hours combined per person (`src/integrity.py`, tested)
 - [x] Overlapping shifts detected and flagged as potential fraud, hours still counted (`src/integrity.py`, tested)
-- [x] Prediction model built and evaluated in `data_modeling.ipynb`: logistic regression beats the naive baselines on forward-in-time folds (PR-AUC 0.43 vs 0.33 for the best baseline), with leakage checks and sensitivity runs (notebook only, not yet in the app)
+- [x] Prediction model built and evaluated in `notebooks/data_modeling.ipynb`: logistic regression beats the naive baselines on forward-in-time folds (PR-AUC 0.43 vs 0.33 for the best baseline), with leakage checks and sensitivity runs (notebook only, not yet in the app)
 - [x] Provisional `predictions.csv` with the exact columns, one row for each of the 213 employee IDs, both IDs of a merged person equal
 - [x] Model moved from the notebook into `src/` (forecast, pipeline, validation, dataset) with tests; the in-progress week and weekday come from the data
 - [x] Flagged-list length decided: keep the F2 threshold (46 people this week), revisit later if a better approach comes up
 - [x] Missing clock-outs and Sunday/holiday hours decided (excluded and flagged; Sunday and holiday hours count normally toward the cap)
-- [x] Improvement experiments on the model (`data_modeling.ipynb` section 10): nothing clearly beats the shipped model
-- [x] Cost analysis notebook (`cost_analysis.ipynb`): the client's way of counting hours against ours, in money, per employee and in total (extra, not in the README)
+- [x] Improvement experiments on the model (`notebooks/data_modeling.ipynb` section 10): nothing clearly beats the shipped model
+- [x] Cost analysis notebook (`notebooks/cost_analysis.ipynb`): the client's way of counting hours against ours, in money, per employee and in total (extra, not in the README)
 
 ## Not done
 
@@ -24,7 +24,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [ ] Review `predictions.csv` (it is now reproduced exactly by `python -m src.pipeline data predictions.csv`)
 
 ### Dashboard
-- [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see DEPLOY.md)
+- [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see docs/DEPLOY.md)
 - [x] Shows who goes over the 10-hour overtime cap by Sunday, ranked by risk, with hours so far, hours left and sites (built, runs locally)
 - [x] The list shows only people at 50% risk or higher, each with a Resolve button, and a drop-down below it for people at 30 to 50% risk
 - [x] Each card shows the usual hours still to come this week (usual shifts left x usual shift length) next to the hours left before 55, with a plain-language note
@@ -43,7 +43,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [ ] TODO: keep track of what has been reported (a reported or escalated state per item), so the same item is not reported twice
 
 ### Supervisor notes
-- [x] Taxonomy of reasons for extra hours, including a "nothing useful" category (9 categories, 4 piles; `shift_classification.ipynb`)
+- [x] Taxonomy of reasons for extra hours, including a "nothing useful" category (9 categories, 4 piles; `notebooks/shift_classification.ipynb`)
 - [x] Overtime split into hours the client asked for versus hours caused by operational failures (55% operational, 24% client, reported as a range), and where it is concentrated (it is not: supervisors, guards, sites, weekdays)
 - [x] Self-designed check of the sorting: blind hand-labelled sample of 205 plus two methods compared, with pre-fix and post-fix scores and where it was wrong. TODO: you hand-label the 50 ambiguous notes in `evaluation/labels/notes_to_label_by_you.csv` for a check that does not share my judgement
 - [x] `note_classifications.csv` with one row per note in `shift_notes.csv`, exactly the columns `shift_id,category,note` (2,117 rows)

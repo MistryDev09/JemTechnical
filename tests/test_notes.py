@@ -72,4 +72,4 @@ def test_accuracy_on_the_blind_hand_labelled_sample_has_not_dropped():
 def test_the_committed_note_classifications_file_matches_the_rules():
     notes = pd.read_csv("data/shift_notes.csv", keep_default_na=False)
     saved = pd.read_csv("note_classifications.csv", keep_default_na=False)
-    assert (classify_notes(notes).category.values == saved.category.values).all(), "re-run shift_classification.ipynb to refresh note_classifications.csv"
+    assert (classify_notes(notes).category.values == saved.category.values).all(), "re-run notebooks/shift_classification.ipynb to refresh note_classifications.csv"

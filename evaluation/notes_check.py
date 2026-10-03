@@ -1,6 +1,6 @@
 """Check of the note sorting against a hand-labelled sample.
 
-Shared helpers for `shift_classification.ipynb`: text normalisation, collapsing the notes to templates,
+Shared helpers for `notebooks/shift_classification.ipynb`: text normalisation, collapsing the notes to templates,
 drawing the blind samples to hand-label, and scoring a classifier against those labels.
 Nothing here classifies a note; the classifiers live in the notebook.
 """

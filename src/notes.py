@@ -1,6 +1,6 @@
 """Sorting of the supervisors' notes into reasons for the extra hours.
 
-This is the one place to change the sorting. The dashboard, `shift_classification.ipynb` and
+This is the one place to change the sorting. The dashboard, `notebooks/shift_classification.ipynb` and
 `note_classifications.csv` all use it, so an edit here shows up in all three.
 
 How it works: the note is normalised (lowercase, no accents or punctuation, no spell-correction because that
