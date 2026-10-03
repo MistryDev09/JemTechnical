@@ -11,23 +11,24 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Duplicate employee IDs (shared ID number, bank account or tax number) detected, severity Escalate or Review, hours combined per person (`src/integrity.py`, tested)
 - [x] Overlapping shifts detected and flagged as potential fraud, hours still counted (`src/integrity.py`, tested)
 - [x] Prediction model built and evaluated in `notebooks/data_modeling.ipynb`: logistic regression beats the naive baselines on forward-in-time folds (PR-AUC 0.43 vs 0.33 for the best baseline), with leakage checks and sensitivity runs (notebook only, not yet in the app)
-- [x] Provisional `predictions.csv` with the exact columns, one row for each of the 213 employee IDs, both IDs of a merged person equal
+- [x] `predictions.csv` with the exact columns, one row for each of the 213 employee IDs, both IDs of a merged person equal (written by `src/pipeline.py`)
 - [x] Model moved from the notebook into `src/` (forecast, pipeline, validation, dataset) with tests; the in-progress week and weekday come from the data
-- [x] Flagged-list length decided: the F1-optimal cut-off (about 0.25), so `will_breach` flags about as many people as actually breach (12 this week after the duplicate and double-dipping people are kept out)
+- [x] Flagged-list length decided: the F1-optimal cut-off (about 0.25), so `will_breach` flags about as many people as actually breach (23 employee IDs, 18 people, this week)
 - [x] Missing clock-outs and Sunday/holiday hours decided (excluded and flagged; Sunday and holiday hours count normally toward the cap)
 - [x] Improvement experiments on the model (`notebooks/data_modeling.ipynb` section 10): nothing clearly beats the shipped model
+- [x] Results and drawbacks in one place: `docs/RESULTS.md`
 - [x] Cost analysis notebook (`notebooks/cost_analysis.ipynb`): the client's way of counting hours against ours, in money, per employee and in total (extra, not in the README)
 
 ## Not done
 
 ### The answer (must be correct)
-- [ ] Review `predictions.csv` (written by `python -m src.pipeline data predictions.csv`; 213 rows, 12 flagged; duplicate and double-dipping people are kept out of `will_breach` and named in `NOTES.md`)
+- [ ] Review `predictions.csv` (written by `python -m src.pipeline data predictions.csv`; 213 rows, 23 flagged IDs; duplicate and double-dipping people are flagged by the model like everyone else, tagged "Also escalated" on the dashboard and named in `NOTES.md`)
 
 ### Dashboard
 - [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see docs/DEPLOY.md)
 - [x] Shows who goes over the 10-hour overtime cap by Sunday, ranked by risk, with hours so far, hours left and sites (built, runs locally)
-- [x] The list shows only people at 50% risk or higher, each with a Resolve button, and a drop-down below it for people at 30 to 50% risk
-- [x] Each card shows the usual hours still to come this week (usual shifts left x usual shift length) next to the hours left before 55, with a plain-language note
+- [x] The list shows people at 50% risk or higher, each with a Resolve button inside the box, and three drop-downs below it: 30 to 50%, 20 to 30% and 0 to 20% risk
+- [x] Each box shows hours so far, shifts so far, hours left to 55, the usual shifts left this week and the usual hours still to come (usual shifts left x usual shift length)
 - [ ] TODO: Resolve only shows the message at the top. Decide what resolving means (for example record who resolved it and when, and remove the item from the list) and build it
 - [ ] Says what to do about each person or site, specific to the data (partly: each person shows hours left and how many usual shifts that allows; no site-level advice yet)
 - [x] Shows why the hours happened, based on the supervisors' notes (a "Why the hours happened" button inside each person's box; rules in `src/notes.py`, shared with the notebook)
@@ -56,7 +57,8 @@ Requirements for the final project only. Status is split into Done and Not done.
 
 ### Repo and submission
 - [x] `NOTES.md`, half a page: assumptions, how the note-sorting was checked and what it found, what a trained model would learn that this approach does not, and how to test it on about 200 people without fooling yourself
-- [ ] Public repo (or invite `southafricanrob`) containing the required files; confirm with the client what the "four files" are, since the README lists three
+- [x] Public repo containing the required files (`predictions.csv`, `note_classifications.csv`, `NOTES.md`)
+- [ ] Confirm with the client what the "four files" are, since the README lists three
 - [ ] Video, 5 minutes, camera on and screen shared: what was unexpected, baseline and metric (and why), where the output is not trusted, what to do next, and one number explained step by step for a non-technical person
 - [ ] Three links sent: dashboard, repo, video
 

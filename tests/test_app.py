@@ -67,6 +67,13 @@ def test_the_two_records_flag_links_to_that_person_under_escalations():
     assert text.count('class="tag esc" href="#esc-') == 5
 
 
+def test_people_also_escalated_for_overlapping_shifts_have_a_tag_that_links_to_the_overlap():
+    text = page_text(AppTest.from_file(APP, default_timeout=180).run())
+    assert text.count("Also escalated: overlapping shifts") == 9                  # the nine double-dipping people
+    assert 'href="#esc-overlap-E1099"' in text and 'id="esc-overlap-E1099"' in text
+    assert "Also escalated: duplicate person" not in text                          # duplicates already carry the 2 records link
+
+
 def test_there_is_no_email_pop_up_any_more():
     text = page_text(AppTest.from_file(APP, default_timeout=180).run())
     assert "mailto:" not in text and "sitenumbersandnames" not in text and ">Report</a>" not in text

@@ -179,7 +179,13 @@ def card(p, res, css="high", index=None, compact=False, shell=True):
     ids = " · ".join(p.employee_ids)
     flag = f' <a class="tag esc" href="#esc-{attr(p.person_key)}">2 records, see Escalations</a>' if len(p.employee_ids) > 1 else ""
     aka = f" (also recorded as {', '.join(p.also_known_as)})" if p.also_known_as else ""
-    sub = esc(ids) + (f" · {esc(p.role)}" if p.role else "") + flag
+    why_esc = getattr(p, "also_escalated_for", "")
+    also = ""
+    if why_esc == "overlapping shifts":
+        also = f' <a class="tag rev" href="#esc-overlap-{attr(p.person_key)}">Also escalated: {esc(why_esc)}</a>'
+    elif why_esc and why_esc != "duplicate person":
+        also = f' <span class="tag rev">Also escalated: {esc(why_esc)}</span>'
+    sub = esc(ids) + (f" · {esc(p.role)}" if p.role else "") + flag + also
     primary = f"Primary site: {esc(site_text(p.primary_sites, labels))}" if p.primary_sites else ""
     worked = f"Worked this week: {esc(site_text(p.sites_worked, labels))}"
     if compact:
@@ -342,13 +348,18 @@ def escalations_section(res):
         if not len(over):
             st.caption("None this week.")
         ordered = over.assign(rank=over["severity"].map({"High": 0, "Medium": 1})).sort_values(["rank", "overlap_hours"], ascending=[True, False]) if len(over) else over
+        anchored = set()
         for i, r in enumerate(ordered.head(MAX_OVERLAPS).itertuples()):
             who = names.get(r.person_key, r.person_key)
+            anchor = ""
+            if r.person_key not in anchored:
+                anchored.add(r.person_key)
+                anchor = f' id="esc-overlap-{attr(r.person_key)}"'
             high = r.severity == "High"
             tag = f'<span class="tag {"esc" if high else "rev"}">{esc(r.severity)}</span>'
             where = " · different provinces" if r.different_province else ""
             st.markdown(
-                f'<div class="card {"high" if high else "flag"}"><div class="top"><span class="name">{esc(who)}</span>{tag}</div>'
+                f'<div class="card {"high" if high else "flag"}"{anchor}><div class="top"><span class="name">{esc(who)}</span>{tag}</div>'
                 f'<div class="sub">{r.overlap_hours:.2f} h overlap{esc(where)}</div>'
                 f'<div class="legs"><div class="leg"><b>{esc(labels.get(r.site_a, r.site_a))}</b>{esc(span(r.start_a, r.end_a))}</div>'
                 f'<div class="leg"><b>{esc(labels.get(r.site_b, r.site_b))}</b>{esc(span(r.start_b, r.end_b))}</div></div></div>', unsafe_allow_html=True)

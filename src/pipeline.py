@@ -42,7 +42,7 @@ class Result:
     model: dict = field(default_factory=dict)
     site_labels: dict = field(default_factory=dict)
     n_weeks: int = 0
-    excluded: pd.DataFrame | None = None         # people kept out of will_breach in predictions.csv, with the reason
+    escalated: pd.DataFrame | None = None        # people also escalated for duplicate records or double dipping this week, with the reason
     reasons: pd.DataFrame | None = None          # supervisor notes joined to a person: person_key, shift_date, site_id, category, note, this_week
     note_classes: pd.DataFrame | None = None     # shift_id, category, note for every note (the note_classifications.csv columns)
 
@@ -174,8 +174,8 @@ def run(bundle):
     sites_frame = sites if sites is not None else pd.DataFrame({"site_id": sorted(set(sh["site_id"].dropna())), "province": None})
     overlaps = find_overlaps(sh, sites_frame, dups)
     overlaps_now = overlaps[overlaps["start_a"].dt.normalize() >= current_week].reset_index(drop=True)
-    # --- people kept out of will_breach in predictions.csv: duplicate people, and double dipping in the week being predicted
-    # (shifts that overlap in time, or two sites in different provinces on one day). They are escalated instead; hours still count.
+    # --- people also escalated: duplicate people, and double dipping in the week being predicted (shifts that overlap in time,
+    # or two sites in different provinces on one day). They are still predicted like everyone else; this only labels them.
     cross_now = find_cross_province_days(segments, sites_frame)
     cross_now = cross_now[cross_now["week_start"] == current_week]
     why_out = {}
@@ -185,8 +185,8 @@ def run(bundle):
         why_out[key] = "overlapping shifts"
     for key in set(dups["person_key"]) if len(dups) else set():
         why_out[key] = "duplicate person"
-    people["not_flagged_because"] = people["person_key"].map(why_out).fillna("")
-    excluded = people.loc[people["not_flagged_because"] != "", ["person_key", "employee_ids", "name", "not_flagged_because", "risk_score"]].reset_index(drop=True)
+    people["also_escalated_for"] = people["person_key"].map(why_out).fillna("")
+    escalated = people.loc[people["also_escalated_for"] != "", ["person_key", "employee_ids", "name", "also_escalated_for", "risk_score", "will_breach"]].reset_index(drop=True)
     open_shifts = sh.loc[open_mask, ["shift_id", "employee_id", "site_id", "shift_date", "clock_in_time", "clock_out_time"]].reset_index(drop=True)
 
     # --- why the hours happened: the supervisors' notes, sorted into reasons and attached to the person
@@ -201,12 +201,12 @@ def run(bundle):
     # --- employee-level predictions (both IDs of a merged person get the same values)
     predictions = None
     if fc.status == "model":
-        by_person = people.set_index("person_key")[["will_breach", "risk_score", "not_flagged_because"]]
+        by_person = people.set_index("person_key")[["will_breach", "risk_score"]]
         pred = pd.DataFrame({"employee_id": sorted(set(emp_ids))})
         pred = pred.join(by_person, on=pred["employee_id"].map(person_of))
         predictions = pd.DataFrame({
             "employee_id": pred["employee_id"],
-            "will_breach": (pred["will_breach"].fillna(0).astype(int) * (pred["not_flagged_because"].fillna("") == "")).astype(int),
+            "will_breach": pred["will_breach"].fillna(0).astype(int),
             "risk_score": pred["risk_score"].fillna(0.0).round(4)}).reset_index(drop=True)
 
     res.status, res.message = fc.status, fc.message
@@ -218,7 +218,7 @@ def run(bundle):
     res.site_labels = {s: _label(s, site_names) for s in set(sh["site_id"].dropna()) | set(site_names) | {x for lst in people["primary_sites"] for x in lst}}
     res.n_weeks = len(fc.weeks) if fc.weeks is not None else 0
     res.reasons, res.note_classes = reasons, note_classes
-    res.excluded = excluded
+    res.escalated = escalated
     res.model = {"method": fc.method, "threshold": fc.threshold, "C": fc.C, "features": fc.features,
                  "folds": fc.folds, "pooled_pr_auc": fc.pooled_pr_auc, "min_weeks": MIN_WEEKS}
     return res
@@ -235,8 +235,8 @@ def main(argv):
     with open(out, "w", newline="") as f:
         f.write(predictions_csv(result))
     flagged = int(result.predictions["will_breach"].sum())
-    kept_out = 0 if result.excluded is None else len(result.excluded)
-    print(f"Wrote {out}: {len(result.predictions)} employees, {flagged} flagged, {kept_out} people kept out of the flags as duplicates or double dipping "
+    also = 0 if result.escalated is None else int(result.escalated["will_breach"].sum())
+    print(f"Wrote {out}: {len(result.predictions)} employees, {flagged} flagged ({also} people among them are also escalated as duplicates or double dipping) "
           f"(data to {result.cutoff:%a %d %b %Y}).")
 
 
