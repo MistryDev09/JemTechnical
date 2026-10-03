@@ -45,7 +45,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 ### Supervisor notes
 - [x] Taxonomy of reasons for extra hours, including a "nothing useful" category (9 categories, 4 piles; `notebooks/shift_classification.ipynb`)
 - [x] Overtime split into hours the client asked for versus hours caused by operational failures (55% operational, 24% client, reported as a range), and where it is concentrated (it is not: supervisors, guards, sites, weekdays)
-- [x] Self-designed check of the sorting: blind hand-labelled sample of 205 plus two methods compared, with pre-fix and post-fix scores and where it was wrong. TODO: you hand-label the 50 ambiguous notes in `evaluation/labels/notes_to_label_by_you.csv` for a check that does not share my judgement
+- [x] Self-designed check of the sorting: blind hand-labelled sample of 205 plus two methods compared, with pre-fix and post-fix scores and where it was wrong. You hand-labelled 50 ambiguous notes (`evaluation/labels/notes_to_label_by_you.csv`): the rules agree on 50 of 50 (11 distinct sentences, a narrow check); your labels side with the rules, not the supplied file, on 10 stood-in notes
 - [x] `note_classifications.csv` with one row per note in `shift_notes.csv`, exactly the columns `shift_id,category,note` (2,117 rows)
 
 ### Loading new data

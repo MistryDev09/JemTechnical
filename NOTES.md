@@ -18,7 +18,7 @@ They are escalated, not predicted: `will_breach` 0, model score kept. Double dip
 - **Risk:** some of them may really breach (E1099 has 51.8 hours so far), so a check that counts them as breachers will see misses.
 
 ## How the note-sorting was checked
-No language model: the notes are about 60 repeated sentences with typos and translations, and I had no independent labels to train on. I used typo-tolerant rules and, separately, clusters labelled once by reading, and checked both against 205 notes I hand-labelled blind. The rules scored 99.0% as first written (the honest number) and 100% after fixes (tuned). The clusters scored 100%.
+No language model: the notes are about 60 repeated sentences with typos and translations, and I had no independent labels to train on. I used typo-tolerant rules and, separately, clusters labelled once by reading, and checked both against 205 notes labelled by hand before the rules were written (by my AI assistant, so a consistency check, not independent). The rules scored 99.0% as first written (the honest number) and 100% after fixes (tuned); the clusters scored 100%. I then labelled 50 ambiguous notes myself: the rules agree on all 50, but those are only 11 distinct sentences, so it is a narrow check. My labels side with the rules, not the supplied labels, on the 10 "took X's shift" / "covered for X again" notes.
 
 It found about 55% operational failures (60% to 74% depending on how absence cover is counted) and 24% client requests, with no concentration by supervisor, guard or site, so it looks systemic. **Limit:** the labels and both methods share my judgement, so this shows consistent definitions, not correct ones, and 100% says nothing about new free text.
 

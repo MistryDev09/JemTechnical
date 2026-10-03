@@ -1,51 +1,51 @@
 shift_id,note,category
-S103584,"worked through, baloyi at the clinic",
-S101059,"WORKED THROUGH, SIBIYA AT THE CLINIC..",
-S108585,"worked through, Adams at the clinic",
-S102399,"worked through, Molefe at the clinic",
-S108743,"worked through, Mokoena at the clinic",
-S102630,"took dlamini shift as well, 2 posts 1 guard",
-S104902,"took Zulu shift as well, 2 posts 1 guard",
-S104782,"took Sibiya shift as well, 2 posts 1 guard !",
-S107387,"took naidoo shift as well, 2 posts 1 guard..",
-S107506,"took Wyk shift as well, 2 posts 1 guard",
-S100771,Covered for Fourie again - 3rd time this month..,
-S101531,Covered for Wyk again - 3rd time this month,
-S105794,Covered for Sithole again - 3rd time this month,
-S108544,Covered for Zulu again - 3rd time this month,
-S105649,Covered for Zulu again - 3rd time this month,
-S106310,stood in for botha,
-S107728,stood in for Maluleke,
-S107995,stood in for mabaso,
-S105999,stood in for Ndlovu,
-S105050,stood in for Pillay..,
-S104103,"Pillay absent, took her rounds as well",
-S105604,"ndlovu absent, took her rounds as well",
-S106659,"Wyk absent, took her rounds as well",
-S108560,"Motaung absent, took her rounds as well",
-S105960,"radebe absent, took her rounds as well",
-S107524,"double duty today, Sibiya on family responsibility leave",
-S106166,"double duty today, Fourie on family responsibility leave",
-S106150,"DOUBLE DUTY TODAY, WYK ON FAMILY RESPONSIBILITY LEAVE",
-S108057,"double duty today, Sithole on family responsibility leave !",
-S106623,"double duty today, Hendricks on family responsibility leave",
-S100774,Centre manager requested additional cover for stocktake,
-S107623,Centre manager requested additional cover for stocktake,
-S106384,Centre manager requested additional cover for stocktake,
-S106578,centre manager requested additional cover for stocktake !,
-S105833,Centre manager requested additional cover for stocktake..,
-S104964,"client says stay till 06h00, dont know if office approved",
-S105147,"client says stay till 06:00, dont know if office approved",
-S100894,"cliennt says stay till 6, dont know if office approved..",
-S106597,"client says stay till 06h00, dont know if office approved",
-S102889,"client says stay till 6am, dont know if office approved",
-S106138,"relief only arrived 06:00, stayed until then",
-S103547,"relief only arrived 6, stayed until then..",
-S108843,"relief only arrived 0600, stayed until then",
-S102948,"relief only arrived six, stayed until then..",
-S106087,"relief only arrived 06h00, stayed until then",
-S101203,"gedek vir Mthembu, siek gemeld",
-S103609,"gedek vir Ndlovu, siek gemeld",
-S102302,"gedek vir Adams, siek gemeld",
-S106116,"gedek vir Zulu, siek gemeld..",
-S101752,"gedek vir Maluleke, siek gemeld",
+S103584,"worked through, baloyi at the clinic",colleague_sick_or_leave
+S101059,"WORKED THROUGH, SIBIYA AT THE CLINIC..",colleague_sick_or_leave
+S108585,"worked through, Adams at the clinic",colleague_sick_or_leave
+S102399,"worked through, Molefe at the clinic",colleague_sick_or_leave
+S108743,"worked through, Mokoena at the clinic",colleague_sick_or_leave
+S102630,"took dlamini shift as well, 2 posts 1 guard",stood_in_unspecified
+S104902,"took Zulu shift as well, 2 posts 1 guard",stood_in_unspecified
+S104782,"took Sibiya shift as well, 2 posts 1 guard !",stood_in_unspecified
+S107387,"took naidoo shift as well, 2 posts 1 guard..",stood_in_unspecified
+S107506,"took Wyk shift as well, 2 posts 1 guard",stood_in_unspecified
+S100771,Covered for Fourie again - 3rd time this month..,stood_in_unspecified
+S101531,Covered for Wyk again - 3rd time this month,stood_in_unspecified
+S105794,Covered for Sithole again - 3rd time this month,stood_in_unspecified
+S108544,Covered for Zulu again - 3rd time this month,stood_in_unspecified
+S105649,Covered for Zulu again - 3rd time this month,stood_in_unspecified
+S106310,stood in for botha,stood_in_unspecified
+S107728,stood in for Maluleke,stood_in_unspecified
+S107995,stood in for mabaso,stood_in_unspecified
+S105999,stood in for Ndlovu,stood_in_unspecified
+S105050,stood in for Pillay..,stood_in_unspecified
+S104103,"Pillay absent, took her rounds as well",colleague_no_show
+S105604,"ndlovu absent, took her rounds as well",colleague_no_show
+S106659,"Wyk absent, took her rounds as well",colleague_no_show
+S108560,"Motaung absent, took her rounds as well",colleague_no_show
+S105960,"radebe absent, took her rounds as well",colleague_no_show
+S107524,"double duty today, Sibiya on family responsibility leave",colleague_sick_or_leave
+S106166,"double duty today, Fourie on family responsibility leave",colleague_sick_or_leave
+S106150,"DOUBLE DUTY TODAY, WYK ON FAMILY RESPONSIBILITY LEAVE",colleague_sick_or_leave
+S108057,"double duty today, Sithole on family responsibility leave !",colleague_sick_or_leave
+S106623,"double duty today, Hendricks on family responsibility leave",colleague_sick_or_leave
+S100774,Centre manager requested additional cover for stocktake,client_requested
+S107623,Centre manager requested additional cover for stocktake,client_requested
+S106384,Centre manager requested additional cover for stocktake,client_requested
+S106578,centre manager requested additional cover for stocktake !,client_requested
+S105833,Centre manager requested additional cover for stocktake..,client_requested
+S104964,"client says stay till 06h00, dont know if office approved",client_unconfirmed
+S105147,"client says stay till 06:00, dont know if office approved",client_unconfirmed
+S100894,"cliennt says stay till 6, dont know if office approved..",client_unconfirmed
+S106597,"client says stay till 06h00, dont know if office approved",client_unconfirmed
+S102889,"client says stay till 6am, dont know if office approved",client_unconfirmed
+S106138,"relief only arrived 06:00, stayed until then",relief_no_show
+S103547,"relief only arrived 6, stayed until then..",relief_no_show
+S108843,"relief only arrived 0600, stayed until then",relief_no_show
+S102948,"relief only arrived six, stayed until then..",relief_no_show
+S106087,"relief only arrived 06h00, stayed until then",relief_no_show
+S101203,"gedek vir Mthembu, siek gemeld",colleague_sick_or_leave
+S103609,"gedek vir Ndlovu, siek gemeld",colleague_sick_or_leave
+S102302,"gedek vir Adams, siek gemeld",colleague_sick_or_leave
+S106116,"gedek vir Zulu, siek gemeld..",colleague_sick_or_leave
+S101752,"gedek vir Maluleke, siek gemeld",colleague_sick_or_leave
