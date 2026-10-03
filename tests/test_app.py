@@ -37,10 +37,12 @@ def test_people_below_50_percent_are_in_three_drop_downs_without_resolve_buttons
 
 
 def test_every_box_has_a_why_the_hours_happened_control():
-    text = page_text(AppTest.from_file(APP, default_timeout=180).run())
-    assert text.count("<summary>Why the hours happened</summary>") == 9 + 7 + 7 + 185
+    at = AppTest.from_file(APP, default_timeout=180).run()
+    text = page_text(at)
+    popovers = [b for b in at.get("popover") if b.proto.popover.label == "Why the hours happened"]
+    assert len(popovers) == 9 + 7 + 7                                   # full boxes: a pop-up; the Resolve button is in the same box
+    assert text.count("<summary>Why the hours happened</summary>") == 185     # compact boxes: opens in place
     assert "This week (" in text and "No note this week. Last 4 weeks (" in text and "Nothing useful this week. Last 4 weeks (" in text
-    assert "Late handover" in text or "Relief did not arrive or was late" in text
 
 
 def test_there_is_no_why_control_without_notes():
@@ -52,12 +54,11 @@ def test_there_is_no_why_control_without_notes():
     assert not at.exception and "Why the hours happened" not in page_text(at)
 
 
-def test_cards_show_the_usual_hours_still_to_come():
+def test_cards_show_the_usual_shifts_and_hours_still_to_come_and_no_explanatory_text():
     text = page_text(AppTest.from_file(APP, default_timeout=180).run())
-    assert "usual hours still to come" in text
-    assert "Usually works about 2.1 more shifts of 9.6 h, which is 20.2 h more this week. That is 3.9 h more than the 16.2 h left before 55." in text
-    assert "That fits within the 19.0 h left" in text and "an average of 49 h a week" in text       # Mandla Sithole
-    assert "Has already worked a usual number of shifts this week, so no more usual hours are expected. Any extra shift would use up the 3.2 h left before 55." in text                           # Portia Fourie
+    assert "usual shifts left this week" in text and "usual hours still to come" in text
+    assert "<b>2.1</b><span>usual shifts left this week" in text and "<b>20.2</b><span>usual hours still to come" in text     # Lerato Motaung
+    assert "Usually works about" not in text and "Has already worked a usual number of shifts" not in text and 'class="note"' not in text
 
 
 def test_the_two_records_flag_links_to_that_person_under_escalations():

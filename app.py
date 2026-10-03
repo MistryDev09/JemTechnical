@@ -39,7 +39,6 @@ CSS = """
 .card .stats {display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 8px 0 4px;}
 .card .stats div b {display: block; font-size: 1.15rem;}
 .card .stats div span {font-size: .75rem; opacity: .7;}
-.card .note {font-size: .9rem; margin-top: 4px;}
 .tag {display: inline-block; font-size: .72rem; font-weight: 700; border-radius: 6px; padding: 1px 7px; margin-left: 6px; background: rgba(128,128,128,.25); text-decoration: none;}
 .tag.esc {background: #dc2626; color: #fff !important;}
 .tag.rev {background: #f59e0b; color: #1f2937 !important;}
@@ -60,6 +59,15 @@ details.why ul {margin: 4px 0 0; padding-left: 1.1rem;}
 details.why li {margin-bottom: 3px;}
 .pill {display: inline-block; font-size: .75rem; font-weight: 700; border-radius: 999px; padding: 1px 9px; margin: 0 4px 3px 0; color: #fff; background: #6b7280;}
 .pill.client {background: #2563eb;} .pill.operational {background: #dc2626;} .pill.absence {background: #d97706;} .pill.none {background: #6b7280;}
+/* a person's box drawn by Streamlit, so the buttons sit inside it: same look as the HTML boxes, buttons side by side even on a phone */
+[class*="st-key-card_"] {border: 1px solid rgba(128,128,128,.3) !important; border-left: 6px solid #9ca3af !important; border-radius: 12px !important; padding: 12px 14px; margin-bottom: 10px;}
+[class*="st-key-card_high_"] {border-left-color: #dc2626 !important; background: rgba(220,38,38,.10);}
+[class*="st-key-card_flag_"] {border-left-color: #f59e0b !important; background: rgba(245,158,11,.12);}
+[class*="st-key-card_"] [data-testid="stHorizontalBlock"] {flex-wrap: nowrap !important; gap: .5rem !important;}
+[class*="st-key-card_"] [data-testid="stColumn"] {min-width: 0 !important; flex: 0 0 auto !important; width: auto !important;}
+[class*="st-key-card_high_"] .badge {background: #dc2626;}
+[class*="st-key-card_flag_"] .badge {background: #d97706;}
+.card.cardbody {border: 0; background: none; padding: 0; margin: 0 0 6px; border-radius: 0;}
 .status {opacity: .8; margin: -0.4rem 0 0.6rem;}
 .stButton button {padding: 0.15rem 0.9rem; min-height: 2rem;}
 /* message that drops in at the top for about two seconds, then goes away (two copies so it replays on every click) */
@@ -117,24 +125,6 @@ def span(start, end):
     return text + (f" ({end:%a})" if end.date() != start.date() else "")
 
 
-def pattern_note(p):
-    """Explain the score in plain words: the person's usual remaining hours against the hours left before the cap."""
-    if p.hours_so_far > CAP:
-        return f"Already over the {CAP}-hour cap by {p.hours_so_far - CAP:.1f} hours."
-    history = ""
-    past, avg = getattr(p, "past_breaches", float("nan")), getattr(p, "avg_weekly_hours", float("nan"))
-    if past == past and avg == avg:       # neither is NaN
-        history = f" The risk comes from long weeks: an average of {avg:.0f} h a week and {int(past)} past week{'s' if past != 1 else ''} over {CAP}."
-    if p.usual_shifts_left < 0.05:
-        return (f"Has already worked a usual number of shifts this week, so no more usual hours are expected. "
-                f"Any extra shift would use up the {p.hours_left:.1f} h left before {CAP}.{history}")
-    usual = f"Usually works about {p.usual_shifts_left:.1f} more shifts of {p.usual_shift_hours:.1f} h, which is {p.usual_hours_to_go:.1f} h more this week"
-    gap = p.usual_hours_to_go - p.hours_left
-    if gap > 0:
-        return f"{usual}. That is {gap:.1f} h more than the {p.hours_left:.1f} h left before {CAP}."
-    return f"{usual}. That fits within the {p.hours_left:.1f} h left ({-gap:.1f} h to spare).{history}"
-
-
 def reason_index(res):
     """person_key -> that person's sorted notes (newest first); None when no notes are loaded."""
     if res.reasons is None:
@@ -142,8 +132,8 @@ def reason_index(res):
     return {k: g for k, g in res.reasons.groupby("person_key")}
 
 
-def why_html(person_key, res, index):
-    """The 'Why the hours happened' control: this week's notes, or the last four weeks if there are none this week."""
+def why_body(person_key, res, index):
+    """What the 'Why the hours happened' box shows: this week's notes, or the last four weeks if there are none this week."""
     if index is None:
         return ""
     mine = index.get(person_key)
@@ -172,10 +162,17 @@ def why_html(person_key, res, index):
                             f" — “{esc(r.note)}”</li>" for r in useful.head(3).itertuples())
             if items:
                 body += f"<ul>{items}</ul>"
-    return f'<details class="why"><summary>Why the hours happened</summary><div class="whybody">{body}</div></details>'
+    return f'<div class="whybody">{body}</div>'
 
 
-def card(p, res, css="high", index=None, compact=False):
+def why_html(person_key, res, index):
+    """The same box as an open-in-place control, for the compact boxes (a pop-up for each of 185 people would be heavy)."""
+    body = why_body(person_key, res, index)
+    return f'<details class="why"><summary>Why the hours happened</summary>{body}</details>' if body else ""
+
+
+def card(p, res, css="high", index=None, compact=False, shell=True):
+    """The HTML of one person's box. shell=False gives the contents only, for a box that Streamlit draws around buttons."""
     labels = res.site_labels
     over = p.hours_so_far > CAP
     badge = f"Over by {p.hours_so_far - CAP:.1f} h" if over else (f"{p.risk_score:.0%} risk" if res.status == "model" else "Over")
@@ -185,21 +182,35 @@ def card(p, res, css="high", index=None, compact=False):
     sub = esc(ids) + (f" · {esc(p.role)}" if p.role else "") + flag
     primary = f"Primary site: {esc(site_text(p.primary_sites, labels))}" if p.primary_sites else ""
     worked = f"Worked this week: {esc(site_text(p.sites_worked, labels))}"
-    note = pattern_note(p) if res.status == "model" else (f"Already over the {CAP}-hour cap by {p.hours_so_far - CAP:.1f} hours." if over else "")
-    usual_stat = (f'<div><b>{p.usual_hours_to_go:.1f}</b><span>usual hours still to come</span></div>' if res.status == "model" else "")
-    why = why_html(p.person_key, res, index)
     if compact:
         line = f"{p.hours_so_far:.1f} h so far" + (f" · {p.usual_hours_to_go:.1f} usual hours still to come" if res.status == "model" else "")
         return (f'<div class="card {css} compact"><div class="top"><span class="name">{esc(p.name)}</span>'
                 f'<span class="badge">{esc(badge)}</span></div><div class="sub">{sub}</div>'
-                f'<div class="line">{esc(line)}</div>{why}</div>')
-    return (f'<div class="card {css}"><div class="top"><span class="name">{esc(p.name)}{esc(aka)}</span>'
+                f'<div class="line">{esc(line)}</div>{why_html(p.person_key, res, index)}</div>')
+    usual = (f'<div><b>{p.usual_shifts_left:.1f}</b><span>usual shifts left this week</span></div>'
+             f'<div><b>{p.usual_hours_to_go:.1f}</b><span>usual hours still to come</span></div>' if res.status == "model" else "")
+    root = f"card {css}" if shell else "card cardbody"
+    return (f'<div class="{root}"><div class="top"><span class="name">{esc(p.name)}{esc(aka)}</span>'
             f'<span class="badge">{esc(badge)}</span></div><div class="sub">{sub}</div>'
             f'<div class="sub">{primary}{" · " if primary else ""}{worked}</div>'
             f'<div class="stats"><div><b>{p.hours_so_far:.1f}</b><span>hours so far</span></div>'
             f'<div><b>{int(p.shifts_so_far)}</b><span>shifts so far</span></div>'
-            f'<div><b>{p.hours_left:.1f}</b><span>hours left to {CAP}</span></div>{usual_stat}</div>'
-            f'<div class="note">{esc(note)}</div>{why}</div>')
+            f'<div><b>{p.hours_left:.1f}</b><span>hours left to {CAP}</span></div>{usual}</div></div>')
+
+
+def person_box(p, res, index, css, resolve=False):
+    """One person's box with, inside it, the Why pop-up and (for people at 50%+) the Resolve button side by side."""
+    with st.container(border=True, key=f"card_{css}_{p.person_key}"):
+        st.markdown(card(p, res, css, shell=False), unsafe_allow_html=True)
+        slots = (["why"] if index is not None else []) + (["resolve"] if resolve else [])
+        if slots:
+            cols = st.columns(len(slots))
+            for col, slot in zip(cols, slots):
+                if slot == "why":
+                    with col.popover("Why the hours happened"):
+                        st.markdown(why_body(p.person_key, res, index), unsafe_allow_html=True)
+                elif col.button("Resolve", key=f"resolve_{p.person_key}"):
+                    notify("resolving an overtime person", p.name)
 
 
 def tiles(res):
@@ -278,17 +289,18 @@ def flagged_section(res):
     if hot.empty:
         st.success("Nobody is " + ("at 50% risk or higher" if res.status == "model" else "over") + ("" if choice == "All sites" else " at this site") + ".")
     for row in hot.itertuples():
-        st.markdown(card(row, res, index=index), unsafe_allow_html=True)
-        if st.button("Resolve", key=f"resolve_{row.person_key}"):
-            notify("resolving an overtime person", row.name)
+        person_box(row, res, index, "high", resolve=True)
     if res.status == "model":
         for band, title, css, compact in GROUPS:
             group = p[p["band"] == band].sort_values(["risk_score", "hours_so_far"], ascending=False)
             with st.expander(f"People at {title} risk ({len(group)})"):
                 if group.empty:
                     st.caption(f"Nobody is at {title} risk" + ("" if choice == "All sites" else " at this site") + ".")
+                elif compact:
+                    st.markdown("".join(card(row, res, css, index, True) for row in group.itertuples()), unsafe_allow_html=True)
                 else:
-                    st.markdown("".join(card(row, res, css, index, compact) for row in group.itertuples()), unsafe_allow_html=True)
+                    for row in group.itertuples():
+                        person_box(row, res, index, css)
 
 
 def sites_section(res):
