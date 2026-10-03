@@ -17,6 +17,7 @@ from sklearn.preprocessing import StandardScaler
 CAP = 55                 # a breach is more than 45 ordinary + 10 overtime hours
 MIN_WEEKS = 6            # 1 history week + 3 training weeks + 1 test week + the week in progress
 MAX_FOLDS = 5
+THRESHOLD_BETA = 1.0     # the cut-off for will_breach maximises F1; 2.0 would favour catching more breachers over false alarms
 C_GRID = [0.01, 0.03, 0.1, 0.3, 1, 3, 10]
 BASE_FEATS = ["hours_so_far", "shifts_so_far", "avg_weekly_hours_prior", "avg_shifts_prior",
               "share_long_shifts_prior", "prior_breaches", "night_pattern"]
@@ -126,19 +127,25 @@ def baseline_oof(tbl, weeks, col, test_idx):
     return te[["person_key", "week_start", "breach"]].assign(score=te[col].to_numpy(), fold=te.week_start.map(folds).to_numpy())
 
 
-def f2_at(y, flag):
+def f_at(y, flag, beta=1.0):
+    """F-beta score, precision and recall of a 0/1 flag. beta=1 weighs precision and recall equally; beta=2 favours recall."""
     tp = ((flag == 1) & (y == 1)).sum()
     fp = ((flag == 1) & (y == 0)).sum()
     fn = ((flag == 0) & (y == 1)).sum()
     p = tp / (tp + fp) if tp + fp else 0.0
     r = tp / (tp + fn) if tp + fn else 0.0
-    return (5 * p * r / (4 * p + r) if p + r else 0.0), p, r
+    b2 = beta ** 2
+    return ((1 + b2) * p * r / (b2 * p + r) if p + r else 0.0), p, r
 
 
-def best_threshold(y, s):
-    """Score cut-off that maximises F2 (recall counts more than precision) on out-of-fold predictions."""
+def f2_at(y, flag):
+    return f_at(y, flag, 2.0)
+
+
+def best_threshold(y, s, beta=THRESHOLD_BETA):
+    """Score cut-off that maximises F1 on the out-of-fold predictions (precision and recall weighted equally)."""
     cands = np.unique(s)
-    return float(cands[int(np.argmax([f2_at(y.values, (s.values >= c).astype(int))[0] for c in cands]))])
+    return float(cands[int(np.argmax([f_at(y.values, (s.values >= c).astype(int), beta)[0] for c in cands]))])
 
 
 def forecast(seg, persons, night, current_week, offset):

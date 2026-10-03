@@ -13,7 +13,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Prediction model built and evaluated in `notebooks/data_modeling.ipynb`: logistic regression beats the naive baselines on forward-in-time folds (PR-AUC 0.43 vs 0.33 for the best baseline), with leakage checks and sensitivity runs (notebook only, not yet in the app)
 - [x] Provisional `predictions.csv` with the exact columns, one row for each of the 213 employee IDs, both IDs of a merged person equal
 - [x] Model moved from the notebook into `src/` (forecast, pipeline, validation, dataset) with tests; the in-progress week and weekday come from the data
-- [x] Flagged-list length decided: keep the F2 threshold (46 people this week), revisit later if a better approach comes up
+- [x] Flagged-list length decided: the F1-optimal cut-off (about 0.25), so `will_breach` flags about as many people as actually breach (12 this week after the duplicate and double-dipping people are kept out)
 - [x] Missing clock-outs and Sunday/holiday hours decided (excluded and flagged; Sunday and holiday hours count normally toward the cap)
 - [x] Improvement experiments on the model (`notebooks/data_modeling.ipynb` section 10): nothing clearly beats the shipped model
 - [x] Cost analysis notebook (`notebooks/cost_analysis.ipynb`): the client's way of counting hours against ours, in money, per employee and in total (extra, not in the README)
@@ -21,7 +21,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 ## Not done
 
 ### The answer (must be correct)
-- [ ] Review `predictions.csv` (written by `python -m src.pipeline data predictions.csv`; 213 rows, 38 flagged; duplicate and double-dipping people are kept out of `will_breach` and named in `NOTES.md`)
+- [ ] Review `predictions.csv` (written by `python -m src.pipeline data predictions.csv`; 213 rows, 12 flagged; duplicate and double-dipping people are kept out of `will_breach` and named in `NOTES.md`)
 
 ### Dashboard
 - [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see docs/DEPLOY.md)

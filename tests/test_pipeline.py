@@ -23,7 +23,7 @@ def test_predictions_csv_is_what_the_pipeline_produces(full):
     assert (got.employee_id.values == expected.employee_id.values).all()
     assert (got.will_breach.values == expected.will_breach.values).all()
     assert (got.risk_score - expected.risk_score).abs().max() < 1e-9
-    assert len(got) == 213 and int(got.will_breach.sum()) == 38
+    assert len(got) == 213 and int(got.will_breach.sum()) == 12
 
 
 DUPLICATE_PEOPLE = {"E1035", "E1090", "E1097", "E1126", "E1193"}
@@ -49,12 +49,12 @@ def test_duplicate_and_double_dipping_people_are_kept_out_of_will_breach(full):
 def test_nobody_in_the_flag_list_is_a_duplicate_or_double_dipper(full):
     flagged = full.predictions[full.predictions.will_breach == 1].employee_id
     assert not (set(flagged) & ({e for lst in full.excluded.employee_ids for e in lst}))
-    assert len(flagged) == 38
+    assert len(flagged) == 12
 
 
 def test_the_dashboard_levels_do_not_change_with_the_exclusion(full):
     p = full.people
-    assert int(p.level.isin(["High", "Watch", "Flagged"]).sum()) == 46 and p.band.value_counts().to_dict()["High"] == 9
+    assert int(p.level.isin(["High", "Watch", "Flagged"]).sum()) == 18 and p.band.value_counts().to_dict()["High"] == 9
 
 
 def test_the_week_and_days_are_derived_from_the_data(full):
@@ -66,11 +66,11 @@ def test_the_week_and_days_are_derived_from_the_data(full):
 
 def test_people_sites_and_flags(full):
     p = full.people
-    assert len(p) == 208 and int((p.level.isin(["High", "Watch", "Flagged"])).sum()) == 46
+    assert len(p) == 208 and int((p.level.isin(["High", "Watch", "Flagged"])).sum()) == 18
     merged = p[p.employee_ids.apply(len) > 1]
     assert len(merged) == 5 and merged.sites_worked.apply(len).min() >= 1
     assert set(full.sites.site_id) == {f"ST-0{i}" for i in range(1, 7)}
-    assert full.sites.flagged.sum() >= 46                      # a person counts at every site worked
+    assert full.sites.flagged.sum() >= 11                      # a person counts at every site worked
     assert (full.people.hours_left == (55 - full.people.hours_so_far).clip(lower=0)).all()
 
 
@@ -165,3 +165,9 @@ def test_without_notes_there_are_no_reasons(bundle):
     b = {k: v for k, v in bundle.items() if k != "shift_notes"}
     res = run(b)
     assert res.reasons is None and res.note_classes is None and res.status == "model"
+
+
+def test_the_will_breach_cut_off_is_the_f1_optimal_one(full):
+    assert full.model["threshold"] == pytest.approx(0.2463, abs=1e-3)
+    flagged = full.people[(full.people.will_breach == 1)]
+    assert flagged.risk_score.min() >= full.model["threshold"] - 1e-9
