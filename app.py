@@ -274,38 +274,6 @@ def escalations_section(res):
                 notify("resolving a shift overlap", who)
 
 
-def checks_section(res):
-    with st.expander("Data checks and how the prediction works"):
-        for level, text in st.session_state.messages:
-            getattr(st, level)(text)
-        for w in res.warnings:
-            st.warning(w)
-        q = res.quality
-        if q:
-            st.write(f"{q['shifts']:,} shifts read over {res.n_weeks} weeks · {q['overnight']:,} overnight · "
-                     f"{q['excluded']:,} excluded (no usable clock times) · {q['over_12h_flagged']:,} longer than 12 hours (counted, flagged).")
-        if res.open_shifts is not None and len(res.open_shifts):
-            st.write("Open or missing clock-outs this week:")
-            st.dataframe(res.open_shifts.fillna("missing").rename(columns={"shift_id": "Shift", "employee_id": "Employee", "site_id": "Site", "shift_date": "Date",
-                                                                          "clock_in_time": "In", "clock_out_time": "Out"}), hide_index=True, width="stretch")
-        m = res.model
-        if res.status == "model":
-            n_high = int(res.people["level"].isin(HIGH_LEVELS).sum())
-            n_watch = int((res.people["level"] == "Watch").sum())
-            st.write(f"Method: {m['method']}. Hours are attributed to the day on which most of a shift was worked. "
-                     f"predictions.csv flags {int(res.predictions['will_breach'].sum())} employee IDs at a score of {m['threshold']:.2f} or more, the cut-off that best balances "
-                     f"catching breachers against false alarms on past weeks (catching breachers counts more). This page lists the {n_high} people at 50% or more "
-                     f"and has {n_watch} more at 30 to 50% in the drop-down.")
-            st.write("Usual hours still to come = the shifts a person usually works in a week minus the shifts already worked, times their usual shift length. "
-                     "It is compared with the hours left before 55; the risk score also looks at past long weeks and breaches.")
-            pooled = m["pooled_pr_auc"]
-            st.write(f"On past weeks the model ranked breachers better than the simple projection in {pooled['folds_won']} of {pooled['folds']} test weeks "
-                     f"(PR-AUC {pooled['model']:.2f} against {pooled['b3']:.2f}).")
-            folds = m["folds"].assign(test_week=m["folds"]["test_week"].dt.strftime("%d %b"))
-            st.dataframe(folds.rename(columns={"test_week": "Test week", "train_weeks": "Train weeks", "test_breaches": "Breachers",
-                                               "pr_auc_model": "PR-AUC model", "pr_auc_b3": "PR-AUC simple projection"}).round(2), hide_index=True, width="stretch")
-
-
 def main():
     st.markdown(CSS, unsafe_allow_html=True)
     st.title("Overtime watch")
@@ -334,7 +302,6 @@ def main():
     flagged_section(res)
     sites_section(res)
     escalations_section(res)
-    checks_section(res)
 
 
 main()

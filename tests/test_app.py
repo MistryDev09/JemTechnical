@@ -19,6 +19,7 @@ def test_bundled_data_renders_high_risk_people_sites_and_escalations():
     assert "Data up to Wed 12 Aug 2026" in text and "predicting Thu, Fri, Sat and Sun" in text
     assert "By site" in [s.value for s in at.subheader] and "Escalations" in [s.value for s in at.subheader]
     assert not any("Everyone else" in e.label for e in at.expander)
+    assert not any("Data checks" in e.label for e in at.expander)          # the data checks section was removed
     # a Resolve button for each person at 50%+, each duplicate and each overlap this week (9 + 5 + 13)
     resolve = [b for b in at.button if b.label == "Resolve"]
     assert len(resolve) == 27 and "resolve_E1126" in {b.key for b in resolve}
