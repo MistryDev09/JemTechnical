@@ -13,7 +13,8 @@ from .hours import attribute_hours, data_cutoff, parse_shifts, quality_report
 from .integrity import add_person_key, find_duplicate_people, find_overlaps
 from .validate import cross_check
 
-HIGH_RISK = 0.5
+HIGH_RISK = 0.5      # shown as a card with a Resolve button
+WATCH_RISK = 0.3     # 30% to 50%: shown in the drop-down below
 KINDS = ("shifts", "employees", "sites", "public_holidays", "shift_notes", "payroll_details")
 DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -101,16 +102,24 @@ def run(bundle):
     usual = seg[seg["week_start"] < current_week].groupby("person_key")["hours"].mean()
     people["usual_shift_hours"] = usual.reindex(people.index).fillna(seg["hours"].mean())
     if fc.current is not None:
-        people = people.join(fc.current.set_index("person_key")[["risk_score", "will_breach", "typical_shift_len"]])
+        people = people.join(fc.current.set_index("person_key")[["risk_score", "will_breach", "typical_shift_len", "avg_weekly_hours_prior", "prior_breaches"]])
         people["usual_shift_hours"] = people["typical_shift_len"].fillna(people["usual_shift_hours"])
-        people = people.drop(columns="typical_shift_len")
+        people = people.drop(columns="typical_shift_len").rename(columns={"avg_weekly_hours_prior": "avg_weekly_hours", "prior_breaches": "past_breaches"})
     else:
         people["risk_score"], people["will_breach"] = np.nan, np.nan
+        people["avg_weekly_hours"], people["past_breaches"] = np.nan, np.nan
     people["hours_left"] = (CAP - people["hours_so_far"]).clip(lower=0)
-    people["shifts_left"] = np.floor(people["hours_left"] / people["usual_shift_hours"].clip(lower=1)).astype(int)
+    people["shifts_left"] = np.floor(people["hours_left"] / people["usual_shift_hours"].clip(lower=1)).astype(int)    # fit under the cap
+    # what the person usually still works this week: usual shifts per week minus shifts already worked, times the usual shift length
+    n_prior = max(len(pd.date_range(seg["week_start"].min(), current_week, freq="7D")) - 1, 1)
+    prior_counts = seg[seg["week_start"] < current_week].groupby(["person_key", "week_start"])["shift_id"].nunique().groupby(level=0).sum()
+    people["usual_shifts_per_week"] = prior_counts.reindex(people.index).fillna(0) / n_prior
+    people["usual_shifts_left"] = (people["usual_shifts_per_week"] - people["shifts_so_far"]).clip(lower=0)
+    people["usual_hours_to_go"] = people["usual_shifts_left"] * people["usual_shift_hours"]
     over = people["hours_so_far"] > CAP
     if fc.status == "model":
-        people["level"] = np.where(over | (people["risk_score"] >= HIGH_RISK), "High", np.where(people["will_breach"] == 1, "Flagged", "Low"))
+        risk = people["risk_score"]
+        people["level"] = np.where(over | (risk >= HIGH_RISK), "High", np.where(risk >= WATCH_RISK, "Watch", np.where(people["will_breach"] == 1, "Flagged", "Low")))
         people["will_breach"] = (people["will_breach"].fillna(0).astype(int) | over.astype(int))
     elif fc.status == "week_complete":
         people["level"] = np.where(over, "Over", "OK")

@@ -35,7 +35,7 @@ def test_the_week_and_days_are_derived_from_the_data(full):
 
 def test_people_sites_and_flags(full):
     p = full.people
-    assert len(p) == 208 and int((p.level.isin(["High", "Flagged"])).sum()) == 46
+    assert len(p) == 208 and int((p.level.isin(["High", "Watch", "Flagged"])).sum()) == 46
     merged = p[p.employee_ids.apply(len) > 1]
     assert len(merged) == 5 and merged.sites_worked.apply(len).min() >= 1
     assert set(full.sites.site_id) == {f"ST-0{i}" for i in range(1, 7)}
@@ -96,3 +96,18 @@ def test_without_sites_the_dashboard_uses_site_ids(bundle):
 def test_without_holidays_hours_are_unchanged(bundle, full):
     res = run({k: v for k, v in bundle.items() if k != "public_holidays"})
     assert (res.people.set_index("person_key").hours_so_far == full.people.set_index("person_key").hours_so_far).all()
+
+
+def test_usual_hours_still_to_come(full):
+    p = full.people.set_index("person_key")
+    assert (p.usual_hours_to_go - p.usual_shifts_left * p.usual_shift_hours).abs().max() < 1e-9
+    assert p.loc["E1126", "usual_hours_to_go"] == pytest.approx(20.18, abs=0.01)       # 2.11 usual shifts x 9.56 h
+    assert p.loc["E1099", "usual_hours_to_go"] == 0                                    # already worked a usual number of shifts
+    assert (p.usual_shifts_left >= 0).all()
+
+
+def test_the_30_to_50_percent_drop_down_level(full):
+    lvl = full.people.set_index("person_key").level
+    assert (lvl == "High").sum() == 9 and (lvl == "Watch").sum() == 7
+    watch = full.people[full.people.level == "Watch"]
+    assert watch.risk_score.between(0.3, 0.5, inclusive="left").all()

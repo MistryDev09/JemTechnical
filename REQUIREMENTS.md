@@ -24,8 +24,9 @@ Requirements for the final project only. Status is split into Done and Not done.
 ### Dashboard
 - [ ] Deployed on a public URL that works on a phone (the app is built and checked locally at laptop and phone width; see DEPLOY.md)
 - [x] Shows who goes over the 10-hour overtime cap by Sunday, ranked by risk, with hours so far, hours left and sites (built, runs locally)
-- [x] The list shows only people at 50% risk or higher, each with a Resolve button
-- [ ] TODO: the Resolve button does nothing yet (it only shows a message). Decide what resolving means (for example record who resolved it and when, and remove the person from the list) and build it
+- [x] The list shows only people at 50% risk or higher, each with a Resolve button, and a drop-down below it for people at 30 to 50% risk
+- [x] Each card shows the usual hours still to come this week (usual shifts left x usual shift length) next to the hours left before 55, with a plain-language note
+- [ ] TODO: Resolve only shows the message at the top. Decide what resolving means (for example record who resolved it and when, and remove the item from the list) and build it
 - [ ] Says what to do about each person or site, specific to the data (partly: each person shows hours left and how many usual shifts that allows; no site-level advice yet)
 - [ ] Shows why the hours happened, based on the supervisors' notes
 
@@ -35,8 +36,8 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Wording is "potential" and "for review", not an accusation
 - [x] The "2 records, see Escalations" flag on a person's card is a link that jumps to that person under Escalations
 - [x] Overlapping shifts are shown as cards (person, severity, both sites and times side by side) so nothing needs sideways scrolling on a phone
-- [x] Each escalation has a Report button, and there is an Escalate all button, that open a pre-filled email to sitenumbersandnames@gmail.com (the app does not send anything itself)
-- [ ] TODO: confirm the real escalation email address (it is a placeholder in `src/report.py`) and decide whether reports should be sent from the app instead of opening an email draft
+- [x] Resolve buttons on each duplicate, overlap and listed person, and an Escalate all button, show a message that drops in at the top for about two seconds: "Sent message to supervisor: resolving a duplicate / an overtime person / a shift overlap (sent by internal tool or email)". The email pop-up was removed
+- [ ] TODO: nothing is actually sent yet. The message at the top is a placeholder. Build the real sending (internal tool or email), decide the recipient address, and say "sent" only when it has been sent
 - [ ] TODO: keep track of what has been reported (a reported or escalated state per item), so the same item is not reported twice
 
 ### Supervisor notes

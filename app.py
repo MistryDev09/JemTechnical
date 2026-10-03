@@ -7,12 +7,11 @@ from src.dataset import apply_upload, content_hash, load_bundled
 from src.export import predictions_csv
 from src.forecast import CAP
 from src.pipeline import run
-from src.report import ESCALATION_EMAIL, duplicate_line, mailto, overlap_line
 from src.validate import FILE_NAMES, check_file
 
 st.set_page_config(page_title="Overtime watch", layout="wide", initial_sidebar_state="collapsed")
 
-HIGH_LEVELS = ["High", "Over"]      # only people at 50%+ risk (or already over the cap) are listed
+HIGH_LEVELS = ["High", "Over"]      # 50%+ risk (or already over the cap): a card with a Resolve button
 MAX_OVERLAPS = 20
 
 CSS = """
@@ -32,6 +31,7 @@ CSS = """
 .card .name {font-weight: 700; font-size: 1.05rem;}
 .card .badge {font-weight: 700; border-radius: 999px; padding: 2px 12px; color: #fff; white-space: nowrap; background: #9ca3af;}
 .card.high .badge {background: #dc2626;}
+.card.flag .badge {background: #d97706;}
 .card .sub {font-size: .85rem; opacity: .8; margin-top: 2px;}
 .card .stats {display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 8px 0 4px;}
 .card .stats div b {display: block; font-size: 1.15rem;}
@@ -41,13 +41,18 @@ CSS = """
 .tag.esc {background: #dc2626; color: #fff !important;}
 .tag.rev {background: #f59e0b; color: #1f2937 !important;}
 a.tag.esc:hover {background: #b91c1c;}
-.btn {display: inline-block; text-decoration: none !important; font-weight: 600; font-size: .85rem; border-radius: 8px; padding: 5px 14px; border: 1px solid #dc2626; color: #dc2626 !important; margin-top: 8px;}
-.btn.solid {background: #dc2626; color: #fff !important;}
 .legs {display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 8px 0 2px;}
 .leg {border: 1px solid rgba(128,128,128,.3); border-radius: 8px; padding: 6px 10px; font-size: .85rem;}
 .leg b {display: block;}
 .status {opacity: .8; margin: -0.4rem 0 0.6rem;}
 .stButton button {padding: 0.15rem 0.9rem; min-height: 2rem;}
+/* message that drops in at the top for about two seconds, then goes away (two copies so it replays on every click) */
+@keyframes dropA {0% {transform: translate(-50%, -140%); opacity: 0;} 9% {transform: translate(-50%, 0); opacity: 1;} 78% {transform: translate(-50%, 0); opacity: 1;} 100% {transform: translate(-50%, -140%); opacity: 0; visibility: hidden;}}
+@keyframes dropB {0% {transform: translate(-50%, -140%); opacity: 0;} 9% {transform: translate(-50%, 0); opacity: 1;} 78% {transform: translate(-50%, 0); opacity: 1;} 100% {transform: translate(-50%, -140%); opacity: 0; visibility: hidden;}}
+.notice {position: fixed; top: 10px; left: 50%; z-index: 1000000; width: min(92vw, 560px); box-sizing: border-box; background: #065f46; color: #fff;
+         padding: 10px 16px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,.35); font-size: .95rem; text-align: center;
+         transform: translate(-50%, -140%); opacity: 0; animation: dropA 2.6s ease forwards;}
+.notice.b {animation-name: dropB;}
 </style>
 """
 
@@ -78,6 +83,14 @@ def init_state():
         st.session_state.uploader_key = 0
 
 
+def notify(action, who=None):
+    """Drop-down message at the top for a moment. This is a placeholder: nothing is actually sent yet."""
+    detail = f"{action}, {who}" if who else action
+    st.session_state.notice_n = st.session_state.get("notice_n", 0) + 1
+    css = "notice b" if st.session_state.notice_n % 2 else "notice"
+    st.markdown(f'<div class="{css}" role="status">Sent message to supervisor: {esc(detail)} (sent by internal tool or email)</div>', unsafe_allow_html=True)
+
+
 def site_text(site_ids, labels):
     return ", ".join(labels.get(s, s) for s in site_ids) if site_ids else "none yet"
 
@@ -87,7 +100,24 @@ def span(start, end):
     return text + (f" ({end:%a})" if end.date() != start.date() else "")
 
 
-def card(p, res):
+def pattern_note(p):
+    """Explain the score in plain words: the person's usual remaining hours against the hours left before the cap."""
+    if p.hours_so_far > CAP:
+        return f"Already over the {CAP}-hour cap by {p.hours_so_far - CAP:.1f} hours."
+    history = ""
+    if p.past_breaches == p.past_breaches and p.avg_weekly_hours == p.avg_weekly_hours:       # not NaN
+        history = f" The risk comes from long weeks: an average of {p.avg_weekly_hours:.0f} h a week and {int(p.past_breaches)} past week{'s' if p.past_breaches != 1 else ''} over {CAP}."
+    if p.usual_shifts_left < 0.05:
+        return (f"Has already worked a usual number of shifts this week, so no more usual hours are expected. "
+                f"Any extra shift would use up the {p.hours_left:.1f} h left before {CAP}.{history}")
+    usual = f"Usually works about {p.usual_shifts_left:.1f} more shifts of {p.usual_shift_hours:.1f} h, which is {p.usual_hours_to_go:.1f} h more this week"
+    gap = p.usual_hours_to_go - p.hours_left
+    if gap > 0:
+        return f"{usual}. That is {gap:.1f} h more than the {p.hours_left:.1f} h left before {CAP}."
+    return f"{usual}. That fits within the {p.hours_left:.1f} h left ({-gap:.1f} h to spare).{history}"
+
+
+def card(p, res, css="high"):
     labels = res.site_labels
     over = p.hours_so_far > CAP
     badge = f"Over by {p.hours_so_far - CAP:.1f} h" if over else (f"{p.risk_score:.0%} risk" if res.status == "model" else "Over")
@@ -97,41 +127,15 @@ def card(p, res):
     sub = esc(ids) + (f" · {esc(p.role)}" if p.role else "") + flag
     primary = f"Primary site: {esc(site_text(p.primary_sites, labels))}" if p.primary_sites else ""
     worked = f"Worked this week: {esc(site_text(p.sites_worked, labels))}"
-    if over:
-        note = f"Already over the {CAP}-hour cap by {p.hours_so_far - CAP:.1f} hours."
-    elif res.status == "model":
-        more = "less than one more usual shift" if p.shifts_left < 1 else f"about {p.shifts_left} more usual shift{'s' if p.shifts_left != 1 else ''}"
-        note = f"{p.hours_left:.1f} hours left before {CAP}: {more} (usual shift {p.usual_shift_hours:.1f} h)."
-    else:
-        note = ""
-    return (f'<div class="card high"><div class="top"><span class="name">{esc(p.name)}{esc(aka)}</span>'
+    note = pattern_note(p) if res.status == "model" else (f"Already over the {CAP}-hour cap by {p.hours_so_far - CAP:.1f} hours." if over else "")
+    usual_stat = (f'<div><b>{p.usual_hours_to_go:.1f}</b><span>usual hours still to come</span></div>' if res.status == "model" else "")
+    return (f'<div class="card {css}"><div class="top"><span class="name">{esc(p.name)}{esc(aka)}</span>'
             f'<span class="badge">{esc(badge)}</span></div><div class="sub">{sub}</div>'
             f'<div class="sub">{primary}{" · " if primary else ""}{worked}</div>'
             f'<div class="stats"><div><b>{p.hours_so_far:.1f}</b><span>hours so far</span></div>'
             f'<div><b>{int(p.shifts_so_far)}</b><span>shifts so far</span></div>'
-            f'<div><b>{p.hours_left:.1f}</b><span>hours left to {CAP}</span></div></div>'
+            f'<div><b>{p.hours_left:.1f}</b><span>hours left to {CAP}</span></div>{usual_stat}</div>'
             f'<div class="note">{esc(note)}</div></div>')
-
-
-def escalation_items(res):
-    """Duplicate and overlap items for this week, each with its text and a ready-made report link."""
-    names = res.people.set_index("person_key")["name"] if res.people is not None else {}
-    labels = res.site_labels
-    dup_items, over_items = [], []
-    if res.duplicates is not None:
-        for r in res.duplicates.itertuples():
-            line = duplicate_line(r.names, r.employee_ids, r.evidence, r.severity)
-            title = " / ".join(n for n in r.names if isinstance(n, str)) or " / ".join(r.employee_ids)
-            dup_items.append((r, line, mailto(f"Possible duplicate employee record: {title}", [line])))
-    if res.overlaps_current is not None and len(res.overlaps_current):
-        cur = res.overlaps_current.copy()
-        cur["rank"] = cur["severity"].map({"High": 0, "Medium": 1})
-        for r in cur.sort_values(["rank", "overlap_hours"], ascending=[True, False]).itertuples():
-            who = names.get(r.person_key, r.person_key)
-            line = overlap_line(who, labels.get(r.site_a, r.site_a), r.start_a, r.end_a, labels.get(r.site_b, r.site_b),
-                                r.start_b, r.end_b, r.overlap_hours, r.severity, r.different_province)
-            over_items.append((r, who, line, mailto(f"Possible overlapping shifts: {who}", [line])))
-    return dup_items, over_items
 
 
 def tiles(res):
@@ -191,7 +195,7 @@ def flagged_section(res):
     p = res.people
     st.subheader("Who is likely to go over " + str(CAP) + " hours by Sunday" if res.status == "model" else "Who is over " + str(CAP) + " hours")
     if res.status == "model":
-        st.caption("Only people at 50% risk or higher are shown. predictions.csv also includes lower-risk people.")
+        st.caption("People at 50% risk or higher are listed here. People at 30 to 50% are in the drop-down below. predictions.csv also includes lower-risk people.")
     sites = res.sites.sort_values(["high_risk", "working"], ascending=False)
     options = ["All sites"] + list(sites["site"])
     by_label = dict(zip(sites["site"], sites["site_id"]))
@@ -205,7 +209,14 @@ def flagged_section(res):
     for row in hot.itertuples():
         st.markdown(card(row, res), unsafe_allow_html=True)
         if st.button("Resolve", key=f"resolve_{row.person_key}"):
-            st.toast("Resolve is not connected to anything yet.")
+            notify("resolving an overtime person", row.name)
+    if res.status == "model":
+        watch = p[p["level"] == "Watch"]
+        with st.expander(f"People at 30 to 50% risk ({len(watch)})"):
+            if watch.empty:
+                st.caption("Nobody is at 30 to 50% risk" + ("" if choice == "All sites" else " at this site") + ".")
+            for row in watch.itertuples():
+                st.markdown(card(row, res, "flag"), unsafe_allow_html=True)
 
 
 def sites_section(res):
@@ -220,31 +231,35 @@ def sites_section(res):
 
 
 def escalations_section(res):
-    dup_items, over_items = escalation_items(res)
-    if not dup_items and not over_items and (res.overlaps is None or res.overlaps.empty):
+    dups = res.duplicates if res.duplicates is not None else []
+    over = res.overlaps_current if res.overlaps_current is not None else []
+    if not len(dups) and not len(over) and (res.overlaps is None or res.overlaps.empty):
         return
+    names = res.people.set_index("person_key")["name"]
+    labels = res.site_labels
     st.subheader("Escalations")
     st.caption("These are indicators for review, not findings. Bank and tax numbers are compared behind the scenes and never shown.")
-    if dup_items or over_items:
-        lines = [x[1] for x in dup_items] + [x[2] for x in over_items]
-        subject = f"Overtime watch escalations, week of {res.week_start:%d %b %Y}"
-        st.markdown(f'<a class="btn solid" href="{attr(mailto(subject, lines))}">Escalate all ({len(lines)})</a>'
-                    f'<div class="sub" style="margin-top:4px">Opens an email to {esc(ESCALATION_EMAIL)} with the details filled in. '
-                    f'Nothing is sent until you press send in your email app.</div>', unsafe_allow_html=True)
-    if dup_items:
+    total = len(dups) + len(over)
+    if total and st.button(f"Escalate all ({total})", type="primary", key="escalate_all"):
+        notify(f"resolving all {total} escalations")
+    if len(dups):
         st.markdown("**People with more than one employee record**")
-        for r, line, link in dup_items:
+        for r in dups.itertuples():
             tag = '<span class="tag esc">Escalate</span>' if r.severity == "Escalate" else '<span class="tag rev">Review</span>'
             title = " / ".join(n for n in r.names if isinstance(n, str)) or " / ".join(r.employee_ids)
             st.markdown(f'<div class="card high" id="esc-{attr(r.person_key)}"><span class="name">{esc(title)}</span>{tag}'
-                        f'<div class="sub">Records: {esc(" · ".join(r.employee_ids))}</div><div class="sub">Evidence: {esc(r.evidence)}</div>'
-                        f'<a class="btn" href="{attr(link)}">Report</a></div>', unsafe_allow_html=True)
+                        f'<div class="sub">Records: {esc(" · ".join(r.employee_ids))}</div><div class="sub">Evidence: {esc(r.evidence)}</div></div>', unsafe_allow_html=True)
+            if st.button("Resolve", key=f"resolve_dup_{r.person_key}"):
+                notify("resolving a duplicate", title)
     if res.overlaps is not None and len(res.overlaps):
         st.markdown("**Shifts that overlap in time (potential: two places at once)**")
         st.caption(f"{len(res.overlaps)} overlapping pairs in all the data, {int((res.overlaps.severity == 'High').sum())} of them at sites in different provinces. "
-                   f"{len(over_items)} this week" + (f" (showing {MAX_OVERLAPS})." if len(over_items) > MAX_OVERLAPS else "."))
-        labels = res.site_labels
-        for r, who, line, link in over_items[:MAX_OVERLAPS]:
+                   f"{len(over)} this week" + (f" (showing {MAX_OVERLAPS})." if len(over) > MAX_OVERLAPS else "."))
+        if not len(over):
+            st.caption("None this week.")
+        ordered = over.assign(rank=over["severity"].map({"High": 0, "Medium": 1})).sort_values(["rank", "overlap_hours"], ascending=[True, False]) if len(over) else over
+        for i, r in enumerate(ordered.head(MAX_OVERLAPS).itertuples()):
+            who = names.get(r.person_key, r.person_key)
             high = r.severity == "High"
             tag = f'<span class="tag {"esc" if high else "rev"}">{esc(r.severity)}</span>'
             where = " · different provinces" if r.different_province else ""
@@ -252,10 +267,9 @@ def escalations_section(res):
                 f'<div class="card {"high" if high else "flag"}"><div class="top"><span class="name">{esc(who)}</span>{tag}</div>'
                 f'<div class="sub">{r.overlap_hours:.2f} h overlap{esc(where)}</div>'
                 f'<div class="legs"><div class="leg"><b>{esc(labels.get(r.site_a, r.site_a))}</b>{esc(span(r.start_a, r.end_a))}</div>'
-                f'<div class="leg"><b>{esc(labels.get(r.site_b, r.site_b))}</b>{esc(span(r.start_b, r.end_b))}</div></div>'
-                f'<a class="btn" href="{attr(link)}">Report</a></div>', unsafe_allow_html=True)
-        if not over_items:
-            st.caption("None this week.")
+                f'<div class="leg"><b>{esc(labels.get(r.site_b, r.site_b))}</b>{esc(span(r.start_b, r.end_b))}</div></div></div>', unsafe_allow_html=True)
+            if st.button("Resolve", key=f"resolve_overlap_{i}_{r.shift_id_a}_{r.shift_id_b}"):
+                notify("resolving a shift overlap", who)
 
 
 def checks_section(res):
@@ -275,9 +289,13 @@ def checks_section(res):
         m = res.model
         if res.status == "model":
             n_high = int(res.people["level"].isin(HIGH_LEVELS).sum())
+            n_watch = int((res.people["level"] == "Watch").sum())
             st.write(f"Method: {m['method']}. Hours are attributed to the day on which most of a shift was worked. "
                      f"predictions.csv flags {int(res.predictions['will_breach'].sum())} employee IDs at a score of {m['threshold']:.2f} or more, the cut-off that best balances "
-                     f"catching breachers against false alarms on past weeks (catching breachers counts more). This page lists only the {n_high} people at 50% or more.")
+                     f"catching breachers against false alarms on past weeks (catching breachers counts more). This page lists the {n_high} people at 50% or more "
+                     f"and has {n_watch} more at 30 to 50% in the drop-down.")
+            st.write("Usual hours still to come = the shifts a person usually works in a week minus the shifts already worked, times their usual shift length. "
+                     "It is compared with the hours left before 55; the risk score also looks at past long weeks and breaches.")
             pooled = m["pooled_pr_auc"]
             st.write(f"On past weeks the model ranked breachers better than the simple projection in {pooled['folds_won']} of {pooled['folds']} test weeks "
                      f"(PR-AUC {pooled['model']:.2f} against {pooled['b3']:.2f}).")
