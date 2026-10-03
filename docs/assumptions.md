@@ -78,5 +78,4 @@
 
 ## 3. Assumptions not yet decided
 
-### Submission
-- The README says the repo must contain "four files" but lists three. The fourth is unclear.
+None. The README says the repo must contain "four files" but lists three; it is confirmed that it is just the three: `predictions.csv`, `note_classifications.csv` and `NOTES.md`.

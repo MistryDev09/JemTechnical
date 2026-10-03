@@ -58,7 +58,7 @@ Requirements for the final project only. Status is split into Done and Not done.
 ### Repo and submission
 - [x] `NOTES.md`, half a page: assumptions, how the note-sorting was checked and what it found, what a trained model would learn that this approach does not, and how to test it on about 200 people without fooling yourself
 - [x] Public repo containing the required files (`predictions.csv`, `note_classifications.csv`, `NOTES.md`)
-- [ ] Confirm with the client what the "four files" are, since the README lists three
+- [x] The "four files" question is settled: it is the three files the README lists (`predictions.csv`, `note_classifications.csv`, `NOTES.md`)
 - [ ] Video, 5 minutes, camera on and screen shared: what was unexpected, baseline and metric (and why), where the output is not trusted, what to do next, and one number explained step by step for a non-technical person
 - [ ] Three links sent: dashboard, repo, video
 
