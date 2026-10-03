@@ -15,6 +15,8 @@ Requirements for the final project only. Status is split into Done and Not done.
 - [x] Model moved from the notebook into `src/` (forecast, pipeline, validation, dataset) with tests; the in-progress week and weekday come from the data
 - [x] Flagged-list length decided: keep the F2 threshold (46 people this week), revisit later if a better approach comes up
 - [x] Missing clock-outs and Sunday/holiday hours decided (excluded and flagged; Sunday and holiday hours count normally toward the cap)
+- [x] Improvement experiments on the model (`data_modeling.ipynb` section 10): nothing clearly beats the shipped model
+- [x] Cost analysis notebook (`cost_analysis.ipynb`): the client's way of counting hours against ours, in money, per employee and in total (extra, not in the README)
 
 ## Not done
 
